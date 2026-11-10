@@ -70,7 +70,26 @@ const SIZES = { desktop: [1366, 768], frame: [1180, 500], phone: [390, 780] };
 		await page.mouse.up();
 		await settle(600);
 		await shot('07-memory-answered');
-		await page.keyboard.press('Escape');
+		// Arrange the frame, say how the pieces belong together, and set it.
+		const fb = await page.locator('#frame').boundingBox();
+		const sb = await page.locator('#frame .sym').first().boundingBox();
+		await page.mouse.move(sb.x + sb.width / 2, sb.y + sb.height / 2);
+		await page.mouse.down();
+		await page.mouse.move(fb.x + fb.width * 0.3, fb.y + fb.height * 0.35, { steps: 4 });
+		await page.mouse.up();
+		await page.fill('#caption', "my daughter's wedding, the year the river came up over the road");
+		await settle(400);
+		await shot('07b-portrait-arranged');
+		const setBox = await page.locator('#portrait-set').boundingBox();
+		await page.mouse.move(setBox.x + setBox.width / 2, setBox.y + setBox.height / 2);
+		await page.mouse.down();
+		await settle(700);
+		await page.mouse.up();
+		await settle(250);
+		await shot('07c-portrait-set');
+		await page.waitForSelector('#memory:not(.active)', { timeout: 5000 });
+		await settle(700);
+		await shot('07d-sky-after-set');
 
 		for (const share of [0.5, 0.25, 0.08]) {
 			await page.evaluate((s) => window.__adrift.setLight(s), share);
@@ -100,6 +119,21 @@ const SIZES = { desktop: [1366, 768], frame: [1180, 500], phone: [390, 780] };
 		await page.click('#symbol-next');
 		await settle(900);
 		await shot('12-gallery');
+		await ctx.close();
+	}
+	// Every fragment picture on one sheet, at the size it has in a frame and smaller.
+	{
+		const ctx = await browser.newContext({ viewport: { width: 1200, height: 900 }, deviceScaleFactor: 1.5 });
+		const page = await ctx.newPage();
+		const names = fs.readdirSync(path.join(root, 'assets', 'symbols')).filter((f) => f.endsWith('.svg')).map((f) => f.slice(0, -4));
+		await page.goto(`${url}/index.html?debug=1`);
+		await page.evaluate((list) => {
+			document.body.innerHTML = '<div style="display:flex;flex-wrap:wrap;gap:6px;padding:12px;background:#060504;font:11px monospace;color:#8a8070">'
+				+ list.map((n) => `<div style="width:96px;text-align:center"><img src="assets/symbols/${n}.svg" style="width:72px;height:72px"><img src="assets/symbols/${n}.svg" style="width:22px;height:22px"><br>${n}</div>`).join('') + '</div>';
+			document.body.style.overflow = 'auto';
+		}, names);
+		await page.waitForTimeout(900);
+		await page.screenshot({ path: path.join(out, 'symbols-sheet.png'), fullPage: true });
 		await ctx.close();
 	}
 	await browser.close();

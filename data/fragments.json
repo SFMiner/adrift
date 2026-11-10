@@ -4,6 +4,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Different bird calls",
+		"symbol": "bird",
 		"echo": {
 			"recipe": "birdsong",
 			"pitch": 1.2
@@ -50,6 +51,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The trill of a woodpecker",
+		"symbol": "tree",
 		"echo": {
 			"recipe": "trill",
 			"pitch": 0.9
@@ -95,6 +97,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The quack of a duck",
+		"symbol": "bird",
 		"echo": {
 			"recipe": "quack",
 			"pitch": 1
@@ -139,6 +142,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The cluck of chickens",
+		"symbol": "hen",
 		"echo": {
 			"recipe": "birdsong",
 			"pitch": 0.8
@@ -184,6 +188,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The gobble of turkeys",
+		"symbol": "hen",
 		"echo": {
 			"recipe": "croak",
 			"pitch": 0.8
@@ -230,6 +235,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The shriek of an eagle",
+		"symbol": "bird",
 		"echo": {
 			"recipe": "shriek",
 			"pitch": 1.3
@@ -275,6 +281,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The caw of a crow",
+		"symbol": "crow",
 		"echo": {
 			"recipe": "caw",
 			"pitch": 1
@@ -320,6 +327,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The croak of a raven",
+		"symbol": "crow",
 		"echo": {
 			"recipe": "caw",
 			"pitch": 0.7
@@ -365,6 +373,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The bark of a dog",
+		"symbol": "paw-print",
 		"echo": {
 			"recipe": "bark",
 			"pitch": 1
@@ -413,6 +422,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The growl of a dog",
+		"symbol": "paw-print",
 		"echo": {
 			"recipe": "growl",
 			"pitch": 0.8
@@ -458,6 +468,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The meow of a cat",
+		"symbol": "paw-print",
 		"echo": {
 			"recipe": "meow",
 			"pitch": 1.3
@@ -515,6 +526,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The howl of a wolf or a coyote",
+		"symbol": "paw-print",
 		"echo": {
 			"recipe": "howl",
 			"pitch": 0.8
@@ -559,6 +571,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The sounds of cows, of sheep, of pigs",
+		"symbol": "hoof",
 		"echo": {
 			"recipe": "lowing",
 			"pitch": 0.9
@@ -605,6 +618,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Clip-clop of horses",
+		"symbol": "hoof",
 		"echo": {
 			"recipe": "hooves",
 			"pitch": 1
@@ -650,6 +664,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Frogs croaking in a pond",
+		"symbol": "frog",
 		"echo": {
 			"recipe": "croak",
 			"pitch": 1
@@ -696,6 +711,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Spring peepers peeping",
+		"symbol": "frog",
 		"echo": {
 			"recipe": "peep",
 			"pitch": 1.3
@@ -740,6 +756,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Tree frogs trilling",
+		"symbol": "frog",
 		"echo": {
 			"recipe": "trill",
 			"pitch": 1.2
@@ -785,6 +802,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The hiss of something",
+		"symbol": "smoke",
 		"echo": {
 			"recipe": "hiss",
 			"pitch": 1
@@ -830,6 +848,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The howl of wind, the fall of rain, the smell of rain",
+		"symbol": "drop",
 		"echo": {
 			"recipe": "rain",
 			"pitch": 1
@@ -876,6 +895,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A sunset",
+		"symbol": "sun",
 		"echo": {
 			"recipe": "shimmer",
 			"pitch": 0.9
@@ -923,6 +943,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "An overcast sky",
+		"symbol": "cloud",
 		"echo": {
 			"recipe": "drone",
 			"pitch": 1
@@ -944,6 +965,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A rainbow",
+		"symbol": "rainbow",
 		"echo": {
 			"recipe": "shimmer",
 			"pitch": 1.5
@@ -989,6 +1011,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The sunlight through tree branches overhead",
+		"symbol": "tree",
 		"echo": {
 			"recipe": "shimmer",
 			"pitch": 1.2
@@ -1034,6 +1057,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Sun in one's eyes",
+		"symbol": "sun",
 		"echo": {
 			"recipe": "shimmer",
 			"pitch": 1.5
@@ -1080,6 +1104,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Putting a hand over one's eyes to keep the sun out",
+		"symbol": "hand",
 		"echo": {
 			"recipe": "shimmer",
 			"pitch": 1.1
@@ -1128,6 +1153,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A light breeze",
+		"symbol": "wind",
 		"echo": {
 			"recipe": "wind",
 			"pitch": 0.7
@@ -1173,6 +1199,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A cold wind on wet clothing or skin",
+		"symbol": "wind",
 		"echo": {
 			"recipe": "wind",
 			"pitch": 1.2
@@ -1218,6 +1245,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A sky full of stars",
+		"symbol": "star",
 		"echo": {
 			"recipe": "shimmer",
 			"pitch": 1.4
@@ -1266,6 +1294,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The full moon",
+		"symbol": "moon",
 		"echo": {
 			"recipe": "shimmer",
 			"pitch": 1
@@ -1309,6 +1338,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The half moon",
+		"symbol": "crescent",
 		"echo": {
 			"recipe": "drone",
 			"pitch": 1.2
@@ -1353,6 +1383,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The darkness of the new moon",
+		"symbol": "moon",
 		"echo": {
 			"recipe": "drone",
 			"pitch": 0.6
@@ -1401,6 +1432,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A waning moon",
+		"symbol": "crescent",
 		"echo": {
 			"recipe": "drone",
 			"pitch": 1
@@ -1443,6 +1475,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A waxing moon",
+		"symbol": "crescent",
 		"echo": {
 			"recipe": "shimmer",
 			"pitch": 1.3
@@ -1490,6 +1523,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Sudden gloom",
+		"symbol": "cloud",
 		"echo": {
 			"recipe": "drone",
 			"pitch": 0.8
@@ -1511,6 +1545,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A flash of brilliant color",
+		"symbol": "rainbow",
 		"echo": {
 			"recipe": "shimmer",
 			"pitch": 1.6
@@ -1557,6 +1592,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The rustle of dry leaves",
+		"symbol": "leaf-autumn",
 		"echo": {
 			"recipe": "leaves",
 			"pitch": 1
@@ -1602,6 +1638,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The sting of sunburn, the warmth of sun on one's skin",
+		"symbol": "sun",
 		"echo": {
 			"recipe": "shimmer",
 			"pitch": 1.3
@@ -1648,6 +1685,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The warmth of a fire on one's hands",
+		"symbol": "flame",
 		"echo": {
 			"recipe": "fire",
 			"pitch": 1
@@ -1696,6 +1734,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The warmth of a fire on one's whole body",
+		"symbol": "flame",
 		"echo": {
 			"recipe": "fire",
 			"pitch": 0.8
@@ -1739,6 +1778,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A burn from a fire or something else",
+		"symbol": "flame",
 		"echo": {
 			"recipe": "drone",
 			"pitch": 1.1
@@ -1784,6 +1824,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The pain of an injury: a break, fracture, or sprain",
+		"symbol": "bone",
 		"echo": {
 			"recipe": "thud",
 			"pitch": 0.7
@@ -1842,6 +1883,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A sudden fall, teetering on an edge",
+		"symbol": "bolt",
 		"echo": {
 			"recipe": "heartbeat",
 			"pitch": 1.3
@@ -1890,6 +1932,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Catching yourself as you fall",
+		"symbol": "hand",
 		"echo": {
 			"recipe": "breath",
 			"pitch": 1.2
@@ -1934,6 +1977,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Dizziness",
+		"symbol": "head",
 		"echo": {
 			"recipe": "hum",
 			"pitch": 0.7
@@ -1982,6 +2026,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A cut",
+		"symbol": "pocket-knife",
 		"echo": {
 			"recipe": "drone",
 			"pitch": 1.4
@@ -2027,6 +2072,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A stomach ache",
+		"symbol": "spiral",
 		"echo": {
 			"recipe": "drone",
 			"pitch": 0.6
@@ -2075,6 +2121,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A fever",
+		"symbol": "head",
 		"echo": {
 			"recipe": "drone",
 			"pitch": 1
@@ -2121,6 +2168,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A headache",
+		"symbol": "head",
 		"echo": {
 			"recipe": "drone",
 			"pitch": 0.8
@@ -2142,6 +2190,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A full stomach",
+		"symbol": "bowl",
 		"echo": {
 			"recipe": "hum",
 			"pitch": 0.9
@@ -2190,6 +2239,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The growl of an empty stomach",
+		"symbol": "bowl",
 		"echo": {
 			"recipe": "growl",
 			"pitch": 0.6
@@ -2233,6 +2283,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Sweat running down your face",
+		"symbol": "drop",
 		"echo": {
 			"recipe": "water",
 			"pitch": 1.5
@@ -2254,6 +2305,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The feel of hot sand under your feet and between your toes",
+		"symbol": "footprint",
 		"echo": {
 			"recipe": "footsteps",
 			"pitch": 0.9
@@ -2302,6 +2354,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The sound of heavy footsteps",
+		"symbol": "footprint",
 		"echo": {
 			"recipe": "footsteps",
 			"pitch": 0.6
@@ -2347,6 +2400,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The sound of light footsteps",
+		"symbol": "footprint",
 		"echo": {
 			"recipe": "footsteps",
 			"pitch": 1.4
@@ -2395,6 +2449,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Blood",
+		"symbol": "drop",
 		"echo": {
 			"recipe": "heartbeat",
 			"pitch": 0.7
@@ -2440,6 +2495,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The smell of bread baking",
+		"symbol": "bread",
 		"echo": {
 			"recipe": "fire",
 			"pitch": 0.6
@@ -2486,6 +2542,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The smell of meat grilling",
+		"symbol": "smoke",
 		"echo": {
 			"recipe": "fire",
 			"pitch": 1
@@ -2530,6 +2587,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The smell of beans cooking",
+		"symbol": "bowl",
 		"echo": {
 			"recipe": "water",
 			"pitch": 0.7
@@ -2576,6 +2634,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Drinking something cold, with ice cubes clicking on your teeth",
+		"symbol": "cup",
 		"echo": {
 			"recipe": "clink",
 			"pitch": 1.2
@@ -2620,6 +2679,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Hot coffee",
+		"symbol": "cup",
 		"echo": {
 			"recipe": "drone",
 			"pitch": 1.1
@@ -2665,6 +2725,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Hot tea",
+		"symbol": "cup",
 		"echo": {
 			"recipe": "shimmer",
 			"pitch": 0.8
@@ -2709,6 +2770,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The taste of beer",
+		"symbol": "beer-mug",
 		"echo": {
 			"recipe": "clink",
 			"pitch": 0.8
@@ -2754,6 +2816,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The sting of liquor going down your throat",
+		"symbol": "shot-glass",
 		"echo": {
 			"recipe": "breath",
 			"pitch": 0.7
@@ -2801,6 +2864,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The taste of wine",
+		"symbol": "wine-glass",
 		"echo": {
 			"recipe": "shimmer",
 			"pitch": 1
@@ -2845,6 +2909,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The smell of stale beer",
+		"symbol": "beer-mug",
 		"echo": {
 			"recipe": "drone",
 			"pitch": 0.7
@@ -2890,6 +2955,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The smell of vinegar",
+		"symbol": "bottle",
 		"echo": {
 			"recipe": "hiss",
 			"pitch": 0.9
@@ -2937,6 +3003,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The smell of sour milk",
+		"symbol": "bottle",
 		"echo": {
 			"recipe": "drone",
 			"pitch": 0.6
@@ -2979,6 +3046,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The smell of wood smoke",
+		"symbol": "smoke",
 		"echo": {
 			"recipe": "fire",
 			"pitch": 0.8
@@ -3026,6 +3094,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The smell of cleaning fluids",
+		"symbol": "bottle",
 		"echo": {
 			"recipe": "drone",
 			"pitch": 1
@@ -3070,6 +3139,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The smell of vomit",
+		"symbol": "spiral",
 		"echo": {
 			"recipe": "breath",
 			"pitch": 0.6
@@ -3114,6 +3184,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The smell of feces",
+		"symbol": "nose",
 		"echo": {
 			"recipe": "drone",
 			"pitch": 0.6
@@ -3158,6 +3229,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The smell of urine",
+		"symbol": "nose",
 		"echo": {
 			"recipe": "drone",
 			"pitch": 0.7
@@ -3205,6 +3277,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The smell of flowers",
+		"symbol": "flower",
 		"echo": {
 			"recipe": "shimmer",
 			"pitch": 1.4
@@ -3253,6 +3326,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The smell of skunk",
+		"symbol": "nose",
 		"echo": {
 			"recipe": "drone",
 			"pitch": 0.9
@@ -3297,6 +3371,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A piece of music",
+		"symbol": "note",
 		"echo": {
 			"recipe": "hum",
 			"pitch": 1.1
@@ -3345,6 +3420,7 @@
 		"type": "relational",
 		"source": "sean",
 		"text": "A musical voice",
+		"symbol": "note",
 		"echo": {
 			"recipe": "hum",
 			"pitch": 1.3
@@ -3404,6 +3480,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The echo of a voice across a distance",
+		"symbol": "sound-waves",
 		"echo": {
 			"recipe": "murmur",
 			"pitch": 0.6
@@ -3451,6 +3528,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The words of a poem",
+		"symbol": "book",
 		"echo": {
 			"recipe": "murmur",
 			"pitch": 1
@@ -3498,6 +3576,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The words of a speech",
+		"symbol": "sound-waves",
 		"echo": {
 			"recipe": "murmur",
 			"pitch": 0.8
@@ -3556,6 +3635,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Dancing",
+		"symbol": "shoe",
 		"echo": {
 			"recipe": "footsteps",
 			"pitch": 1.3
@@ -3604,6 +3684,7 @@
 		"type": "relational",
 		"source": "sean",
 		"text": "Someone leaping out from hiding",
+		"symbol": "curtain",
 		"echo": {
 			"recipe": "shriek",
 			"pitch": 1.3
@@ -3661,6 +3742,7 @@
 		"type": "relational",
 		"source": "sean",
 		"text": "Someone's action was surprising",
+		"symbol": "bolt",
 		"echo": {
 			"recipe": "breath",
 			"pitch": 1.2
@@ -3719,6 +3801,7 @@
 		"type": "relational",
 		"source": "sean",
 		"text": "Someone said something funny",
+		"symbol": "sound-waves",
 		"echo": {
 			"recipe": "laugh",
 			"pitch": 1
@@ -3777,6 +3860,7 @@
 		"type": "relational",
 		"source": "sean",
 		"text": "Someone said something that hurt",
+		"symbol": "sound-waves",
 		"echo": {
 			"recipe": "breath",
 			"pitch": 0.7
@@ -3848,6 +3932,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A stage",
+		"symbol": "curtain",
 		"echo": {
 			"recipe": "murmur",
 			"pitch": 1.1
@@ -3892,6 +3977,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A found coin",
+		"symbol": "coin",
 		"echo": {
 			"recipe": "clink",
 			"pitch": 1.4
@@ -3937,6 +4023,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A lost coin",
+		"symbol": "coin",
 		"echo": {
 			"recipe": "clink",
 			"pitch": 0.7
@@ -3983,6 +4070,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "An object turned up in a pocket",
+		"symbol": "coin",
 		"echo": {
 			"recipe": "shimmer",
 			"pitch": 0.9
@@ -4030,6 +4118,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The press of the typewriter",
+		"symbol": "keyboard",
 		"echo": {
 			"recipe": "clack",
 			"pitch": 0.9
@@ -4077,6 +4166,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The clacking of typewriter keys",
+		"symbol": "keyboard",
 		"echo": {
 			"recipe": "clack",
 			"pitch": 1.2
@@ -4134,6 +4224,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The noise of a dial-up modem",
+		"symbol": "phone",
 		"echo": {
 			"recipe": "modem",
 			"pitch": 1
@@ -4189,6 +4280,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The clatter of dishes",
+		"symbol": "plate",
 		"echo": {
 			"recipe": "clink",
 			"pitch": 0.9
@@ -4236,6 +4328,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The ring of a phone",
+		"symbol": "phone",
 		"echo": {
 			"recipe": "phone",
 			"pitch": 1
@@ -4292,6 +4385,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Clock alarm",
+		"symbol": "clock",
 		"echo": {
 			"recipe": "alarm",
 			"pitch": 1
@@ -4336,6 +4430,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Radio static",
+		"symbol": "radio",
 		"echo": {
 			"recipe": "static",
 			"pitch": 1
@@ -4383,6 +4478,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The ring of metal hitting metal",
+		"symbol": "sound-waves",
 		"echo": {
 			"recipe": "clink",
 			"pitch": 0.6
@@ -4427,6 +4523,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The shriek of brakes",
+		"symbol": "wheel",
 		"echo": {
 			"recipe": "brakes",
 			"pitch": 1.2
@@ -4471,6 +4568,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The thud of a car hitting something",
+		"symbol": "car",
 		"echo": {
 			"recipe": "thud",
 			"pitch": 0.6
@@ -4525,6 +4623,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The roar of a car passing by",
+		"symbol": "car",
 		"echo": {
 			"recipe": "engine",
 			"pitch": 1
@@ -4569,6 +4668,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The roar of a motorcycle passing by",
+		"symbol": "wheel",
 		"echo": {
 			"recipe": "engine",
 			"pitch": 1.4
@@ -4616,6 +4716,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The sound of a motorcycle passing past",
+		"symbol": "wheel",
 		"echo": {
 			"recipe": "engine",
 			"pitch": 0.9
@@ -4659,6 +4760,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The sound of a boat motor",
+		"symbol": "boat",
 		"echo": {
 			"recipe": "engine",
 			"pitch": 0.7
@@ -4716,6 +4818,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The sound of oars in the water",
+		"symbol": "boat",
 		"echo": {
 			"recipe": "water",
 			"pitch": 0.9
@@ -4760,6 +4863,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The sound of a gunshot",
+		"symbol": "bolt",
 		"echo": {
 			"recipe": "shot",
 			"pitch": 1
@@ -4817,6 +4921,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "A bright light",
+		"symbol": "sun",
 		"echo": {
 			"recipe": "shimmer",
 			"pitch": 1.5
@@ -4861,6 +4966,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Laser and strobe lights",
+		"symbol": "star",
 		"echo": {
 			"recipe": "shimmer",
 			"pitch": 1.3
@@ -4919,6 +5025,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "The glow of a fire",
+		"symbol": "flame",
 		"echo": {
 			"recipe": "fire",
 			"pitch": 0.9
@@ -4977,6 +5084,7 @@
 		"type": "sensory",
 		"source": "sean",
 		"text": "Looking out a window",
+		"symbol": "window",
 		"echo": {
 			"recipe": "wind",
 			"pitch": 0.7
@@ -5025,6 +5133,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A hand held yours longer than it needed to. The corridor smelled of floor polish. Nobody said anything.",
+		"symbol": "hand",
 		"echo": {
 			"recipe": "footsteps",
 			"pitch": 0.9
@@ -5082,6 +5191,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "Two cups on the table, one still full. A coat over the back of a chair. The light above the stove was on.",
+		"symbol": "cup",
 		"echo": {
 			"recipe": "clink",
 			"pitch": 1
@@ -5140,6 +5250,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A suitcase open on the bed. Folded shirts, not yours. Someone kept smoothing the same sleeve flat.",
+		"symbol": "bed",
 		"echo": {
 			"recipe": "breath",
 			"pitch": 0.9
@@ -5197,6 +5308,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "Someone laughing in the next room until it stopped being laughing. You stayed where you were, one hand flat on the wall.",
+		"symbol": "hand",
 		"echo": {
 			"recipe": "laugh",
 			"pitch": 0.8
@@ -5254,6 +5366,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A long drive with the window cracked and the radio low. They fell asleep against the glass, and you drove more slowly.",
+		"symbol": "car",
 		"echo": {
 			"recipe": "engine",
 			"pitch": 1
@@ -5314,6 +5427,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A phone rang late. You let it ring three times before you picked up. Someone breathed on the line and did not speak first.",
+		"symbol": "phone",
 		"echo": {
 			"recipe": "phone",
 			"pitch": 1
@@ -5372,6 +5486,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A folded note pressed into your palm. The paper was warm from a pocket. You did not read it until you were alone.",
+		"symbol": "envelope",
 		"echo": {
 			"recipe": "murmur",
 			"pitch": 1.2
@@ -5429,6 +5544,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A bed too wide. Someone's weight on the far side, not turning. The ceiling had a crack in it that you knew by heart.",
+		"symbol": "bed",
 		"echo": {
 			"recipe": "breath",
 			"pitch": 0.7
@@ -5486,6 +5602,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A school hallway after the bell. Someone straightened your collar and said it would be all right. Their hands smelled of chalk.",
+		"symbol": "chalk",
 		"echo": {
 			"recipe": "footsteps",
 			"pitch": 1.1
@@ -5544,6 +5661,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "Cold water over your hands at the sink. Behind you a chair scraped back. Neither of you had finished eating.",
+		"symbol": "drop",
 		"echo": {
 			"recipe": "water",
 			"pitch": 1
@@ -5602,6 +5720,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A platform at dusk. A door sliding shut, a face behind the glass, one hand lifted but not waving. The train took a long time to leave.",
+		"symbol": "train",
 		"echo": {
 			"recipe": "brakes",
 			"pitch": 0.9
@@ -5659,6 +5778,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "Flour on someone's forearms. A radio, and a song they sang with the wrong words. You let them.",
+		"symbol": "bread",
 		"echo": {
 			"recipe": "hum",
 			"pitch": 1.1
@@ -5719,6 +5839,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A small hand closed around your finger and would not open. The room was very quiet. Someone said your name softly, as if testing it.",
+		"symbol": "hand",
 		"echo": {
 			"recipe": "heartbeat",
 			"pitch": 1.3
@@ -5777,6 +5898,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A long table, the good plates, too many chairs. Someone stood to speak and forgot what they meant to say. Everyone waited.",
+		"symbol": "plate",
 		"echo": {
 			"recipe": "murmur",
 			"pitch": 0.9
@@ -5835,6 +5957,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A key turned in the lock from the wrong side. The hallway light came on. Someone stood there with a bag still on their shoulder.",
+		"symbol": "door",
 		"echo": {
 			"recipe": "clack",
 			"pitch": 1
@@ -5892,6 +6015,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A back seat and a blanket that smelled of another house. In the front, two voices talking low. You kept your eyes shut.",
+		"symbol": "car",
 		"echo": {
 			"recipe": "engine",
 			"pitch": 0.8
@@ -5950,6 +6074,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A waiting room with a fish tank. Someone beside you read the same page again and again. A door opened and everyone looked up.",
+		"symbol": "door",
 		"echo": {
 			"recipe": "water",
 			"pitch": 0.8
@@ -6008,6 +6133,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A letter with your name on it, in handwriting you knew. The envelope was thin. You held it a while before turning it over.",
+		"symbol": "envelope",
 		"echo": {
 			"recipe": "murmur",
 			"pitch": 0.9
@@ -6065,6 +6191,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A coat held open for you. The sleeves were too long. Someone turned the collar up against your neck and stepped back to look.",
+		"symbol": "coat",
 		"echo": {
 			"recipe": "wind",
 			"pitch": 1
@@ -6122,6 +6249,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "Someone's laughter close by, and a hand over your mouth to keep yours in. You were hiding behind something. Footsteps went past.",
+		"symbol": "curtain",
 		"echo": {
 			"recipe": "laugh",
 			"pitch": 1.3
@@ -6179,6 +6307,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A name said across a crowded room, once. You turned. The speaker was already looking at you.",
+		"symbol": "sound-waves",
 		"echo": {
 			"recipe": "murmur",
 			"pitch": 1.2
@@ -6237,6 +6366,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "Wet footprints from the door to the bed. Someone asleep with their shoes still on. You took the shoes off, one at a time.",
+		"symbol": "shoe",
 		"echo": {
 			"recipe": "footsteps",
 			"pitch": 0.8
@@ -6295,6 +6425,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A table for two by a window, and a menu you both pretended to read. The waiter came back twice. Neither of you was ready.",
+		"symbol": "plate",
 		"echo": {
 			"recipe": "clink",
 			"pitch": 1
@@ -6353,6 +6484,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A voice on an answering machine, saying nothing important. You played it again, and again, until the tape began to hiss.",
+		"symbol": "radio",
 		"echo": {
 			"recipe": "static",
 			"pitch": 0.9
@@ -6410,6 +6542,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A narrow stairwell, someone going up ahead of you one step at a time, a hand on the rail. You carried the bags and said nothing.",
+		"symbol": "stairs",
 		"echo": {
 			"recipe": "footsteps",
 			"pitch": 0.9
@@ -6467,6 +6600,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A single candle on a small cake. A knife held ready. Someone watched the flame and not you, and nobody had begun to sing.",
+		"symbol": "candle",
 		"echo": {
 			"recipe": "fire",
 			"pitch": 1.1
@@ -6524,6 +6658,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "Gravel underfoot and someone's arm through yours, steadying you or being steadied. The path was longer than it looked.",
+		"symbol": "footprint",
 		"echo": {
 			"recipe": "footsteps",
 			"pitch": 0.7
@@ -6582,6 +6717,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "Someone cutting your hair in the kitchen, newspaper on the floor. Cold scissors at your neck. They hummed and did not hurry.",
+		"symbol": "pocket-knife",
 		"echo": {
 			"recipe": "hum",
 			"pitch": 1.2
@@ -6642,6 +6778,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "An empty lead in someone's hand. They stood at the end of the lane with their back to you, and you called out.",
+		"symbol": "paw-print",
 		"echo": {
 			"recipe": "wind",
 			"pitch": 0.9
@@ -6699,6 +6836,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A borrowed scarf wound twice around your neck. It smelled of someone's soap. They tucked in the end and looked away.",
+		"symbol": "coat",
 		"echo": {
 			"recipe": "breath",
 			"pitch": 1.1
@@ -6757,6 +6895,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "Dishes stacked in the sink and two people not washing them. The tap dripped. Outside the window it was entirely black.",
+		"symbol": "window",
 		"echo": {
 			"recipe": "water",
 			"pitch": 0.8
@@ -6815,6 +6954,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A crowd on a pavement, and one pair of shoulders going the other way. You said a word that no one heard. The light changed.",
+		"symbol": "shoe",
 		"echo": {
 			"recipe": "brakes",
 			"pitch": 1
@@ -6872,6 +7012,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "Two sets of footprints in fresh snow, one stepping inside the other. A mitten held out. Your breath and theirs in a single cloud.",
+		"symbol": "footprint",
 		"echo": {
 			"recipe": "wind",
 			"pitch": 1.2
@@ -6929,6 +7070,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A low voice reading aloud, and a page turning. Someone's eyes were closing, though the lamp stayed on. The reading did not stop.",
+		"symbol": "book",
 		"echo": {
 			"recipe": "murmur",
 			"pitch": 0.8
@@ -6987,6 +7129,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A handshake that went on a moment too long. Dry palm, firm grip. Behind them a door was already open.",
+		"symbol": "hand",
 		"echo": {
 			"recipe": "clack",
 			"pitch": 1
@@ -7045,6 +7188,7 @@
 		"type": "relational",
 		"source": "draft",
 		"text": "A window seat on a bus, and someone's head slowly settling on your shoulder. You did not move for a long time, though your arm went numb.",
+		"symbol": "car",
 		"echo": {
 			"recipe": "engine",
 			"pitch": 0.9
@@ -7103,6 +7247,7 @@
 		"type": "sensory",
 		"source": "draft",
 		"text": "Wool, a stiff collar, a button done up wrong. The smell of someone else's mothballs.",
+		"symbol": "coat",
 		"echo": {
 			"recipe": "drone",
 			"pitch": 0.9
@@ -7160,6 +7305,7 @@
 		"type": "sensory",
 		"source": "draft",
 		"text": "A stairwell light on a timer, clicking off between floors. Your hand sliding along the cold rail in the dark.",
+		"symbol": "stairs",
 		"echo": {
 			"recipe": "clack",
 			"pitch": 0.8
@@ -7217,6 +7363,7 @@
 		"type": "sensory",
 		"source": "draft",
 		"text": "Chalk dust on a sleeve. A board half erased, the ghost of a word still on it. The room smelled of oranges.",
+		"symbol": "chalk",
 		"echo": {
 			"recipe": "shimmer",
 			"pitch": 1
@@ -7274,6 +7421,7 @@
 		"type": "sensory",
 		"source": "draft",
 		"text": "A hospital corridor at night, the floor shining. A trolley's soft wheels. Somewhere a machine kept a slow count.",
+		"symbol": "clock",
 		"echo": {
 			"recipe": "heartbeat",
 			"pitch": 0.7
@@ -7331,6 +7479,7 @@
 		"type": "sensory",
 		"source": "draft",
 		"text": "The kitchen light left on over the stove. A faint smell of onions. A radio so low it was only a texture.",
+		"symbol": "radio",
 		"echo": {
 			"recipe": "hum",
 			"pitch": 0.9
@@ -7388,6 +7537,7 @@
 		"type": "sensory",
 		"source": "draft",
 		"text": "The rattle of a train over points and the long lean of a curve. A paper cup sliding on a tray. Everything outside was a smear of lights.",
+		"symbol": "train",
 		"echo": {
 			"recipe": "clack",
 			"pitch": 1.1

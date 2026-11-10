@@ -1,6 +1,9 @@
-// The reading. The assembled memories, one after another, in the order they were begun.
-// Fixed details are set in full type. Unanswered questions stay, in softer type. No narration.
+// The reading. The portraits, one after another, in the order they were begun: the frame as it was
+// left, the line saying how its pieces belong together, then each fragment.
+// Fixed details are set in full type. Unanswered questions stay, in softer type; so does the line of a
+// portrait that was never set. No narration.
 import { statementOf } from './Question.js';
+import { renderPortrait } from './Portrait.js';
 import { $, el, showScreen } from './ui.js';
 
 export class Reading {
@@ -33,6 +36,10 @@ export class Reading {
 		const game = this.game;
 		const container = this.memories[this.index];
 		const block = el('div', 'memory-read');
+		const frame = el('div', container.set ? 'frame read-frame set' : 'frame read-frame');
+		renderPortrait(frame, container, game);
+		block.append(frame);
+		if (container.caption) block.append(el('p', container.set ? 'read-caption' : 'read-caption soft', container.caption));
 		for (const id of container.fragments) {
 			const frag = game.lib.get(id);
 			if (!frag) continue;

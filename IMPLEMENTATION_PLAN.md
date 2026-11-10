@@ -24,6 +24,29 @@ What differs from the plan as written below:
 - `.claude/settings.local.json` was not updated for the local server: the permission system refused
   the edit as self-modification. Sean can add the entries if the prompts annoy him.
 
+## Portraits (Sean, 2026-11-10, after his first play)
+
+What the GDD calls a container is a **portrait**: a frame that holds fragments as pictures.
+
+- Each fragment has one picture (`symbol` in `fragments.json`, drawings in `assets/symbols/`).
+- Keeping a fragment in a portrait is permanent and frees the hand. It can be done long before the portrait
+  is finished.
+- Inside an open portrait the player moves, sizes and turns the pictures, and writes one line (up to 256
+  characters, `CAPTION_MAX`) saying how they belong together.
+- **Setting** a portrait (press and hold) is permanent. After it nothing can be added, moved or rewritten,
+  and the portrait shows in the sky as stars, one for each fragment, standing where its picture stood.
+- An open portrait shows in the sky as a small frame. Any number of portraits can be made.
+
+Claude's choices inside that, **for Sean to confirm** (none of them were stated by him):
+
+- Questions can still be answered after a portrait is set.
+- The line is optional: a portrait can be set with nothing written.
+- The light does not gutter out while any portrait is still open (the approved rule was "nothing left to
+  gather or answer"; an open portrait now counts as something left).
+- A portrait never set still appears in the reading, with a dashed frame and its line in soft type.
+- The fragment-to-picture assignment and the 50 new drawings are drafts (made by subagents, looked at
+  once on a contact sheet). Weakest: phone, chalk, nose, head, hoof, spiral.
+
 ## Where the project stood before session 1
 
 Only the scaffold exists: `index.html`, `css/main.css`, and a 96-line `js/main.js` that draws an

@@ -1,7 +1,7 @@
 // node tools/validate_fragments.mjs
 // Checks data/fragments.json: schema, Sean's wording untouched, balance, and that the per-run draw
 // always meets its floor. Exits non-zero on any error; warnings do not fail.
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { validateFragments, drawPool, costOf } from '../js/FragmentPool.js';
@@ -26,6 +26,12 @@ const present = new Set(sean.map((f) => f.text));
 for (const f of library) {
 	if (!present.has(f.text)) warnings.push(`library entry not in fragments.json: "${f.text}"`);
 }
+
+// Every fragment's picture must exist as a drawing.
+for (const f of list) {
+	if (typeof f.symbol === 'string' && !existsSync(join(root, 'assets', 'symbols', f.symbol + '.svg'))) errors.push(`${f.id}: no drawing assets/symbols/${f.symbol}.svg`);
+}
+if (!existsSync(join(root, 'assets', 'symbols', CONFIG.SYMBOL_FALLBACK + '.svg'))) errors.push('the fallback drawing is missing');
 
 if (list.length < 100) errors.push(`only ${list.length} fragments; the GDD asks for at least a hundred`);
 const relational = list.filter((f) => f.type === 'relational');

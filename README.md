@@ -19,7 +19,8 @@ Then open <http://localhost:8765/>. Add `?debug=1` to see certainty, fragment id
 `?debug=1&seed=7` replays one run; `&speed=6` fast-forwards. None of these do anything without `debug`.
 
 Controls: arrow keys or A/D walk, Space gathers, E shows what you hold, Esc closes, M mutes. Or click
-and touch: the shore to walk, a light to gather it, the lights at the bottom to see what you hold.
+and touch: the shore to walk, a light to gather it, the lights at the bottom to see what you hold, the dark
+above to begin a portrait, a frame or stars to open one.
 
 ## Check it
 
@@ -43,11 +44,14 @@ The bot uses the Chrome on this machine through the Playwright in `Website\game-
 - [x] Certainty: random start (40-100), never shown; spent only by answering
 - [x] Light: world darkens as certainty is spent; far water goes at half, warmth at a quarter, only memories under a tenth
 - [x] On hand: up to five, shown as a transparent overlay over the shore
-- [x] Memories: unlimited containers shown as constellations; placing is permanent; click or drag or keyboard
+- [x] Portraits: unlimited frames holding fragments as pictures; placing is permanent; click or drag or keyboard
+- [x] Arrange a portrait (move, size, turn), write how its pieces belong together (256 characters), hold to set
+- [x] A set portrait takes nothing more and shows as stars; an open one shows as a small frame
+- [x] A picture for every fragment (70 drawings: the 20 objects plus 50 drafts)
 - [x] Questions: binary, temporal, occasion, relational, name; free entry where allowed; press and hold to fix
 - [x] Cost shown only as a small light that is consumed
 - [x] Ending without announcement when certainty runs out; the light also gutters out when nothing is left to fix
-- [x] The reading: fixed details in full type, open questions in soft type
+- [x] The reading: each portrait's frame and line, fixed details in full type, open questions in soft type
 - [x] Rating chart: unlabelled plane, optional axis prompts, one point
 - [x] Symbol builder: 20 objects; layer, move, scale, turn; brightness, contrast, saturation
 - [x] Gallery: symbols at their points, no text; saved in localStorage
@@ -57,5 +61,7 @@ The bot uses the Chrome on this machine through the Playwright in `Website\game-
 - [x] Validator, bot, screenshot pass, itch package
 - [ ] Sean's playtest (`PLAYTEST.md`): audio by ear, fragment and question quality, feel of the light, run length
 - [ ] Sean's verdict on the 42 draft fragments and on the questions written for his own
+- [ ] Sean's verdict on which picture stands for which fragment, and on the 50 draft drawings
+- [ ] Sean's word on the portrait choices listed in `IMPLEMENTATION_PLAN.md` § Portraits
 - [ ] Recorded samples for the animal calls that need them
 - [ ] itch.io page and upload

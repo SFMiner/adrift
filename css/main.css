@@ -93,7 +93,7 @@ button:disabled { cursor: default; }
 
 #title { z-index: 6; flex-direction: column; text-align: center; }
 #hand { z-index: 3; transition-duration: 0.5s, 0s; background: rgba(6, 5, 4, 0.3); }
-#memory { z-index: 6; transition-duration: 0.6s, 0s; background: rgba(6, 5, 4, 0.74); display: block; overflow-y: auto; }
+#memory { z-index: 6; transition-duration: 0.6s, 0s; background: rgba(6, 5, 4, 0.8); display: block; overflow: hidden; }
 #reading, #rating, #symbol, #gallery { z-index: 7; }
 
 /* === TITLE === */
@@ -127,10 +127,11 @@ button:disabled { cursor: default; }
 	background: var(--paper);
 }
 
-/* === THE SKY: memories as constellations === */
+/* === THE SKY: open portraits as small frames, set portraits as constellations === */
 
 #sky { position: absolute; inset: 0; z-index: 4; pointer-events: none; transition: opacity 2.4s ease; }
 .sky-gone #sky { opacity: 0; }
+.in-memory #sky { opacity: 0; transition-duration: 0.6s; }
 .sky-gone #sky .constellation { pointer-events: none; }
 
 .constellation {
@@ -154,7 +155,13 @@ button:disabled { cursor: default; }
 	60% { opacity: 1; }
 	100% { transform: translate(-50%, -50%) scale(1); }
 }
-.lifting .constellation { opacity: 1; outline: 1px dashed rgba(245, 240, 232, 0.22); outline-offset: 2px; }
+.constellation.open { border-radius: 0; border: 1px solid rgba(245, 240, 232, 0.3); filter: none; }
+.constellation .mini { position: absolute; inset: 0; display: block; overflow: hidden; pointer-events: none; }
+.lifting .constellation.open { opacity: 1; outline: 1px dashed rgba(245, 240, 232, 0.3); outline-offset: 3px; }
+.lifting .constellation.set { opacity: 0.3; cursor: default; }
+
+/* A picture standing for a fragment, inside any frame. */
+.sym { position: absolute; height: auto; aspect-ratio: 1; user-select: none; -webkit-user-drag: none; }
 
 /* === WHAT YOU HOLD === */
 
@@ -245,7 +252,44 @@ button:disabled { cursor: default; }
 
 /* === INSIDE A MEMORY === */
 
-#memory-col { max-width: 34rem; margin: 0 auto; padding: 13vh 1.6rem 22vh; user-select: text; -webkit-user-select: text; }
+/* === INSIDE A PORTRAIT === */
+
+.portrait-layout { display: flex; align-items: stretch; justify-content: center; gap: clamp(1rem, 4vw, 3.5rem); height: 100%; padding: 0 1.6rem; }
+.portrait-col { flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.7rem; padding-bottom: 76px; }
+.frame { position: relative; width: min(46vh, 40vw); aspect-ratio: 1; border: 1px solid rgba(245, 240, 232, 0.2); background: rgba(6, 5, 4, 0.5); overflow: hidden; touch-action: none; transition: border-color 1.6s ease, box-shadow 1.6s ease; }
+#frame .sym { cursor: grab; }
+#frame .sym.selected { outline: 1px dashed rgba(245, 240, 232, 0.4); outline-offset: -1px; }
+.is-set .frame, .frame.set { border-color: rgba(var(--glint), 0.5); box-shadow: 0 0 34px rgba(var(--glint), 0.12); }
+.is-set #frame .sym { cursor: default; }
+#caption, .caption-set {
+	width: min(46vh, 40vw);
+	font-size: 1.1rem;
+	font-style: italic;
+	line-height: 1.34;
+	text-align: center;
+	color: var(--paper);
+	overflow-wrap: anywhere;
+}
+#caption {
+	min-width: 15rem;
+	background: none;
+	border: 0;
+	border-bottom: 1px solid var(--paper-ghost);
+	font-family: inherit;
+	padding: 0.3rem 0.2rem;
+	resize: none;
+	user-select: text;
+	-webkit-user-select: text;
+}
+#caption::placeholder { color: rgba(245, 240, 232, 0.3); }
+#caption:focus { border-bottom-color: var(--paper-soft); outline: none; }
+.caption-set { font-style: normal; font-size: 1.2rem; user-select: text; -webkit-user-select: text; }
+.caption-set.soft { font-style: italic; color: rgba(245, 240, 232, 0.4); }
+#portrait-set { touch-action: none; }
+#memory-col { flex: 0 1 31rem; min-width: 0; overflow-y: auto; padding: 13vh 0.4rem 22vh; user-select: text; -webkit-user-select: text; }
+.frag { border-left: 1px solid transparent; padding-left: 0.9rem; transition: border-color 0.5s ease; }
+.frag.selected { border-left-color: rgba(var(--glint), 0.6); }
+.frag-text { cursor: default; }
 .frag { margin-bottom: 2.6rem; }
 .frag-text { font-size: 1.28rem; line-height: 1.42; }
 .details { list-style: none; margin-top: 0.7rem; }
@@ -347,6 +391,10 @@ button:disabled { cursor: default; }
 .read-frag { margin: 0 0 2rem; }
 .read-text { font-size: 1.36rem; line-height: 1.45; }
 .read-fixed { font-size: 1.36rem; line-height: 1.45; margin-top: 0.3rem; }
+.read-frame { width: min(34vh, 60vw); margin: 0 auto 1.4rem; }
+.read-frame:not(.set) { border-style: dashed; border-color: rgba(245, 240, 232, 0.16); }
+.read-caption { font-size: 1.5rem; line-height: 1.4; text-align: center; margin: 0 0 2.2rem; overflow-wrap: anywhere; }
+.read-caption.soft { font-size: 1.2rem; font-style: italic; color: rgba(245, 240, 232, 0.34); }
 .read-open { font-size: 1.14rem; line-height: 1.45; margin-top: 0.3rem; font-style: italic; color: rgba(245, 240, 232, 0.34); }
 
 /* === THE PLANE (rating chart and gallery) === */
@@ -444,6 +492,11 @@ button:disabled { cursor: default; }
 	.card { width: 44vw; font-size: 0.84rem; line-height: 1.26; padding: 0.55em 0.65em; transform: rotate(var(--tilt, 0deg)); }
 	.card.lifted { transform: none; }
 	#cards { top: 42%; gap: 8px; }
+	#memory { overflow-y: auto; }
+	.portrait-layout { flex-direction: column; align-items: center; height: auto; }
+	.portrait-col { padding: 7vh 0 0; }
+	.frame, #caption, .caption-set { width: min(40vh, 84vw); }
+	#memory-col { flex: none; width: 100%; max-width: 34rem; overflow-y: visible; padding: 2rem 0.4rem 22vh; }
 }
 
 #veil { display: none; }

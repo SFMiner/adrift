@@ -9,6 +9,7 @@ lives. Run `node tools/validate_fragments.mjs` after any edit.
 	"type": "relational",
 	"source": "draft",
 	"text": "The smell of beer on their breath. Curly hair under your fingers. A whispered promise you believed.",
+	"symbol": "hand",
 	"echo": { "recipe": "breath", "pitch": 1.0 },
 	"valences": ["a first love", "a last goodbye"],
 	"tags": ["touch", "night", "promise"],
@@ -31,6 +32,7 @@ lives. Run `node tools/validate_fragments.mjs` after any edit.
 | `type` | `sensory` (smell, sound, texture, light) or `relational` (a moment with another person). |
 | `source` | `sean` (his wording, never edited by anyone else) or `draft` (written by Claude, awaiting his verdict). |
 | `text` | What the player reads. Second person where a person is needed ("you"); other people are "they" or "someone" so that gender, name and role stay open. No narration, no interpretation, no stated emotion. |
+| `symbol` | The picture that stands for this fragment inside a portrait: a file name in `assets/symbols/`, without `.svg`. It shows the thing sensed or the object present, never the occasion. Several fragments may share one. |
 | `echo.recipe` | One of the recipe names below: a faint sound that suggests the fragment without explaining it. |
 | `echo.pitch` | Optional, 0.6 to 1.6, default 1. Lower is larger, older, further away. |
 | `echo.file` | Optional path to a recorded sample that replaces the recipe. |

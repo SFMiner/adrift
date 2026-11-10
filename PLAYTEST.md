@@ -32,6 +32,16 @@ Anything stuck, overlapping, unreadable, or silent that should not be.
 - Could you tell some questions cost more than others (the size of the small light)? Should you be able to?
 - Questions can only be answered once a fragment is in a memory. Did you want to answer while holding?
 
+## 4b. Portraits
+
+- Was it clear that the dark above begins a portrait, and that a frame can take more?
+- Arranging the pictures: enough control (move, size, turn)? Did you want layering or colour as in the last screen?
+- Writing how they belong together: right moment, right length (256 characters)? Should it be required?
+- Setting: did the hold feel like the right weight? Did the stars coming out read as the portrait?
+- After setting, questions can still be answered. Should setting close them?
+- The light waits while any portrait is open. Right, or should it go out regardless?
+- Pictures: which ones are wrong for their fragment, or unreadable? (`tests/web/shots/symbols-sheet.png` shows all.)
+
 ## 5. Fragments and questions
 
 List ids if you play with `?debug=1` afterwards, or just quote a few words.

@@ -5,6 +5,7 @@
 //
 //   SEEDS=20      how many seeded full runs (default 20)
 //   PLAIN=0       skip the slow run without ?debug (default: run it)
+//   BASE_URL=...  check a deployed copy at that address instead of a local folder
 //
 // Every run fails on any console error or page error, and must print the boot line.
 const path = require('node:path');
@@ -13,6 +14,13 @@ const { serve, loadPlaywright } = require('./server.cjs');
 const SEEDS = Number(process.env.SEEDS || 20);
 const PLAIN = process.env.PLAIN !== '0';
 const SPEED = 8;
+// What the bot writes under a portrait. No digits: the game never shows one.
+const CAPTIONS = [
+	'my daughter\'s wedding',
+	'   the summer   the well ran dry ',
+	'everything I remember about the house on the hill, and the people who came and went from it',
+	'x'.repeat(300),
+];
 
 const results = [];
 let checks = 0;
@@ -71,6 +79,11 @@ async function walk(page, key, ms, tap) {
 async function playToReading(page, opts, where) {
 	const speed = opts.debug ? SPEED : 1;
 	const holdMs = Math.ceil(900 / speed) + 400;	// generous: frames run late when the machine is busy
+	const setHoldMs = Math.ceil(1300 / speed) + 400;
+	const frozen = new Map();	// portrait index -> what it held when it was set, to prove it never changes
+	let sets = 0;
+	let didQuickSet = false;
+	let didRefuse = false;
 	const rand = (() => { let a = opts.seed * 9301 + 49297; return () => ((a = (a * 233280 + 1) % 4294967291) / 4294967291); })();
 	const v = opts.variant || {};
 
@@ -89,7 +102,7 @@ async function playToReading(page, opts, where) {
 	let didReload = false;
 	let answers = 0;
 	const started = Date.now();
-	const limit = opts.debug ? 240000 : 900000;
+	const limit = opts.debug ? 240000 : 2700000;	// real speed with 40-100 certainty is slow
 
 	while (!(await active(page, 'reading'))) {
 		if (Date.now() - started > limit) throw new Error(`${where}: the run did not reach the reading in time`);
@@ -142,17 +155,27 @@ async function playToReading(page, opts, where) {
 						continue;
 					}
 					await card.click();
-					if (constellations < 2 || (constellations < 7 && rand() < 0.3)) {
+					const opens = await count(page, '.constellation.open');
+					if (opens < 2 || (constellations < 9 && rand() < 0.3)) {
 						const vp = page.viewportSize();
 						const cardsBefore = await count(page, '#cards .card');
 						const x = vp.width * (0.1 + 0.8 * rand());
 						const y = vp.height * (0.09 + 0.24 * rand());
-						const onOne = await page.evaluate(([px, py]) => !!document.elementFromPoint(px, py).closest('.constellation'), [x, y]);
+						const hit = await page.evaluate(([px, py]) => {
+							const c = document.elementFromPoint(px, py).closest('.constellation');
+							return c ? (c.classList.contains('set') ? 'set' : 'open') : null;
+						}, [x, y]);
 						await page.mouse.click(x, y);
-						check((await count(page, '.constellation')) === constellations + (onOne ? 0 : 1), 'clicking the dark makes a new memory', where);
+						check((await count(page, '.constellation')) === constellations + (hit ? 0 : 1), 'clicking the dark makes a new portrait', where);
+						if (hit === 'set') {
+							check((await count(page, '#cards .card')) === cardsBefore, 'a set portrait takes nothing more', where);
+							didRefuse = true;
+							await page.keyboard.press('Escape');
+							break;
+						}
 						check((await count(page, '#cards .card')) === cardsBefore - 1 || !(await active(page, 'hand')), 'the placed card leaves the hand', where);
 					} else {
-						await page.locator('.constellation').nth(Math.floor(rand() * constellations)).click({ timeout: 2000 });
+						await page.locator('.constellation.open').nth(Math.floor(rand() * opens)).click({ timeout: 2000 });
 					}
 				}
 				if (await active(page, 'hand')) await page.keyboard.press('Escape');
@@ -168,6 +191,26 @@ async function playToReading(page, opts, where) {
 				}));
 				for (const id of placed.keys()) {
 					check(!s.run.hand.includes(id) && !s.run.shore.some((f) => f.id === id), `placed fragment ${id} left its memory`, where);
+				}
+				s.run.containers.forEach((c, i) => {
+					if (!c.set) return;
+					const now = JSON.stringify([c.fragments, c.layout, c.caption]);
+					check(!frozen.has(i) || frozen.get(i) === now, `set portrait ${i} never changes`, where);
+					frozen.set(i, now);
+				});
+				check(s.run.containers.every((c) => c.fragments.every((id) => c.layout[id])), 'every kept fragment has a place in its frame', where);
+				// A set portrait refuses a fragment even through the game's own entry point.
+				const setIndex = s.run.containers.findIndex((c) => c.set);
+				if (setIndex >= 0 && s.run.hand.length > 0) {
+					const same = await page.evaluate((i) => {
+						const g = window.__adrift.game;
+						const hand = g.run.hand.length;
+						const n = g.run.containers[i].fragments.length;
+						g.inventory.placeInto(g.run.hand[0], i);
+						g.clearHint();
+						return g.run.hand.length === hand && g.run.containers[i].fragments.length === n;
+					}, setIndex);
+					check(same, 'a set portrait cannot be added to', where);
 				}
 				check(s.light <= lightBefore + 1e-9, 'the light never comes back', where);
 				lightBefore = s.light;
@@ -193,10 +236,42 @@ async function playToReading(page, opts, where) {
 			// --- go into a memory and make something certain ---
 			const constellations = await count(page, '.constellation');
 			if (constellations > 0 && !(await active(page, 'reading'))) {
-				await page.locator('.constellation').nth(Math.floor(rand() * constellations)).click({ timeout: 2000 });
+				const pick = Math.floor(rand() * constellations);
+				const one = page.locator('.constellation').nth(pick);
+				const wasSet = await one.evaluate((n) => n.classList.contains('set'));
+				await one.click({ timeout: 2000 });
 				await page.waitForSelector('#memory.active', { timeout: 2000 });
 				if (!opts.debug) await noDigits(page, where + ' (memory)');
 				check((await count(page, '#memory-col .frag-text')) > 0, 'a memory shows its fragments', where);
+				check((await count(page, '#frame .sym')) === (await count(page, '#memory-col .frag')), 'a portrait shows one picture for each fragment', where);
+				await page.waitForFunction(() => [...document.querySelectorAll('#frame .sym')].every((i) => i.complete && i.naturalWidth > 0), null, { timeout: 5000 });
+				// Waited for, not sampled: under ?debug the fast-forward stylesheet staggers visibility by a few frames.
+				const shows = (sel) => page.locator(sel).waitFor({ state: wasSet ? 'hidden' : 'visible', timeout: 4000 }).then(() => true, () => false);
+				check(await shows('#caption'), 'only an open portrait offers its line to be written', where);
+				check(await shows('#portrait-set'), 'only an open portrait offers to be set', where);
+
+				// Move a picture. In an open portrait it moves; in a set one it cannot.
+				{
+					const before = opts.debug ? await state(page) : null;
+					const fb = await page.locator('#frame').boundingBox();
+					const sb = await page.locator('#frame .sym').first().boundingBox();
+					const from = { x: Math.min(fb.x + fb.width - 3, Math.max(fb.x + 3, sb.x + sb.width / 2)), y: Math.min(fb.y + fb.height - 3, Math.max(fb.y + 3, sb.y + sb.height / 2)) };
+					let to = { x: fb.x + fb.width * (0.2 + 0.6 * rand()), y: fb.y + fb.height * (0.2 + 0.6 * rand()) };
+					if (Math.hypot(to.x - from.x, to.y - from.y) < 24) to = { x: fb.x + fb.width * (from.x < fb.x + fb.width / 2 ? 0.8 : 0.2), y: to.y };
+					await page.mouse.move(from.x, from.y);
+					await page.mouse.down();
+					await page.mouse.move(to.x, to.y, { steps: 4 });
+					await page.mouse.up();
+					if (before && (await active(page, 'memory'))) {
+						const after = await state(page);
+						if (after.phase === 'shore') {
+							const moved = JSON.stringify(after.run.containers[pick].layout) !== JSON.stringify(before.run.containers[pick].layout);
+							if (wasSet) check(!moved, 'a set portrait cannot be rearranged', where);
+							else check(moved, 'a picture moves inside an open portrait, which it never did', where);
+						}
+					}
+				}
+				if (!wasSet && rand() < 0.7) await page.fill('#caption', CAPTIONS[Math.floor(rand() * CAPTIONS.length)]);
 				check((await count(page, '#memory-col button.frag-text, #memory-col .frag [draggable="true"]')) === 0, 'nothing in a memory can be picked back out', where);
 				for (let n = 0; n < 5; n++) {
 					const prompts = await count(page, '#memory .prompt');
@@ -241,7 +316,33 @@ async function playToReading(page, opts, where) {
 					}
 				}
 				check((await count(page, '#memory .fixed button, #memory .fixed input')) === 0, 'a fixed detail offers nothing to change', where);
-				if (await active(page, 'memory')) await page.keyboard.press('Escape');
+
+				// Set it for good, some of the time.
+				if (!wasSet && (await active(page, 'memory')) && (await page.locator('#portrait-set').isVisible()) && rand() < 0.5) {
+					const button = page.locator('#portrait-set');
+					if (!didQuickSet) {
+						await button.click({ timeout: 2000 });
+						await page.waitForTimeout(200);
+						check(await button.isVisible(), 'a quick click never sets a portrait', where);
+						didQuickSet = true;
+					}
+					const typed = await page.inputValue('#caption');
+					const pictures = await count(page, '#frame .sym');
+					await hold(page, button, setHoldMs);
+					await page.waitForSelector('#memory:not(.active)', { timeout: 8000 });
+					check(await one.evaluate((n) => n.classList.contains('set')), 'a set portrait never stays a frame: it shows as stars', where);
+					check((await one.locator('.star').count()) === pictures, 'a set portrait never loses a star: one for each fragment', where);
+					if (opts.debug) {
+						const c = (await state(page)).run.containers[pick];
+						const want = typed.replace(/\s+/g, ' ').trim().slice(0, 256);
+						check(c.set && c.caption === want, `setting fixes the line as written, which it never did ("${c.caption.slice(0, 30)}")`, where);
+					}
+					sets++;
+				}
+				for (let n = 0; n < 2 && (await active(page, 'memory')); n++) {
+					await page.keyboard.press('Escape');	// the first may only leave the line being typed
+					await page.waitForTimeout(100);
+				}
 				await page.waitForTimeout(100);
 			}
 		} catch (err) {
@@ -249,7 +350,7 @@ async function playToReading(page, opts, where) {
 			const s = opts.debug ? await state(page) : null;
 			const ending = s ? s.phase !== 'shore' : await page.evaluate(() => !document.querySelector('#hands') || document.querySelector('#game').classList.contains('sky-gone') || document.getElementById('reading').classList.contains('active'));
 			if (!ending && !/Timeout|not visible|detached|nothing to hold/i.test(String(err.message))) throw err;
-			if (!ending && /a digit|moved|never|survives|cannot|costs|fixes|makes|offers|returns/.test(String(err.message))) throw err;
+			if (!ending && /a digit|moved|never|survives|cannot|costs|fixes|makes|offers|returns|takes|shows/.test(String(err.message))) throw err;
 			if (opts.debug && s && s.phase === 'shore' && /Timeout/.test(String(err.message))) {
 				// A missed click while the shore is still live: close whatever is open and carry on.
 				await page.keyboard.press('Escape');
@@ -267,7 +368,7 @@ async function playToReading(page, opts, where) {
 		if (v.keyboard) check(didKeyboardPlace, 'the keyboard path was exercised', where);
 		if (v.reload) check(didReload, 'the reload path was exercised', where);
 	}
-	return { answers, placed: placed.size };
+	return { answers, placed: placed.size, sets, refused: didRefuse };
 }
 
 // From the reading to the gallery.
@@ -291,6 +392,9 @@ async function finishRun(page, opts, where) {
 					return { fixed, open };
 				}, c.fragments);
 				check(fixed === expected.fixed && open === expected.open, 'the reading shows fixed details in full and open ones softly', where);
+				check((await count(page, '.memory-read .read-frame .sym')) === c.fragments.length, 'the reading shows the portrait as it was left', where);
+				const line = await page.evaluate(() => { const n = document.querySelector('.memory-read .read-caption'); return n ? [n.textContent, n.classList.contains('soft')] : null; });
+				check(c.caption ? (line && line[0] === c.caption && line[1] === !c.set) : line === null, 'the reading gives the portrait its line, softly if it was never set', where);
 			}
 			await page.click('#reading-next');
 			await page.waitForTimeout(220);
@@ -405,7 +509,19 @@ async function gutterRun(browser, url) {
 	const start = await state(page);
 	check(start.run.shore.length === 30, 'thirty fragments are drawn', where);
 	check(start.run.certaintyStart >= 40 && start.run.certaintyStart <= 100, 'certainty starts inside its range', where);
-	await page.evaluate(() => { const r = window.__adrift.game.run; r.shore.length = 0; });
+	// One fragment kept and fully answered, nothing else left: the light still waits while its portrait is open.
+	await page.evaluate(() => {
+		const g = window.__adrift.game;
+		const r = g.run;
+		const id = r.shore[0].id;
+		r.shore.length = 0;
+		r.containers.push({ x: 0.5, y: 0.2, fragments: [id], layout: { [id]: { x: 0.5, y: 0.5, s: 0.3, r: 0 } }, caption: '', set: false });
+		r.answers[id] = Object.fromEntries(g.lib.get(id).questions.map((q) => [q.id, q.options[0]]));
+		g.changed();
+	});
+	await page.waitForTimeout(2500);
+	check((await state(page)).run.certaintyLeft === start.run.certaintyLeft, 'the light waits while a portrait is still open', where);
+	await page.evaluate(() => { const g = window.__adrift.game; g.run.containers[0].set = true; g.changed(); });
 	await page.waitForSelector('#reading.active', { timeout: 60000 });
 	const s = await state(page);
 	check(s.run.certaintyLeft === 0, 'the light guttered out', where);
@@ -484,8 +600,10 @@ async function run(label, fn) {
 }
 
 (async () => {
-	const root = path.resolve(process.argv[2] || path.join(__dirname, '../..'));
-	const { server, url } = await serve(root);
+	// BASE_URL=https://example.org/adrift checks a deployed copy instead of serving a folder.
+	const live = (process.env.BASE_URL || '').replace(/\/$/, '');
+	const root = live || path.resolve(process.argv[2] || path.join(__dirname, '../..'));
+	const { server, url } = live ? { server: { close() {} }, url: live } : await serve(root);
 	const { chromium } = loadPlaywright();
 	const browser = await chromium.launch({ channel: 'chrome' });
 	console.log(`adrift check: ${root}`);

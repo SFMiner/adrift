@@ -3,7 +3,8 @@
 Narrative game: a dying consciousness walks a dark shore, gathers memory fragments, and spends a finite
 "certainty" resource to fix details of who they were. The game ends when certainty runs out.
 
-**Status (2026-11-10):** the whole game is built and passes its bot; it has not been played by a person.
+**Status (2026-11-10):** the whole game is built and passes its bot. Sean played an early run remotely; portraits
+were added after it and have been played only by the bot.
 Next: Sean's playtest (`PLAYTEST.md`), then fixes and the itch upload. Feature checklist: `README.md`.
 **Source of truth:** `adrift_gdd.html`. Plan and settled decisions: `IMPLEMENTATION_PLAN.md`. Fragment
 format: `data/SCHEMA.md`. Background and Godot port notes: `KNOWLEDGE.md`.
@@ -26,8 +27,11 @@ format: `data/SCHEMA.md`. Background and Godot port notes: `KNOWLEDGE.md`.
 - **Persistence is localStorage only**: no server, no accounts.
 - **Never show certainty as a number or UI text.** It is shown only through light: the world darkens
 	as it's spent.
-- **Irreversibility is the design**: placing a fragment in a container and answering a question are both
-	permanent. Don't add undo.
+- **Irreversibility is the design**: placing a fragment in a portrait, answering a question and setting a
+	portrait are all permanent. Don't add undo.
+- **A container is a portrait** (Sean, 2026-11-10): a frame of fragment pictures the player arranges and captions,
+	then sets; set portraits show as stars. Rules and the choices still awaiting his word: `IMPLEMENTATION_PLAN.md`
+	§ Portraits. In code the data is still `run.containers`.
 - **No narration, no scoring, no win/lose framing, no music.** The story comes from what the player
 	assembles. The tone is quiet: shore ambience plus faint fragment echoes.
 - **Fragments are written with double valence.** Each must plausibly belong in more than one container

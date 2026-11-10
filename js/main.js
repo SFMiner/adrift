@@ -13,6 +13,7 @@ import { RatingChart } from './RatingChart.js';
 import { SymbolBuilder } from './SymbolBuilder.js';
 import { Gallery, loadGallery, saveToGallery } from './Gallery.js';
 import { ShoreAudio } from './Audio.js';
+import { normalisePortrait } from './Portrait.js';
 import { $, clamp, showScreen, holdToConfirm } from './ui.js';
 
 // === DEBUG GATES (only ever active with ?debug=1) ===
@@ -30,7 +31,7 @@ const game = {
 	list: [],
 	run: null,			// the run in progress (plain data; this is what is autosaved)
 	phase: 'title',
-	overlay: null,		// 'hand' | 'memory' | null
+	overlay: null,		// 'hand' | 'memory' (a portrait) | null
 	moving: false,
 	env: new Environment($('#shore')),
 	audio: new ShoreAudio(),
@@ -216,7 +217,7 @@ function newRun() {
 		playerX: CONFIG.WORLD_WIDTH / 2,
 		shore: scatter(pool, rand),
 		hand: [],
-		containers: [],		// [{ x, y, fragments: [id] }]
+		containers: [],		// portraits: [{ x, y, fragments: [id], layout: { id: { x, y, s, r } }, caption, set }]
 		answers: {},		// fragId -> { questionId: text }
 		phase: 'shore',
 		point: null,
@@ -230,7 +231,10 @@ function loadRun() {
 	const known = (id) => game.lib.has(id);
 	run.shore = run.shore.filter((f) => f && known(f.id));
 	run.hand = (run.hand || []).filter(known);
-	for (const c of run.containers) c.fragments = (c.fragments || []).filter(known);
+	for (const c of run.containers) {
+		c.fragments = (c.fragments || []).filter(known);
+		normalisePortrait(c);
+	}
 	run.answers = run.answers || {};
 	run.playerX = clamp(Number(run.playerX) || CONFIG.WORLD_WIDTH / 2, 60, CONFIG.WORLD_WIDTH - 60);
 	return run;
@@ -300,7 +304,7 @@ function bindTitle() {
 // === INPUT ===
 
 function onKeyDown(e) {
-	const typing = e.target instanceof HTMLInputElement;
+	const typing = (e.target instanceof HTMLInputElement && e.target.type !== 'range') || e.target instanceof HTMLTextAreaElement;
 	if (typing) return;
 	const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
 	if (key === 'm' && !e.ctrlKey && !e.metaKey) {
@@ -437,6 +441,8 @@ function update(dt) {
 function nothingLeftToFix(run) {
 	if (run.shore.length > 0 || run.hand.length > 0) return false;
 	for (const c of run.containers) {
+		// An open portrait is still being made: the light waits for it.
+		if (!c.set && c.fragments.length) return false;
 		for (const id of c.fragments) {
 			const frag = game.lib.get(id);
 			if (frag && frag.questions.some((q) => game.answerOf(id, q.id) === undefined)) return false;
@@ -461,7 +467,7 @@ function drawDebug() {
 	const run = game.run;
 	$('#debug').textContent = run
 		? `certainty ${run.certaintyLeft}/${run.certaintyStart}  seed ${run.seed}  x ${Math.round(run.playerX)}\n`
-			+ `shore ${run.shore.length}  hand ${run.hand.join(' ')}  containers ${run.containers.map((c) => c.fragments.length).join(',')}\n`
+			+ `shore ${run.shore.length}  hand ${run.hand.join(' ')}  portraits ${run.containers.map((c) => c.fragments.length + (c.set ? '*' : '')).join(',')}\n`
 			+ `phase ${game.phase}  overlay ${game.overlay}  near ${(game.nearestInReach() || {}).id || '-'}`
 		: `phase ${game.phase}`;
 }
