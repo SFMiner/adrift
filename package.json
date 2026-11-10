@@ -1,0 +1,10 @@
+{
+	"name": "adrift",
+	"private": true,
+	"type": "module",
+	"description": "No dependencies and no build step. This file only tells Node that js/ and tools/ are ES modules.",
+	"scripts": {
+		"validate": "node tools/validate_fragments.mjs",
+		"serve": "python -m http.server 8765"
+	}
+}

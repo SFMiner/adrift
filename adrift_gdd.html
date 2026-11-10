@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adrift — GDD</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inconsolata:wght@300;400&display=swap');
+
+  :root {
+    --ink: #1a1714;
+    --paper: #f5f0e8;
+    --faded: #8a8070;
+    --accent: #7a4f3a;
+    --rule: #d4cabb;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.8;
+    padding: 4rem 2rem;
+  }
+
+  .page { max-width: 680px; margin: 0 auto; }
+
+  .header {
+    margin-bottom: 4rem;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2rem;
+  }
+
+  .title {
+    font-size: 3.2rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    font-style: italic;
+    line-height: 1.1;
+  }
+
+  .subtitle {
+    font-family: 'Inconsolata', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--faded);
+    margin-top: 0.75rem;
+  }
+
+  .meta {
+    font-family: 'Inconsolata', monospace;
+    font-size: 0.7rem;
+    color: var(--faded);
+    margin-top: 0.4rem;
+    letter-spacing: 0.1em;
+  }
+
+  .version-note {
+    font-family: 'Inconsolata', monospace;
+    font-size: 0.68rem;
+    color: var(--rule);
+    margin-top: 0.3rem;
+  }
+
+  section { margin-bottom: 3rem; }
+
+  h2 {
+    font-family: 'Inconsolata', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--accent);
+    margin: 1.4rem 0 0.6rem;
+  }
+
+  p { margin-bottom: 1rem; font-weight: 300; }
+
+  ul { padding-left: 1.4rem; margin-bottom: 1rem; }
+  li { margin-bottom: 0.5rem; font-weight: 300; }
+
+  .thesis {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 1.4rem 1.8rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .fragment-example {
+    background: white;
+    border-left: 2px solid var(--accent);
+    padding: 1rem 1.4rem;
+    margin: 1.2rem 0;
+    font-style: italic;
+    color: var(--faded);
+    font-size: 0.95rem;
+  }
+
+  .open-question {
+    font-family: 'Inconsolata', monospace;
+    font-size: 0.82rem;
+    color: var(--faded);
+    padding-left: 1rem;
+    border-left: 1px dashed var(--rule);
+    margin: 0.6rem 0;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .col-label {
+    font-family: 'Inconsolata', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--faded);
+    margin-bottom: 0.5rem;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="title">Adrift</div>
+    <div class="subtitle">Game Design Document — v0.4</div>
+    <div class="meta">Platform: HTML/JS · Target: itch.io · Scope: 1–2 hrs · Status: Design phase</div>
+    <div class="version-note">v0.4 — randomized fragment pool, randomized certainty, fragment sounds, container rules clarified, symbol library, inventory display</div>
+  </div>
+
+  <section>
+    <h2>The Question</h2>
+    <div class="thesis">
+      "Call no man happy until he is dead." — Solon<br><br>
+      You cannot rate a life until it is over. This game takes place at the end. The question it asks is not <em>what happened?</em> or even <em>who were you?</em> It asks: <em>what was worth being certain about?</em> What did you spend your remaining clarity on? What did you choose to know, when knowing was almost gone?
+    </div>
+  </section>
+
+  <section>
+    <h2>Concept</h2>
+    <p>The player inhabits a mind at its end — in delirium, in dissolution, in the last moments before the self disperses entirely. Scattered along a dark shoreline are fragments of a life: sensory impressions, relational echoes, emotional residue. By gathering and connecting these fragments, the player reconstructs a biography.</p>
+    <p>But reconstruction is not free. The player has a finite resource — the last of their clarity, their lucidity, the capacity to know anything with certainty. Spending it fixes a detail. Not spending it leaves the memory open — vast, ambiguous, possibly richer, certainly less defined.</p>
+    <p>The resource runs out. That is how the game ends. Not with a choice to stop, but with the stopping itself.</p>
+  </section>
+
+  <section>
+    <h2>Emotional Goal</h2>
+    <p>The player should finish with a feeling of <em>authorship</em> — not discovery. The portrait that emerges is not made of memories. It is made of priorities — the shape of what this person chose to know for certain, when certainty was scarce. Two players with identical fragments will build different portraits based only on where they spent.</p>
+    <p>But no two players will have identical fragments. And no two players will have the same certainty to spend. The game is different every time not because of randomness alone, but because every life is different — in what it contains, and in how much of it remains legible at the end.</p>
+    <p>The tone is quiet. Melancholy without despair. The feeling of looking at an old photograph of someone you loved and realizing you've forgotten the sound of their voice.</p>
+  </section>
+
+  <section>
+    <h2>Randomization</h2>
+
+    <h3>The Fragment Pool</h3>
+    <p>The master fragment library will contain at least a hundred fragments across a wide range of sensory and relational types. Each playthrough draws a random subset of these — enough to fill the shore, not enough to include everything. No playthrough surfaces the same life.</p>
+    <p>This is by design. Not every person has every memory. Not every life contains a first kiss, or a wedding, or a particular kind of loss. The player works with what surfaces. They cannot hunt for a specific memory because it may not be there.</p>
+
+    <h3>The Certainty Pool</h3>
+    <p>The starting certainty is randomized within a range. Some playthroughs begin with enough to resolve a dozen fully connected memories. Some begin with enough for four or five. The player does not know how much they have at the start — they feel it only as it diminishes, and as the world grows darker around them.</p>
+    <p>This too is by design. Some lives arrive at the end with more lucidity than others. A shorter life, or a harder one, may have less to spend. The resulting portrait is thinner. That is not a worse outcome — it is an honest one.</p>
+  </section>
+
+  <section>
+    <h2>The Environment</h2>
+    <p>The player walks a shoreline at night — bidirectional, essentially linear. The ocean extends perhaps twenty feet before ending in absolute dark. The world feels like a set: not because it is fake, but because this mind can only hold so much. The darkness at the water's edge is not emptiness. It is the limit of what remains.</p>
+    <p>Fragments rest at the waterline or half-buried in sand. The player moves left or right along the shore and can retrace steps to return to fragments passed.</p>
+    <p>As certainty is spent, the memories anchored in containers grow brighter. Everything else — the shore, the water, the dark horizon — grows darker. The world contracts toward what has been committed to. When the last light goes out, no new fragments can be found. What remains is all there is.</p>
+
+    <h3>Ambient Sound</h3>
+    <p>Shore ambience throughout: waves, wind, the small sounds of water on sand. No music. The soundscape should feel like something half-remembered rather than composed.</p>
+
+    <h3>Fragment Sounds</h3>
+    <p>Each fragment carries a faint echo of its sensory content — not the memory itself, but a suggestion of it. An auditory memory might carry a distant bell, a ripple of laughter, the rustle of fire. A tactile memory might carry a different texture of sound. These sounds play softly when a fragment is picked up or moved — present enough to register, quiet enough not to explain.</p>
+    <p>Sound becomes part of discovery: a player moving along the shore may hear a fragment before they see it.</p>
+  </section>
+
+  <section>
+    <h2>The Certainty Resource</h2>
+    <p>The resource has no name in the UI and is never displayed as a number. Its presence is felt through light — the brightness of anchored memories against the darkening world. The player does not know their starting amount. They know only that it is finite, and that spending it is irreversible.</p>
+    <p>Each answered question within a fragment or container costs certainty individually. A fragment with more questions isn't more expensive to place — but it is more expensive to fully resolve. Partial resolution is always valid. Unanswered questions remain open in the final reading.</p>
+    <p>Movement, gathering fragments, and placing them into containers costs nothing. Only the act of fixing a detail has a price.</p>
+  </section>
+
+  <section>
+    <h2>Inventory</h2>
+
+    <h3>On Hand</h3>
+    <p>The player carries a small number of fragments loosely — perhaps four or five. When viewed, they appear as a transparent overlay on the environment: the shoreline visible behind them, fragments arranged loosely across the screen. Unconnected, uncommitted, held lightly.</p>
+
+    <h3>Memory Containers</h3>
+    <p>A container is a group of fragments the player has decided belong together. The number of containers is unlimited — creating one costs nothing. Placing a fragment into a container is permanent: it cannot be removed or moved to another container afterward.</p>
+    <p>There is no sealing gesture. The container is simply an open vessel. Things go in and stay. The irreversibility is quiet.</p>
+    <p>After a fragment is placed, additional fragments can still be added to the same container if the player finds something that seems to belong. Adding a fragment doesn't rewrite what's already fixed inside — it adds another unresolved thread.</p>
+    <p>The race condition is intentional: the player may fill containers and run out of certainty before answering any questions inside them. Those fragments exist in the final reading — present, unresolved, rendered in softer type. A life with unanswered questions is still a life.</p>
+  </section>
+
+  <section>
+    <h2>The Question Mechanic</h2>
+    <p>Each fragment carries a set of optional questions. None are required. Each answered question costs certainty and fixes that detail permanently — foreclosing all alternatives. Knowing closes doors. The memory becomes smaller and more true simultaneously.</p>
+    <p>Questions vary in kind:</p>
+    <ul>
+      <li>Binary: <em>What was their gender?</em></li>
+      <li>Open with suggestions: <em>Was this a specific occasion?</em> (Christmas, Eid, birthday, anniversary — or free entry)</li>
+      <li>Relational: <em>What was this person to you?</em></li>
+      <li>Temporal: <em>When in your life did this happen?</em></li>
+    </ul>
+    <p>Each question costs certainty individually. Whether all questions cost the same or whether some cost more than others is an open design question — though knowing a name intuitively feels more expensive than knowing it was a birthday.</p>
+
+    <div class="fragment-example">
+      "The smell of beer on their breath. Curly hair under your fingers. A whispered promise you believed."
+    </div>
+    <p>This fragment might carry: <em>What was their gender? What was their name? Was this the first time you met? Was this the last?</em> The player answers none, some, or all. What they answer is what becomes true.</p>
+  </section>
+
+  <section>
+    <h2>Fragment Types</h2>
+    <div class="two-col">
+      <div>
+        <div class="col-label">Sensory</div>
+        <ul>
+          <li>Smell, sound, texture, light</li>
+          <li>Specific, not abstract</li>
+          <li>Portable across containers</li>
+          <li>Echo their content as sound</li>
+        </ul>
+      </div>
+      <div>
+        <div class="col-label">Relational</div>
+        <ul>
+          <li>Moments with other people</li>
+          <li>Ambiguous by default</li>
+          <li>Details fixed only by spending certainty</li>
+          <li>Carry questions about persons and events</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fragment-example">
+      "A church in winter. Your hands were cold. Someone was crying, and it wasn't you."
+    </div>
+    <p>Fragments carry <strong>double valence</strong> — written to belong to a first kiss or a funeral, a marriage or an estrangement. Placement in a container fixes their context. Certainty fixes their details.</p>
+  </section>
+
+  <section>
+    <h2>The Ending</h2>
+    <p>When the certainty resource is exhausted, the game moves to its conclusion without announcement. The assembled memories are presented in sequence — a quiet reading of the life as reconstructed. No narration. Fixed details rendered fully. Unresolved details rendered in softer type. The player reads what they made.</p>
+
+    <h3>The Rating Chart</h3>
+    <p>A 2D plane. The player places a single point anywhere on it. The axes are unlabeled by default — the player decides what the dimensions mean. Suggested axis pairs are offered as optional prompts: good/bad, happy/sad, deep/shallow, regretted/accepted. The player may use these, ignore them, or define their own. They are not scoring the life. They are locating it in emotional space.</p>
+
+    <h3>The Symbol</h3>
+    <p>The player assembles a personal symbol from a library of layered objects. Objects can be scaled, layered, and repositioned. Color controls are limited to brightness, contrast, and saturation — enough to personalize, not enough to become a painting application.</p>
+    <p>Current symbol library (subject to expansion):</p>
+    <ul>
+      <li>Green leaf, autumnal leaf</li>
+      <li>Oyster shell</li>
+      <li>Cigarette, cigar</li>
+      <li>Wine glass, shot glass, champagne cork</li>
+      <li>Keyboard, thumb drive</li>
+      <li>Key on a keychain</li>
+      <li>Four-leaf clover</li>
+      <li>Skull</li>
+      <li>Butterfly, butterfly wing</li>
+      <li>Pocket knife</li>
+      <li>Candle</li>
+      <li>Book of matches</li>
+      <li>Paw print (cat or dog)</li>
+      <li>Human fingerprint</li>
+    </ul>
+    <p>The symbol is the permanent record of the run — not a summary, but a mark.</p>
+  </section>
+
+  <section>
+    <h2>The Gallery</h2>
+    <p>Past runs are saved locally (localStorage). Each is represented by its symbol and the position of its point on the rating chart. No text. No summary. Over many plays the gallery becomes a scatter of located lives and personal marks — a private museum, or a cemetery, or both.</p>
+  </section>
+
+  <section>
+    <h2>Technical Notes</h2>
+    <ul>
+      <li>Platform: HTML/JS, deployable to itch.io with no build pipeline</li>
+      <li>Save system: localStorage for gallery persistence</li>
+      <li>No server required, no accounts</li>
+      <li>Visual: dark canvas, typography-forward, light as the primary dynamic element</li>
+      <li>Fragment data: JSON object store, editable without touching engine code</li>
+      <li>Fragment pool: 100+ fragments, random subset drawn per playthrough</li>
+      <li>Certainty resource: randomized starting value within a defined range; never displayed directly</li>
+      <li>Port to Godot remains viable if scope expands</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Open Questions</h2>
+    <div class="open-question">Do all certainty questions cost the same, or does weight vary by question type?</div>
+    <div class="open-question">What is the range for randomized certainty? What does a "low" vs "high" starting pool feel like in play?</div>
+    <div class="open-question">How many fragments are drawn per playthrough from the master library?</div>
+    <div class="open-question">What does the on-hand inventory look like visually — how are fragments represented as objects on the shore?</div>
+    <div class="open-question">What does the world look like at full brightness vs. near-total darkness — is there a visual threshold moment?</div>
+    <div class="open-question">What additional objects belong in the symbol library?</div>
+  </section>
+
+</div>
+</body>
+</html>

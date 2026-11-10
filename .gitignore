@@ -1,0 +1,4 @@
+dist/
+tests/web/shots/
+*.log
+.claude/settings.local.json
