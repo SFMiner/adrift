@@ -19,6 +19,7 @@ export class MemoryView {
 		this.col = $('#memory-col');
 		this.index = -1;
 		this.openQuestion = null;	// "fragId/qid" of the question whose answers are showing
+		this.drafts = new Map();	// typed but not yet fixed: kept so closing a question does not lose it
 		$('#memory-close').addEventListener('click', () => this.close());
 		$('#memory').addEventListener('click', (e) => {
 			if (e.target === $('#memory')) this.close();
@@ -113,6 +114,7 @@ export class MemoryView {
 			const text = cleanAnswer(answer);
 			if (!text) return;
 			game.answer(frag.id, q, text);
+			this.drafts.delete(key);
 			this.openQuestion = null;
 			if (this.isOpen) {
 				this.render();
@@ -120,11 +122,12 @@ export class MemoryView {
 				if (fixed) fixed.classList.add('just-fixed');
 			}
 		};
+		const tooShort = () => game.say('keep it held down until the light is gone');
 		const dim = (p) => light.style.setProperty('--spent', p.toFixed(3));
 		for (const option of q.options) {
 			const button = el('button', 'answer', option);
 			button.type = 'button';
-			holdToConfirm(button, () => game.holdMs(), () => fix(option), dim);
+			holdToConfirm(button, () => game.holdMs(), () => fix(option), dim, tooShort);
 			answers.append(button);
 		}
 		if (q.free) {
@@ -139,10 +142,21 @@ export class MemoryView {
 			const commit = el('button', 'answer free-commit');
 			commit.type = 'button';
 			commit.setAttribute('aria-label', 'Hold to make your own answer certain');
-			commit.disabled = true;
-			input.addEventListener('input', () => { commit.disabled = !cleanAnswer(input.value); });
-			input.addEventListener('keydown', (e) => e.stopPropagation());
-			holdToConfirm(commit, () => game.holdMs(), () => fix(input.value), dim);
+			input.value = this.drafts.get(key) || '';
+			commit.disabled = !cleanAnswer(input.value);
+			input.addEventListener('input', () => {
+				this.drafts.set(key, input.value);
+				commit.disabled = !cleanAnswer(input.value);
+			});
+			input.addEventListener('keydown', (e) => {
+				e.stopPropagation();
+				// Typing is not answering. Enter points at the light that must be held.
+				if (e.key === 'Enter' && cleanAnswer(input.value)) {
+					commit.focus();
+					game.say('hold the small light beside it to make it certain');
+				}
+			});
+			holdToConfirm(commit, () => game.holdMs(), () => fix(input.value), dim, tooShort);
 			wrap.append(input, commit);
 			answers.append(wrap);
 		}

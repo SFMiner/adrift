@@ -70,7 +70,7 @@ async function walk(page, key, ms, tap) {
 // Play from the title until the reading begins. opts: { debug, seed, speed, variant }
 async function playToReading(page, opts, where) {
 	const speed = opts.debug ? SPEED : 1;
-	const holdMs = Math.ceil(900 / speed) + 180;
+	const holdMs = Math.ceil(900 / speed) + 400;	// generous: frames run late when the machine is busy
 	const rand = (() => { let a = opts.seed * 9301 + 49297; return () => ((a = (a * 233280 + 1) % 4294967291) / 4294967291); })();
 	const v = opts.variant || {};
 
@@ -198,7 +198,7 @@ async function playToReading(page, opts, where) {
 				if (!opts.debug) await noDigits(page, where + ' (memory)');
 				check((await count(page, '#memory-col .frag-text')) > 0, 'a memory shows its fragments', where);
 				check((await count(page, '#memory-col button.frag-text, #memory-col .frag [draggable="true"]')) === 0, 'nothing in a memory can be picked back out', where);
-				for (let n = 0; n < 2; n++) {
+				for (let n = 0; n < 5; n++) {
 					const prompts = await count(page, '#memory .prompt');
 					if (prompts === 0) break;
 					const fixedBefore = await count(page, '#memory .fixed');
@@ -404,7 +404,7 @@ async function gutterRun(browser, url) {
 	await page.waitForTimeout(400);
 	const start = await state(page);
 	check(start.run.shore.length === 30, 'thirty fragments are drawn', where);
-	check(start.run.certaintyStart >= 8 && start.run.certaintyStart <= 24, 'certainty starts inside its range', where);
+	check(start.run.certaintyStart >= 40 && start.run.certaintyStart <= 100, 'certainty starts inside its range', where);
 	await page.evaluate(() => { const r = window.__adrift.game.run; r.shore.length = 0; });
 	await page.waitForSelector('#reading.active', { timeout: 60000 });
 	const s = await state(page);

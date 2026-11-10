@@ -19,7 +19,8 @@ export function showScreen(id, on = true) {
 
 // Press and hold to commit. Releasing early does nothing: that is the only "are you sure" the game has.
 // getMs() is read at press time so debug runs can shorten it. onDone fires once per completed hold.
-export function holdToConfirm(node, getMs, onDone, onProgress = null) {
+// onShort fires when a press is let go too early, so the game can say that it must be held.
+export function holdToConfirm(node, getMs, onDone, onProgress = null, onShort = null) {
 	let start = 0;
 	let raf = 0;
 	let active = false;
@@ -34,6 +35,7 @@ export function holdToConfirm(node, getMs, onDone, onProgress = null) {
 		cancelAnimationFrame(raf);
 		node.classList.remove('holding');
 		set(0);
+		if (onShort) onShort();
 	};
 	const tick = () => {
 		if (!active) return;

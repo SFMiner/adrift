@@ -40,7 +40,7 @@ The bot uses the Chrome on this machine through the Playwright in `Website\game-
 - [x] Shore: scrolling, bidirectional, dark at both ends; walk by key, click or touch
 - [x] Fragments drawn per run from the library (30, at least 10 relational), seeded
 - [x] Fragments as points of light; first words surface when near; gather and set back down
-- [x] Certainty: random start (8-24), never shown; spent only by answering
+- [x] Certainty: random start (40-100), never shown; spent only by answering
 - [x] Light: world darkens as certainty is spent; far water goes at half, warmth at a quarter, only memories under a tenth
 - [x] On hand: up to five, shown as a transparent overlay over the shore
 - [x] Memories: unlimited containers shown as constellations; placing is permanent; click or drag or keyboard

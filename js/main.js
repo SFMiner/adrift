@@ -70,6 +70,13 @@ const game = {
 		clearTimeout(this.hintTimer);
 		this.hintTimer = setTimeout(() => this.clearHint(), 9000);
 	},
+	// Said every time it is needed, unlike a hint: used when a press was let go too early.
+	say(text) {
+		hintNode.textContent = text;
+		hintNode.classList.add('shown');
+		clearTimeout(this.hintTimer);
+		this.hintTimer = setTimeout(() => this.clearHint(), 5000);
+	},
 	clearHint() {
 		clearTimeout(this.hintTimer);
 		hintNode.classList.remove('shown');
@@ -109,7 +116,7 @@ const game = {
 		run.hand.push(f.id);
 		this.playEcho(this.lib.get(f.id), 0.7);
 		this.changed();
-		this.hint('held', COARSE ? 'touch the lights below to see what you hold' : 'e · see what you hold');
+		this.hint('held', COARSE ? 'touch the lights below to see what you hold' : 'e, or the lights below · see what you hold');
 		return true;
 	},
 
@@ -280,7 +287,7 @@ function bindTitle() {
 		enterRun(saved || newRun());
 	});
 	// Beginning again lets go of the run in progress, so it takes the same held press as an answer.
-	holdToConfirm($('#btn-again'), () => 1200 / SPEED, () => enterRun(newRun()));
+	holdToConfirm($('#btn-again'), () => 1200 / SPEED, () => enterRun(newRun()), null, () => game.say('keep it held down to let the last one go'));
 	$('#btn-gallery').addEventListener('click', () => {
 		showScreen('title', false);
 		game.phase = 'gallery';

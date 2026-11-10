@@ -6,8 +6,11 @@ export const CONFIG = {
 	COST: { binary: 1, temporal: 1, occasion: 2, relational: 2, name: 3 },
 
 	// PROVISIONAL 2: starting certainty, drawn uniformly, inclusive.
-	CERTAINTY_MIN: 8,
-	CERTAINTY_MAX: 24,
+	// Raised from 8-24 on 2026-11-10 after Sean's first play: 8-24 completed about two fragments.
+	// A fragment costs about 4 to resolve fully and a run offers about 120, so this resolves roughly
+	// 10 fragments at the low end and 24 at the high end (the GDD's "four or five memories" to "a dozen").
+	CERTAINTY_MIN: 40,
+	CERTAINTY_MAX: 100,
 
 	// PROVISIONAL 3: fragments drawn per run, and how many must be relational.
 	POOL_SIZE: 30,

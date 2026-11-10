@@ -54,8 +54,9 @@ one later costs nothing.
 
 1. **Question cost.** Default: binary 1, temporal 1, occasion (open with suggestions) 2, relational 2,
    name 3.
-2. **Certainty range.** Default: 8-24, drawn uniformly. Low end resolves about four memories, high end
-   about a dozen, matching the GDD.
+2. **Certainty range.** 40-100, drawn uniformly (Sean, 2026-11-10: "far more" after his first play;
+   the first value, 8-24, completed only about two fragments). A fragment costs about 4 to resolve
+   fully, so this resolves roughly 10 fragments at the low end and 24 of the 30 at the high end.
 3. **Fragments per run.** Default: 30 drawn from the library, with a floor of 10 relational so every
    run has people in it. (The relational set is small, so a higher floor would repeat the same ones
    run after run.)
