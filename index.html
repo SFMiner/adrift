@@ -13,7 +13,7 @@
 	<div id="game">
 		<canvas id="shore" aria-hidden="true"></canvas>
 
-		<div id="sky" aria-label="Memories"></div>
+		<div id="sky" aria-label="Portraits"></div>
 
 		<button id="hands" type="button" aria-label="What you hold" hidden></button>
 		<p id="hint" aria-live="polite"></p>
@@ -31,13 +31,25 @@
 		</section>
 
 		<section id="hand" class="screen" aria-label="What you hold">
-			<button id="sky-drop" type="button" aria-label="Keep it in a new place"></button>
+			<button id="sky-drop" type="button" aria-label="Begin a new portrait with it"></button>
 			<div id="cards"></div>
 			<button id="set-down" type="button" aria-label="Set it back down on the sand"></button>
 		</section>
 
-		<section id="memory" class="screen" aria-label="A memory">
-			<div id="memory-col"></div>
+		<section id="memory" class="screen" aria-label="A portrait">
+			<div class="portrait-layout">
+				<div class="portrait-col">
+					<div id="frame" class="frame" tabindex="0" role="application" aria-label="The portrait. Move its pictures as you like."></div>
+					<div id="frame-controls" class="symbol-controls">
+						<label>size <input id="frm-size" type="range" step="0.01"></label>
+						<label>turn <input id="frm-turn" type="range" min="-180" max="180" step="1"></label>
+					</div>
+					<textarea id="caption" rows="3" placeholder="how these belong together" aria-label="How these belong together" autocomplete="off" spellcheck="false"></textarea>
+					<p id="caption-set" class="caption-set" hidden></p>
+					<button id="portrait-set" type="button" class="menu-item hold" aria-label="Hold to set this portrait for good">set</button>
+				</div>
+				<div id="memory-col"></div>
+			</div>
 			<button id="memory-close" type="button" class="light-button" aria-label="Return to the shore"></button>
 		</section>
 

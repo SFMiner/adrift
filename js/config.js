@@ -29,6 +29,14 @@ export const CONFIG = {
 	],
 	MAX_SYMBOL_LAYERS: 9,
 
+	// Portraits (Sean, 2026-11-10): a frame of pictures and a line saying how they belong together.
+	CAPTION_MAX: 256,
+	PORTRAIT_SYMBOL_SIZE: 0.3,		// a picture's width as a share of the frame, when first kept
+	PORTRAIT_SYMBOL_MIN: 0.1,
+	PORTRAIT_SYMBOL_MAX: 0.9,
+	SET_HOLD_MS: 1300,				// press and hold to set a portrait for good
+	SYMBOL_FALLBACK: 'mote',		// drawn for a fragment whose own picture is missing
+
 	// Approved by Sean 2026-11-10.
 	HAND_MAX: 5,
 	GUTTER_SECONDS: 60,		// once nothing is left to gather or answer, the light goes out over this long

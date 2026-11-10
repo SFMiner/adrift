@@ -1,10 +1,12 @@
 // What is held, and where it is kept.
 // On hand: up to HAND_MAX fragments, shown as a transparent overlay over the shore.
-// Containers: groups of fragments, drawn as constellations in the dark above the water.
-// Placing a fragment in a container is permanent. There is no undo and no confirmation.
+// Portraits: frames of fragments, kept in the dark above the water. An open portrait shows as a small
+// frame; once it is set it shows as stars. Placing a fragment in a portrait is permanent: there is no
+// undo and no confirmation. A set portrait takes nothing more.
 import { CONFIG } from './config.js';
 import { hash01, makeRng } from './rng.js';
 import { $, el, clamp, showScreen } from './ui.js';
+import { spotFor, renderPortrait, answeredShare } from './Portrait.js';
 
 const SVG = 'http://www.w3.org/2000/svg';
 const SKY_BOTTOM = 0.42;	// share of the screen height that is sky
@@ -50,7 +52,7 @@ export class Inventory {
 		showScreen('hand', true);
 		const first = this.cards.querySelector('.card');
 		if (first) first.focus({ preventScroll: true });
-		game.hint('hand', 'choose one · then the dark above to keep it · or the sand to set it down');
+		game.hint('hand', 'choose one · the dark above begins a portrait · a frame adds to one · the sand sets it down');
 	}
 
 	close() {
@@ -150,6 +152,7 @@ export class Inventory {
 			card.style.pointerEvents = '';
 			const target = under && under.closest ? under.closest('.constellation') : null;
 			const ny = e.clientY / window.innerHeight;
+			// Dropped on a portrait: it joins if the portrait is still open, and otherwise stays in the hand.
 			if (target) this.placeInto(id, Number(target.dataset.index));
 			else if (ny < SKY_BOTTOM) this.placeNew(id, e.clientX / window.innerWidth, ny);
 			else if (ny > 0.86) this.setDown(id);
@@ -181,7 +184,7 @@ export class Inventory {
 		const game = this.game;
 		if (!this.takeFromHand(id)) return;
 		const spot = this.freeSpot(nx, ny);
-		game.run.containers.push({ x: spot.x, y: spot.y, fragments: [id] });
+		game.run.containers.push({ x: spot.x, y: spot.y, fragments: [id], layout: { [id]: spotFor(id, 0) }, caption: '', set: false });
 		this.afterPlacing(id);
 		this.settle(game.run.containers.length - 1);
 	}
@@ -189,7 +192,10 @@ export class Inventory {
 	placeInto(id, index) {
 		const game = this.game;
 		const container = game.run.containers[index];
-		if (!container || !this.takeFromHand(id)) return;
+		if (!container) return;
+		if (container.set) { game.say('that one is set · it takes nothing more'); return; }
+		if (!this.takeFromHand(id)) return;
+		container.layout[id] = spotFor(id, container.fragments.length, Object.values(container.layout));
 		container.fragments.push(id);
 		this.afterPlacing(id);
 		this.settle(index);
@@ -244,40 +250,48 @@ export class Inventory {
 			button.dataset.index = index;
 			button.style.left = (c.x * 100) + '%';
 			button.style.top = (c.y * 100) + '%';
-			button.setAttribute('aria-label', 'A memory, holding ' + (c.fragments.length === 1 ? 'one fragment' : 'several fragments'));
-
-			const svg = document.createElementNS(SVG, 'svg');
-			svg.setAttribute('viewBox', '-50 -50 100 100');
-			const rand = makeRng(index * 104729 + run.seed);
-			const points = [];
+			const many = c.fragments.length === 1 ? 'one fragment' : 'several fragments';
 			let answered = 0;
-			c.fragments.forEach((id, i) => {
-				// Stars spiral outward from the first, so adding one never moves the others.
-				const angle = rand() * Math.PI * 2 + i * 2.4;
-				const radius = i === 0 ? rand() * 6 : Math.min(40, 13 + i * 4.5 + rand() * 7);
+			for (const id of c.fragments) {
 				const frag = game.lib.get(id);
-				const total = frag ? frag.questions.length : 0;
-				const done = frag ? frag.questions.filter((q) => game.answerOf(id, q.id) !== undefined).length : 0;
-				answered += done;
-				points.push({ x: Math.cos(angle) * radius, y: Math.sin(angle) * radius * 0.8, done, total });
-			});
-			if (points.length > 1) {
-				const line = document.createElementNS(SVG, 'polyline');
-				line.setAttribute('points', points.map((p) => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' '));
-				line.setAttribute('class', 'thread');
-				svg.append(line);
+				if (frag) answered += frag.questions.filter((q) => game.answerOf(id, q.id) !== undefined).length;
 			}
-			for (const p of points) {
-				const star = document.createElementNS(SVG, 'circle');
-				star.setAttribute('cx', p.x.toFixed(1));
-				star.setAttribute('cy', p.y.toFixed(1));
-				star.setAttribute('r', (2.5 + Math.min(p.done, 4) * 0.9).toFixed(2));
-				star.setAttribute('class', 'star');
-				star.style.opacity = (0.42 + 0.58 * (p.total ? p.done / p.total : 0.3)).toFixed(2);
-				svg.append(star);
+			if (!c.set) {
+				// Still open: a small frame showing the pictures where the player has put them.
+				button.classList.add('open');
+				button.setAttribute('aria-label', 'An open portrait, holding ' + many);
+				const mini = el('span', 'mini');
+				renderPortrait(mini, c, game);
+				button.append(mini);
+			} else {
+				// Set: one star for each fragment, standing where its picture stood in the frame.
+				button.classList.add('set');
+				button.setAttribute('aria-label', 'A portrait, set, holding ' + many);
+				const svg = document.createElementNS(SVG, 'svg');
+				svg.setAttribute('viewBox', '-50 -50 100 100');
+				const points = c.fragments.filter((id) => c.layout[id]).map((id) => ({
+					x: (c.layout[id].x - 0.5) * 84,
+					y: (c.layout[id].y - 0.5) * 84,
+					share: answeredShare(game, id),
+				}));
+				if (points.length > 1) {
+					const line = document.createElementNS(SVG, 'polyline');
+					line.setAttribute('points', points.map((p) => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' '));
+					line.setAttribute('class', 'thread');
+					svg.append(line);
+				}
+				for (const p of points) {
+					const star = document.createElementNS(SVG, 'circle');
+					star.setAttribute('cx', p.x.toFixed(1));
+					star.setAttribute('cy', p.y.toFixed(1));
+					star.setAttribute('r', (2.6 + p.share * 3.4).toFixed(2));
+					star.setAttribute('class', 'star');
+					star.style.opacity = (0.45 + 0.55 * p.share).toFixed(2);
+					svg.append(star);
+				}
+				button.append(svg);
 			}
 			button.style.setProperty('--answered', Math.min(answered, 8));
-			button.append(svg);
 			button.addEventListener('click', (e) => {
 				e.stopPropagation();
 				if (this.isOpen && this.lifted) this.placeInto(this.lifted, index);

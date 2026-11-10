@@ -32,6 +32,7 @@ export function validateFragments(list, recipeNames = null) {
 		if (f.source !== 'sean' && f.source !== 'draft') bad('source must be sean or draft');
 		if (typeof f.text !== 'string' || !f.text.trim()) bad('missing text');
 		else if (/\d/.test(f.text)) bad('text contains a digit');
+		if (typeof f.symbol !== 'string' || !/^[a-z][a-z-]*$/.test(f.symbol)) bad('missing symbol (a file name in assets/symbols, without .svg)');
 		if (!f.echo || typeof f.echo.recipe !== 'string') bad('missing echo.recipe');
 		else if (recipeNames && !recipeNames.includes(f.echo.recipe)) bad(`unknown echo recipe "${f.echo.recipe}"`);
 		if (f.echo && f.echo.pitch !== undefined && !(f.echo.pitch >= 0.5 && f.echo.pitch <= 2)) bad('echo.pitch out of range');
