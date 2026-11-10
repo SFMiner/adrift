@@ -1,0 +1,3 @@
+Cormorant Garamond (Christian Thalmann) and Inconsolata (Raph Levien) are licensed under the
+SIL Open Font License 1.1: https://openfontlicense.org
+Latin subsets, variable weight, downloaded from Google Fonts 2026-11-10.

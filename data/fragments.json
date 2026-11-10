@@ -1,0 +1,7442 @@
+[
+	{
+		"id": "s001",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Different bird calls",
+		"echo": {
+			"recipe": "birdsong",
+			"pitch": 1.2
+		},
+		"valences": [
+			"a morning in a garden",
+			"a walk with someone gone",
+			"waking in a strange place"
+		],
+		"tags": [
+			"birds",
+			"dawn",
+			"garden"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "You were {}.",
+				"options": [
+					"in a garden",
+					"at a window",
+					"on a long walk",
+					"at a campsite"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "What time of day was it?",
+				"statement": "It was {}.",
+				"options": [
+					"dawn",
+					"midday",
+					"dusk"
+				]
+			}
+		]
+	},
+	{
+		"id": "s002",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The trill of a woodpecker",
+		"echo": {
+			"recipe": "trill",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a forest walk",
+			"a childhood yard",
+			"a quiet cabin"
+		],
+		"tags": [
+			"woodpecker",
+			"forest",
+			"wood"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Were you walking or sitting still?",
+				"statement": "You were {}.",
+				"options": [
+					"walking",
+					"sitting still"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who was beside you?",
+				"statement": "You were with {}.",
+				"options": [
+					"your father",
+					"your sister",
+					"a friend",
+					"a teacher"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s003",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The quack of a duck",
+		"echo": {
+			"recipe": "quack",
+			"pitch": 1
+		},
+		"valences": [
+			"feeding ducks at a pond",
+			"a hunt at dawn"
+		],
+		"tags": [
+			"duck",
+			"pond",
+			"water"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Were they wild or kept?",
+				"statement": "They were {} ducks.",
+				"options": [
+					"wild",
+					"kept"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "name",
+				"prompt": "Where was the water?",
+				"statement": "The water was {}.",
+				"options": [
+					"a village pond",
+					"a city park",
+					"a river",
+					"a lake"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s004",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The cluck of chickens",
+		"echo": {
+			"recipe": "birdsong",
+			"pitch": 0.8
+		},
+		"valences": [
+			"a grandmother's yard",
+			"a dawn chore",
+			"a market day"
+		],
+		"tags": [
+			"chickens",
+			"farm",
+			"yard"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Whose chickens were they?",
+				"statement": "The chickens belonged to {}.",
+				"options": [
+					"your grandmother",
+					"a neighbor",
+					"you",
+					"your uncle"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Was it morning or evening?",
+				"statement": "It was {}.",
+				"options": [
+					"morning",
+					"evening"
+				]
+			}
+		]
+	},
+	{
+		"id": "s005",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The gobble of turkeys",
+		"echo": {
+			"recipe": "croak",
+			"pitch": 0.8
+		},
+		"valences": [
+			"a farm in autumn",
+			"a holiday table",
+			"a fright as a child"
+		],
+		"tags": [
+			"turkeys",
+			"farm",
+			"autumn"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "You were {}.",
+				"options": [
+					"on a farm",
+					"on a country road",
+					"at a fair",
+					"in a yard"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "What season was it?",
+				"statement": "It was {}.",
+				"options": [
+					"autumn",
+					"spring",
+					"early winter"
+				]
+			}
+		]
+	},
+	{
+		"id": "s006",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The shriek of an eagle",
+		"echo": {
+			"recipe": "shriek",
+			"pitch": 1.3
+		},
+		"valences": [
+			"a mountain trip",
+			"a ceremony",
+			"a lone cliff"
+		],
+		"tags": [
+			"eagle",
+			"sky",
+			"height"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Was it close, or far overhead?",
+				"statement": "It was {}.",
+				"options": [
+					"close by",
+					"far above"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "What was happening?",
+				"statement": "You heard it during {}.",
+				"options": [
+					"a hike",
+					"a ceremony",
+					"a long drive",
+					"a day by the water"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s007",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The caw of a crow",
+		"echo": {
+			"recipe": "caw",
+			"pitch": 1
+		},
+		"valences": [
+			"a morning on the farm",
+			"a burial"
+		],
+		"tags": [
+			"crow",
+			"field",
+			"morning"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What was below it?",
+				"statement": "Below it, there was {}.",
+				"options": [
+					"a field being cut",
+					"a gathering at a grave",
+					"an empty road",
+					"a washing line"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "What time of day was it?",
+				"statement": "It was {}.",
+				"options": [
+					"dawn",
+					"midday",
+					"evening"
+				]
+			}
+		]
+	},
+	{
+		"id": "s008",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The croak of a raven",
+		"echo": {
+			"recipe": "caw",
+			"pitch": 0.7
+		},
+		"valences": [
+			"a mountain pass",
+			"a grave",
+			"a long drive north"
+		],
+		"tags": [
+			"raven",
+			"north",
+			"stone"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Was it alone, or with others?",
+				"statement": "It was {}.",
+				"options": [
+					"a lone bird",
+					"a flock"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "name",
+				"prompt": "Where was this?",
+				"statement": "This was {}.",
+				"options": [
+					"a mountain pass",
+					"a rocky coast",
+					"a cemetery",
+					"a northern road"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s009",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The bark of a dog",
+		"echo": {
+			"recipe": "bark",
+			"pitch": 1
+		},
+		"valences": [
+			"a neighbor's gate",
+			"a loyal companion",
+			"a night alarm"
+		],
+		"tags": [
+			"dog",
+			"bark",
+			"home"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Whose dog was it?",
+				"statement": "The dog belonged to {}.",
+				"options": [
+					"you",
+					"a neighbor",
+					"your father",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "name",
+				"prompt": "What was the dog called?",
+				"statement": "The dog was called {}.",
+				"options": [
+					"Biscuit",
+					"Pepper",
+					"Koda",
+					"Lupe"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s010",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The growl of a dog",
+		"echo": {
+			"recipe": "growl",
+			"pitch": 0.8
+		},
+		"valences": [
+			"a guarded gate",
+			"a protective dog",
+			"a close escape"
+		],
+		"tags": [
+			"dog",
+			"warning",
+			"fear"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Was it a warning, or play?",
+				"statement": "It was {}.",
+				"options": [
+					"a warning",
+					"play"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "You were {}.",
+				"options": [
+					"at a gate",
+					"on a path",
+					"in a yard",
+					"in a doorway"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s011",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The meow of a cat",
+		"echo": {
+			"recipe": "meow",
+			"pitch": 1.3
+		},
+		"valences": [
+			"a cat at the door",
+			"a hungry morning",
+			"a stray in the rain"
+		],
+		"tags": [
+			"cat",
+			"door",
+			"home"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Whose cat was it?",
+				"statement": "The cat belonged to {}.",
+				"options": [
+					"you",
+					"your mother",
+					"a neighbor",
+					"no one"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "What did it want?",
+				"statement": "It wanted to {}.",
+				"options": [
+					"come in",
+					"go out"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "name",
+				"prompt": "What was the cat called?",
+				"statement": "The cat was called {}.",
+				"options": [
+					"Mochi",
+					"Tabitha",
+					"Ziggy"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s012",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The howl of a wolf or a coyote",
+		"echo": {
+			"recipe": "howl",
+			"pitch": 0.8
+		},
+		"valences": [
+			"a camp in the wilderness",
+			"a night of fear"
+		],
+		"tags": [
+			"wolf",
+			"night",
+			"wild"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Were you indoors or outside?",
+				"statement": "You were {}.",
+				"options": [
+					"indoors",
+					"outside"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "What were you doing?",
+				"statement": "You were {}.",
+				"options": [
+					"camping",
+					"driving at night",
+					"lying awake",
+					"walking home"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s013",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The sounds of cows, of sheep, of pigs",
+		"echo": {
+			"recipe": "lowing",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a farm visit",
+			"a county fair",
+			"a childhood summer"
+		],
+		"tags": [
+			"cows",
+			"farm",
+			"summer"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "You were at {}.",
+				"options": [
+					"a farm",
+					"a fair",
+					"a petting zoo",
+					"a relative's land"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"small",
+					"a teenager",
+					"grown"
+				]
+			}
+		]
+	},
+	{
+		"id": "s014",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Clip-clop of horses",
+		"echo": {
+			"recipe": "hooves",
+			"pitch": 1
+		},
+		"valences": [
+			"a wedding carriage",
+			"a country road",
+			"a funeral procession"
+		],
+		"tags": [
+			"horses",
+			"road",
+			"hooves"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What was the occasion?",
+				"statement": "It was {}.",
+				"options": [
+					"a wedding",
+					"a funeral",
+					"a parade",
+					"an ordinary day"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Were they ridden, or pulling something?",
+				"statement": "They were {}.",
+				"options": [
+					"ridden",
+					"pulling a cart"
+				]
+			}
+		]
+	},
+	{
+		"id": "s015",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Frogs croaking in a pond",
+		"echo": {
+			"recipe": "croak",
+			"pitch": 1
+		},
+		"valences": [
+			"a summer night at the pond",
+			"a camp",
+			"a last evening"
+		],
+		"tags": [
+			"frogs",
+			"pond",
+			"night"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "temporal",
+				"prompt": "What season was it?",
+				"statement": "It was {}.",
+				"options": [
+					"spring",
+					"summer",
+					"early autumn"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who was with you?",
+				"statement": "You were with {}.",
+				"options": [
+					"your brother",
+					"a friend",
+					"your father",
+					"a cousin"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s016",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Spring peepers peeping",
+		"echo": {
+			"recipe": "peep",
+			"pitch": 1.3
+		},
+		"valences": [
+			"the first warm night",
+			"a long walk home"
+		],
+		"tags": [
+			"peepers",
+			"spring",
+			"dusk"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Was it early spring, or late?",
+				"statement": "It was {} spring.",
+				"options": [
+					"early",
+					"late"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "You were {}.",
+				"options": [
+					"by a pond",
+					"in a yard",
+					"on a porch",
+					"on a road at dusk"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s017",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Tree frogs trilling",
+		"echo": {
+			"recipe": "trill",
+			"pitch": 1.2
+		},
+		"valences": [
+			"a rainy evening",
+			"a porch with a loved one",
+			"a camp"
+		],
+		"tags": [
+			"treefrogs",
+			"rain",
+			"evening"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What were you doing?",
+				"statement": "You were {}.",
+				"options": [
+					"sitting on a porch",
+					"walking",
+					"waiting for rain",
+					"lying in a tent"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Was the rain coming, or gone?",
+				"statement": "The rain was {}.",
+				"options": [
+					"coming",
+					"gone"
+				]
+			}
+		]
+	},
+	{
+		"id": "s018",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The hiss of something",
+		"echo": {
+			"recipe": "hiss",
+			"pitch": 1
+		},
+		"valences": [
+			"a snake in the grass",
+			"steam from a kettle",
+			"a warning in the dark"
+		],
+		"tags": [
+			"hiss",
+			"snake",
+			"steam"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What made it?",
+				"statement": "It was {}.",
+				"options": [
+					"a snake",
+					"a cat",
+					"a kettle",
+					"a leaking pipe"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Was it near your feet, or across the room?",
+				"statement": "It was {}.",
+				"options": [
+					"near your feet",
+					"across the room"
+				]
+			}
+		]
+	},
+	{
+		"id": "s019",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The howl of wind, the fall of rain, the smell of rain",
+		"echo": {
+			"recipe": "rain",
+			"pitch": 1
+		},
+		"valences": [
+			"a storm at sea",
+			"the first rain after drought",
+			"a window at night"
+		],
+		"tags": [
+			"rain",
+			"wind",
+			"storm"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "You were {}.",
+				"options": [
+					"indoors, listening",
+					"outside, caught in it",
+					"in a car",
+					"under a tin roof"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "What season was it?",
+				"statement": "It was {}.",
+				"options": [
+					"the dry end of summer",
+					"spring",
+					"winter"
+				]
+			}
+		]
+	},
+	{
+		"id": "s020",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A sunset",
+		"echo": {
+			"recipe": "shimmer",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a day's end at the sea",
+			"a farewell"
+		],
+		"tags": [
+			"sunset",
+			"evening",
+			"horizon"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who watched it with you?",
+				"statement": "You watched it with {}.",
+				"options": [
+					"your mother",
+					"a lover",
+					"a friend",
+					"your child"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "Where did you watch it?",
+				"statement": "You watched it from {}.",
+				"options": [
+					"a beach",
+					"a rooftop",
+					"a hillside",
+					"a car window"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s021",
+		"type": "sensory",
+		"source": "sean",
+		"text": "An overcast sky",
+		"echo": {
+			"recipe": "drone",
+			"pitch": 1
+		},
+		"valences": [
+			"a long grey winter",
+			"a day before a journey",
+			"a quiet afternoon at home"
+		],
+		"tags": [
+			"clouds",
+			"grey",
+			"still"
+		],
+		"questions": []
+	},
+	{
+		"id": "s022",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A rainbow",
+		"echo": {
+			"recipe": "shimmer",
+			"pitch": 1.5
+		},
+		"valences": [
+			"after a storm on a farm",
+			"a child's wonder",
+			"a grave visited"
+		],
+		"tags": [
+			"rainbow",
+			"storm",
+			"sky"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Was it a full arc, or only part?",
+				"statement": "It was {}.",
+				"options": [
+					"a full arc",
+					"only a part"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who pointed it out?",
+				"statement": "It was {} who pointed it out.",
+				"options": [
+					"a child",
+					"your mother",
+					"a stranger",
+					"your partner"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s023",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The sunlight through tree branches overhead",
+		"echo": {
+			"recipe": "shimmer",
+			"pitch": 1.2
+		},
+		"valences": [
+			"a forest walk",
+			"a park bench",
+			"a childhood climb"
+		],
+		"tags": [
+			"sunlight",
+			"branches",
+			"trees"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "You were {}.",
+				"options": [
+					"in a forest",
+					"in a park",
+					"in a back garden",
+					"on a trail"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Were you lying down, or standing?",
+				"statement": "You were {}.",
+				"options": [
+					"lying down",
+					"standing"
+				]
+			}
+		]
+	},
+	{
+		"id": "s024",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Sun in one's eyes",
+		"echo": {
+			"recipe": "shimmer",
+			"pitch": 1.5
+		},
+		"valences": [
+			"a long drive west",
+			"a ball game",
+			"a morning after"
+		],
+		"tags": [
+			"sun",
+			"glare",
+			"eyes"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What were you doing?",
+				"statement": "You were {}.",
+				"options": [
+					"driving",
+					"playing a game",
+					"waiting at a stop",
+					"walking home"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "What time of day was it?",
+				"statement": "It was {}.",
+				"options": [
+					"early morning",
+					"midday",
+					"late afternoon"
+				]
+			}
+		]
+	},
+	{
+		"id": "s025",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Putting a hand over one's eyes to keep the sun out",
+		"echo": {
+			"recipe": "shimmer",
+			"pitch": 1.1
+		},
+		"valences": [
+			"squinting at someone far off",
+			"a day at sea",
+			"a fierce noon"
+		],
+		"tags": [
+			"sun",
+			"hand",
+			"squint"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who were you looking for?",
+				"statement": "You were looking for {}.",
+				"options": [
+					"your child",
+					"a friend",
+					"your brother",
+					"your mother"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "You were {}.",
+				"options": [
+					"on a beach",
+					"in a field",
+					"on a road",
+					"on a deck"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s026",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A light breeze",
+		"echo": {
+			"recipe": "wind",
+			"pitch": 0.7
+		},
+		"valences": [
+			"a quiet porch",
+			"a hillside picnic",
+			"a walk to school"
+		],
+		"tags": [
+			"breeze",
+			"air",
+			"calm"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Did it come off water, or off land?",
+				"statement": "It came off the {}.",
+				"options": [
+					"water",
+					"land"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "What were you doing?",
+				"statement": "You were {}.",
+				"options": [
+					"sitting still",
+					"hanging washing",
+					"walking",
+					"lying in grass"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s027",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A cold wind on wet clothing or skin",
+		"echo": {
+			"recipe": "wind",
+			"pitch": 1.2
+		},
+		"valences": [
+			"a swim ended",
+			"a rescue",
+			"a walk home in rain"
+		],
+		"tags": [
+			"cold",
+			"wet",
+			"wind"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "How did you get wet?",
+				"statement": "You were wet from {}.",
+				"options": [
+					"rain",
+					"a swim",
+					"a river crossing",
+					"a fall into water"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Were you alone, or with someone?",
+				"statement": "You were {}.",
+				"options": [
+					"with someone",
+					"alone"
+				]
+			}
+		]
+	},
+	{
+		"id": "s028",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A sky full of stars",
+		"echo": {
+			"recipe": "shimmer",
+			"pitch": 1.4
+		},
+		"valences": [
+			"a camp far from town",
+			"a night on a roof",
+			"a night on a boat"
+		],
+		"tags": [
+			"stars",
+			"night",
+			"sky"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where were you looking from?",
+				"statement": "You were looking up from {}.",
+				"options": [
+					"a roof",
+					"a field",
+					"a dock",
+					"a boat deck"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who named the stars for you?",
+				"statement": "It was {} who named them.",
+				"options": [
+					"your father",
+					"a grandparent",
+					"a friend",
+					"a teacher"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s029",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The full moon",
+		"echo": {
+			"recipe": "shimmer",
+			"pitch": 1
+		},
+		"valences": [
+			"a bright walk at night",
+			"a restless night",
+			"a wedding night"
+		],
+		"tags": [
+			"moon",
+			"full",
+			"night"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "temporal",
+				"prompt": "What season was it?",
+				"statement": "It was {}.",
+				"options": [
+					"summer",
+					"autumn",
+					"winter"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Did you see it from a window, or outdoors?",
+				"statement": "You saw it {}.",
+				"options": [
+					"from a window",
+					"outdoors"
+				]
+			}
+		]
+	},
+	{
+		"id": "s030",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The half moon",
+		"echo": {
+			"recipe": "drone",
+			"pitch": 1.2
+		},
+		"valences": [
+			"a drive home",
+			"a waiting hour"
+		],
+		"tags": [
+			"moon",
+			"half",
+			"dusk"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What were you doing?",
+				"statement": "You were {}.",
+				"options": [
+					"driving home",
+					"waiting for someone",
+					"walking a dog",
+					"closing up for the night"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Was it rising, or setting?",
+				"statement": "It was {}.",
+				"options": [
+					"rising",
+					"setting"
+				]
+			}
+		]
+	},
+	{
+		"id": "s031",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The darkness of the new moon",
+		"echo": {
+			"recipe": "drone",
+			"pitch": 0.6
+		},
+		"valences": [
+			"a power cut",
+			"a camp",
+			"a night of grief"
+		],
+		"tags": [
+			"dark",
+			"newmoon",
+			"night"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "You were {}.",
+				"options": [
+					"in the country",
+					"at sea",
+					"in a house without light",
+					"on a mountain"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who was beside you?",
+				"statement": "Beside you was {}.",
+				"options": [
+					"your father",
+					"a friend",
+					"a lover",
+					"no one"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s032",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A waning moon",
+		"echo": {
+			"recipe": "drone",
+			"pitch": 1
+		},
+		"valences": [
+			"an early departure",
+			"a long illness"
+		],
+		"tags": [
+			"moon",
+			"waning",
+			"dawn"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "temporal",
+				"prompt": "What time of day was it?",
+				"statement": "It was {}.",
+				"options": [
+					"before dawn",
+					"deep night",
+					"a pale morning"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Were you leaving, or arriving?",
+				"statement": "You were {}.",
+				"options": [
+					"leaving",
+					"arriving"
+				]
+			}
+		]
+	},
+	{
+		"id": "s033",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A waxing moon",
+		"echo": {
+			"recipe": "shimmer",
+			"pitch": 1.3
+		},
+		"valences": [
+			"an evening of anticipation",
+			"a beginning"
+		],
+		"tags": [
+			"moon",
+			"waxing",
+			"evening"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What were you waiting for?",
+				"statement": "You were waiting for {}.",
+				"options": [
+					"a wedding",
+					"a journey",
+					"a birth",
+					"a harvest"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who walked with you?",
+				"statement": "You were walking with {}.",
+				"options": [
+					"a friend",
+					"your sister",
+					"your partner",
+					"a neighbor"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s034",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Sudden gloom",
+		"echo": {
+			"recipe": "drone",
+			"pitch": 0.8
+		},
+		"valences": [
+			"a cloud over a field",
+			"an eclipse",
+			"bad news in a room"
+		],
+		"tags": [
+			"gloom",
+			"shadow",
+			"sudden"
+		],
+		"questions": []
+	},
+	{
+		"id": "s035",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A flash of brilliant color",
+		"echo": {
+			"recipe": "shimmer",
+			"pitch": 1.6
+		},
+		"valences": [
+			"a bird in a hedge",
+			"a festival",
+			"a flare at sea"
+		],
+		"tags": [
+			"color",
+			"flash",
+			"bright"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What was it?",
+				"statement": "It was {}.",
+				"options": [
+					"a bird",
+					"a flower",
+					"a flag",
+					"a firework"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"young",
+					"grown",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "s036",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The rustle of dry leaves",
+		"echo": {
+			"recipe": "leaves",
+			"pitch": 1
+		},
+		"valences": [
+			"a childhood autumn",
+			"a lonely path",
+			"a hunt"
+		],
+		"tags": [
+			"leaves",
+			"autumn",
+			"dry"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Were you walking through them, or watching them blow?",
+				"statement": "You were {} them.",
+				"options": [
+					"walking through",
+					"watching"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who was with you?",
+				"statement": "You were with {}.",
+				"options": [
+					"a friend",
+					"your brother",
+					"your father",
+					"your child"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s037",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The sting of sunburn, the warmth of sun on one's skin",
+		"echo": {
+			"recipe": "shimmer",
+			"pitch": 1.3
+		},
+		"valences": [
+			"a day at the beach",
+			"a long harvest",
+			"a summer of youth"
+		],
+		"tags": [
+			"sun",
+			"skin",
+			"burn"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where did you get it?",
+				"statement": "You got it {}.",
+				"options": [
+					"at a beach",
+					"in a field",
+					"on a boat",
+					"on a long hike"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "What month was it?",
+				"statement": "It was {}.",
+				"options": [
+					"early summer",
+					"midsummer",
+					"late summer"
+				]
+			}
+		]
+	},
+	{
+		"id": "s038",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The warmth of a fire on one's hands",
+		"echo": {
+			"recipe": "fire",
+			"pitch": 1
+		},
+		"valences": [
+			"a campfire",
+			"a stove in winter",
+			"a vigil"
+		],
+		"tags": [
+			"fire",
+			"hands",
+			"warmth"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who sat beside you?",
+				"statement": "Beside you sat {}.",
+				"options": [
+					"your brother",
+					"a friend",
+					"a stranger",
+					"your father"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "What kind of fire was it?",
+				"statement": "It was {}.",
+				"options": [
+					"a campfire",
+					"a stove",
+					"a fireplace",
+					"a burning barrel"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s039",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The warmth of a fire on one's whole body",
+		"echo": {
+			"recipe": "fire",
+			"pitch": 0.8
+		},
+		"valences": [
+			"coming in from the cold",
+			"a hearth at home",
+			"a borrowed shelter"
+		],
+		"tags": [
+			"fire",
+			"warmth",
+			"hearth"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Was it a home, or somewhere borrowed?",
+				"statement": "It was {}.",
+				"options": [
+					"a home",
+					"somewhere borrowed"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "What time of day was it?",
+				"statement": "It was {}.",
+				"options": [
+					"late afternoon",
+					"evening",
+					"deep night"
+				]
+			}
+		]
+	},
+	{
+		"id": "s040",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A burn from a fire or something else",
+		"echo": {
+			"recipe": "drone",
+			"pitch": 1.1
+		},
+		"valences": [
+			"a stove in a kitchen",
+			"a bonfire",
+			"a careless moment"
+		],
+		"tags": [
+			"burn",
+			"pain",
+			"heat"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What burned you?",
+				"statement": "You were burned by {}.",
+				"options": [
+					"a stove",
+					"a fire",
+					"hot water",
+					"a hot pan"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Were you at home, or away?",
+				"statement": "You were {}.",
+				"options": [
+					"at home",
+					"away"
+				]
+			}
+		]
+	},
+	{
+		"id": "s041",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The pain of an injury: a break, fracture, or sprain",
+		"echo": {
+			"recipe": "thud",
+			"pitch": 0.7
+		},
+		"valences": [
+			"a fall from a bike",
+			"a game gone wrong",
+			"a long recovery"
+		],
+		"tags": [
+			"injury",
+			"bone",
+			"pain"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What happened?",
+				"statement": "You had {}.",
+				"options": [
+					"fallen from a bike",
+					"fallen on ice",
+					"been in a game",
+					"been in a crash"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Was it a bone, or a joint?",
+				"statement": "It was {}.",
+				"options": [
+					"a bone",
+					"a joint"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "relational",
+				"prompt": "Who helped you?",
+				"statement": "It was {} who helped you.",
+				"options": [
+					"your father",
+					"a stranger",
+					"a friend",
+					"a teacher"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s042",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A sudden fall, teetering on an edge",
+		"echo": {
+			"recipe": "heartbeat",
+			"pitch": 1.3
+		},
+		"valences": [
+			"a cliff edge",
+			"a staircase",
+			"a childhood climb"
+		],
+		"tags": [
+			"fall",
+			"edge",
+			"height"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What were you standing on?",
+				"statement": "You were on {}.",
+				"options": [
+					"a cliff",
+					"a stair",
+					"a roof",
+					"a wall"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who saw it?",
+				"statement": "It was {} who saw.",
+				"options": [
+					"your brother",
+					"a friend",
+					"a parent",
+					"a stranger"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s043",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Catching yourself as you fall",
+		"echo": {
+			"recipe": "breath",
+			"pitch": 1.2
+		},
+		"valences": [
+			"a slip on ice",
+			"a stumble on stairs"
+		],
+		"tags": [
+			"catch",
+			"fall",
+			"hands"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What did you catch?",
+				"statement": "You caught hold of {}.",
+				"options": [
+					"a railing",
+					"a branch",
+					"a wall",
+					"someone's arm"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Was it ice, or a loose step?",
+				"statement": "It was {}.",
+				"options": [
+					"ice",
+					"a loose step"
+				]
+			}
+		]
+	},
+	{
+		"id": "s044",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Dizziness",
+		"echo": {
+			"recipe": "hum",
+			"pitch": 0.7
+		},
+		"valences": [
+			"standing up too fast",
+			"a spinning game",
+			"an illness"
+		],
+		"tags": [
+			"dizzy",
+			"spin",
+			"head"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What brought it on?",
+				"statement": "It came from {}.",
+				"options": [
+					"standing too fast",
+					"spinning in circles",
+					"heat",
+					"a long climb"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who helped you sit?",
+				"statement": "It was {} who helped you down.",
+				"options": [
+					"a nurse",
+					"your mother",
+					"a friend",
+					"a stranger"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s045",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A cut",
+		"echo": {
+			"recipe": "drone",
+			"pitch": 1.4
+		},
+		"valences": [
+			"a kitchen knife",
+			"a broken glass",
+			"a paper edge"
+		],
+		"tags": [
+			"cut",
+			"blood",
+			"hand"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What cut you?",
+				"statement": "You were cut by {}.",
+				"options": [
+					"a knife",
+					"glass",
+					"a tin edge",
+					"a thorn"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Was it your hand, or your foot?",
+				"statement": "It was your {}.",
+				"options": [
+					"hand",
+					"foot"
+				]
+			}
+		]
+	},
+	{
+		"id": "s046",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A stomach ache",
+		"echo": {
+			"recipe": "drone",
+			"pitch": 0.6
+		},
+		"valences": [
+			"a bad meal",
+			"a nervous day",
+			"a childhood sick day"
+		],
+		"tags": [
+			"stomach",
+			"ache",
+			"sick"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What was it from?",
+				"statement": "It was from {}.",
+				"options": [
+					"a bad meal",
+					"too many sweets",
+					"a long trip",
+					"nothing you could name"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who stayed with you?",
+				"statement": "You were looked after by {}.",
+				"options": [
+					"your mother",
+					"your father",
+					"a grandparent",
+					"a nurse"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s047",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A fever",
+		"echo": {
+			"recipe": "drone",
+			"pitch": 1
+		},
+		"valences": [
+			"a childhood sickbed",
+			"a long night",
+			"a faraway country"
+		],
+		"tags": [
+			"fever",
+			"heat",
+			"bed"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "temporal",
+				"prompt": "What time of year was it?",
+				"statement": "It was {}.",
+				"options": [
+					"winter",
+					"summer",
+					"the rainy season"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who brought you water?",
+				"statement": "Water was brought by {}.",
+				"options": [
+					"your mother",
+					"your sister",
+					"a nurse",
+					"a friend"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s048",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A headache",
+		"echo": {
+			"recipe": "drone",
+			"pitch": 0.8
+		},
+		"valences": [
+			"a bright afternoon",
+			"a noisy room",
+			"a day of waiting"
+		],
+		"tags": [
+			"headache",
+			"head",
+			"pain"
+		],
+		"questions": []
+	},
+	{
+		"id": "s049",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A full stomach",
+		"echo": {
+			"recipe": "hum",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a holiday table",
+			"a harvest supper",
+			"a quiet after-meal"
+		],
+		"tags": [
+			"full",
+			"meal",
+			"warm"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What was the meal?",
+				"statement": "It was {}.",
+				"options": [
+					"a holiday dinner",
+					"a wedding feast",
+					"an ordinary supper",
+					"a picnic"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who cooked it?",
+				"statement": "It was cooked by {}.",
+				"options": [
+					"your mother",
+					"your grandmother",
+					"your father",
+					"a friend"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s050",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The growl of an empty stomach",
+		"echo": {
+			"recipe": "growl",
+			"pitch": 0.6
+		},
+		"valences": [
+			"a hungry winter",
+			"a walk before dinner",
+			"a classroom before lunch"
+		],
+		"tags": [
+			"hunger",
+			"stomach",
+			"empty"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "temporal",
+				"prompt": "What time of day was it?",
+				"statement": "It was {}.",
+				"options": [
+					"before breakfast",
+					"mid-morning",
+					"late afternoon"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Were you waiting for food, or without any?",
+				"statement": "You were {}.",
+				"options": [
+					"waiting for a meal",
+					"without one"
+				]
+			}
+		]
+	},
+	{
+		"id": "s051",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Sweat running down your face",
+		"echo": {
+			"recipe": "water",
+			"pitch": 1.5
+		},
+		"valences": [
+			"a hard day's work",
+			"a run",
+			"a fever breaking"
+		],
+		"tags": [
+			"sweat",
+			"heat",
+			"effort"
+		],
+		"questions": []
+	},
+	{
+		"id": "s052",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The feel of hot sand under your feet and between your toes",
+		"echo": {
+			"recipe": "footsteps",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a day at the beach",
+			"a desert crossing",
+			"a barefoot childhood"
+		],
+		"tags": [
+			"sand",
+			"hot",
+			"feet"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where was the sand?",
+				"statement": "It was {}.",
+				"options": [
+					"a beach",
+					"a desert",
+					"a playground",
+					"a riverbank"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who ran ahead of you?",
+				"statement": "It was {} who ran ahead.",
+				"options": [
+					"your child",
+					"a friend",
+					"your sister",
+					"your brother"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s053",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The sound of heavy footsteps",
+		"echo": {
+			"recipe": "footsteps",
+			"pitch": 0.6
+		},
+		"valences": [
+			"someone coming home",
+			"a threat on the stair",
+			"a father's return"
+		],
+		"tags": [
+			"footsteps",
+			"heavy",
+			"stairs"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Whose footsteps were they?",
+				"statement": "The footsteps were those of {}.",
+				"options": [
+					"your father",
+					"a stranger",
+					"a neighbor",
+					"a soldier"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Were they approaching, or leaving?",
+				"statement": "They were {}.",
+				"options": [
+					"approaching",
+					"leaving"
+				]
+			}
+		]
+	},
+	{
+		"id": "s054",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The sound of light footsteps",
+		"echo": {
+			"recipe": "footsteps",
+			"pitch": 1.4
+		},
+		"valences": [
+			"a child running",
+			"a lover at the door",
+			"an intruder"
+		],
+		"tags": [
+			"footsteps",
+			"light",
+			"quick"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where did you hear them?",
+				"statement": "You heard them {}.",
+				"options": [
+					"on a stair",
+					"in a hallway",
+					"on gravel",
+					"overhead"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Whose were they?",
+				"statement": "The steps were those of {}.",
+				"options": [
+					"a child",
+					"a lover",
+					"your mother",
+					"a friend"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s055",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Blood",
+		"echo": {
+			"recipe": "heartbeat",
+			"pitch": 0.7
+		},
+		"valences": [
+			"a childhood scrape",
+			"a hospital corridor",
+			"a birth"
+		],
+		"tags": [
+			"blood",
+			"body",
+			"red"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What happened?",
+				"statement": "It was {}.",
+				"options": [
+					"a fall",
+					"a fight",
+					"a birth",
+					"an accident"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Whose blood was it?",
+				"statement": "It was {} blood.",
+				"options": [
+					"your own",
+					"someone else's"
+				]
+			}
+		]
+	},
+	{
+		"id": "s056",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The smell of bread baking",
+		"echo": {
+			"recipe": "fire",
+			"pitch": 0.6
+		},
+		"valences": [
+			"a grandmother's kitchen",
+			"a bakery before dawn"
+		],
+		"tags": [
+			"bread",
+			"kitchen",
+			"warmth"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who was baking?",
+				"statement": "The one baking was {}.",
+				"options": [
+					"your mother",
+					"your grandmother",
+					"a neighbor",
+					"you yourself"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "What time of day was it?",
+				"statement": "It was {}.",
+				"options": [
+					"early morning",
+					"midday",
+					"late afternoon",
+					"night"
+				]
+			}
+		]
+	},
+	{
+		"id": "s057",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The smell of meat grilling",
+		"echo": {
+			"recipe": "fire",
+			"pitch": 1
+		},
+		"valences": [
+			"a summer yard",
+			"a street stall"
+		],
+		"tags": [
+			"grill",
+			"smoke",
+			"summer"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What was the occasion?",
+				"statement": "It was {}.",
+				"options": [
+					"a family gathering",
+					"a holiday",
+					"an ordinary evening",
+					"a celebration"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Were you at home?",
+				"statement": "You were {}.",
+				"options": [
+					"at home",
+					"away from home"
+				]
+			}
+		]
+	},
+	{
+		"id": "s058",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The smell of beans cooking",
+		"echo": {
+			"recipe": "water",
+			"pitch": 0.7
+		},
+		"valences": [
+			"a lean winter",
+			"a grandmother's pot"
+		],
+		"tags": [
+			"beans",
+			"kitchen",
+			"cooking"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Whose pot was it?",
+				"statement": "The pot belonged to {}.",
+				"options": [
+					"your mother",
+					"your grandmother",
+					"a friend",
+					"you yourself"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "What season was it?",
+				"statement": "It was {}.",
+				"options": [
+					"winter",
+					"spring",
+					"summer",
+					"autumn"
+				]
+			}
+		]
+	},
+	{
+		"id": "s059",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Drinking something cold, with ice cubes clicking on your teeth",
+		"echo": {
+			"recipe": "clink",
+			"pitch": 1.2
+		},
+		"valences": [
+			"a hot summer day",
+			"a bar late at night"
+		],
+		"tags": [
+			"ice",
+			"drink",
+			"cold"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "What was in the glass?",
+				"statement": "It was {}.",
+				"options": [
+					"water",
+					"something stronger"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "What was the occasion?",
+				"statement": "It was {}.",
+				"options": [
+					"a hot afternoon",
+					"a party",
+					"a long walk",
+					"a meal"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s060",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Hot coffee",
+		"echo": {
+			"recipe": "drone",
+			"pitch": 1.1
+		},
+		"valences": [
+			"a night shift",
+			"a quiet morning with someone"
+		],
+		"tags": [
+			"coffee",
+			"heat",
+			"morning"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "name",
+				"prompt": "Where did you drink it?",
+				"statement": "You drank it at {}.",
+				"options": [
+					"a kitchen table",
+					"a diner",
+					"a desk"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "What time of day was it?",
+				"statement": "It was {}.",
+				"options": [
+					"before dawn",
+					"morning",
+					"afternoon",
+					"late at night"
+				]
+			}
+		]
+	},
+	{
+		"id": "s061",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Hot tea",
+		"echo": {
+			"recipe": "shimmer",
+			"pitch": 0.8
+		},
+		"valences": [
+			"a sick day",
+			"a long conversation"
+		],
+		"tags": [
+			"tea",
+			"steam",
+			"warmth"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Who made it?",
+				"statement": "It was made by {}.",
+				"options": [
+					"you",
+					"someone else"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "What was the occasion?",
+				"statement": "It was {}.",
+				"options": [
+					"a cold day",
+					"an illness",
+					"a visit",
+					"a quiet evening"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s062",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The taste of beer",
+		"echo": {
+			"recipe": "clink",
+			"pitch": 0.8
+		},
+		"valences": [
+			"a first drink",
+			"a long shift's end"
+		],
+		"tags": [
+			"beer",
+			"bar",
+			"bitter"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "temporal",
+				"prompt": "How old were you?",
+				"statement": "You were {}.",
+				"options": [
+					"very young",
+					"a young adult",
+					"grown",
+					"old"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "name",
+				"prompt": "Where did you drink it?",
+				"statement": "You drank it at {}.",
+				"options": [
+					"a bar",
+					"a backyard",
+					"a ballgame"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s063",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The sting of liquor going down your throat",
+		"echo": {
+			"recipe": "breath",
+			"pitch": 0.7
+		},
+		"valences": [
+			"a dare",
+			"a funeral toast"
+		],
+		"tags": [
+			"liquor",
+			"burn",
+			"throat"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What was the occasion?",
+				"statement": "It was {}.",
+				"options": [
+					"a dare",
+					"a toast",
+					"a cold night",
+					"a goodbye"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who handed it to you?",
+				"statement": "The one who handed it to you was {}.",
+				"options": [
+					"a friend",
+					"a relative",
+					"a stranger",
+					"a lover"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s064",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The taste of wine",
+		"echo": {
+			"recipe": "shimmer",
+			"pitch": 1
+		},
+		"valences": [
+			"a wedding table",
+			"a quiet dinner for two"
+		],
+		"tags": [
+			"wine",
+			"table",
+			"glass"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What was the occasion?",
+				"statement": "It was {}.",
+				"options": [
+					"a wedding",
+					"a dinner",
+					"a funeral",
+					"a holiday"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "What color was it?",
+				"statement": "It was {} wine.",
+				"options": [
+					"red",
+					"white"
+				]
+			}
+		]
+	},
+	{
+		"id": "s065",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The smell of stale beer",
+		"echo": {
+			"recipe": "drone",
+			"pitch": 0.7
+		},
+		"valences": [
+			"a bar floor the morning after",
+			"a father's den"
+		],
+		"tags": [
+			"beer",
+			"stale",
+			"room"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "You were in {}.",
+				"options": [
+					"a bar",
+					"a basement",
+					"a car",
+					"a kitchen"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "When was it?",
+				"statement": "It was {}.",
+				"options": [
+					"the morning after",
+					"late at night",
+					"an afternoon"
+				]
+			}
+		]
+	},
+	{
+		"id": "s066",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The smell of vinegar",
+		"echo": {
+			"recipe": "hiss",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a jar of pickles",
+			"cleaning a window"
+		],
+		"tags": [
+			"vinegar",
+			"sharp",
+			"kitchen"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What was it for?",
+				"statement": "It was for {}.",
+				"options": [
+					"pickling",
+					"cleaning",
+					"a salad",
+					"a wound"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Whose kitchen was it?",
+				"statement": "The kitchen belonged to {}.",
+				"options": [
+					"your mother",
+					"your grandmother",
+					"you",
+					"a stranger"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s067",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The smell of sour milk",
+		"echo": {
+			"recipe": "drone",
+			"pitch": 0.6
+		},
+		"valences": [
+			"a forgotten fridge",
+			"a childhood spill"
+		],
+		"tags": [
+			"milk",
+			"sour",
+			"fridge"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Whose fridge was it?",
+				"statement": "It was {} fridge.",
+				"options": [
+					"your own",
+					"someone else's"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "How old were you?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"a teenager",
+					"an adult"
+				]
+			}
+		]
+	},
+	{
+		"id": "s068",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The smell of wood smoke",
+		"echo": {
+			"recipe": "fire",
+			"pitch": 0.8
+		},
+		"valences": [
+			"a campfire",
+			"a house in winter",
+			"a burning field"
+		],
+		"tags": [
+			"smoke",
+			"wood",
+			"fire"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "You were at {}.",
+				"options": [
+					"a campfire",
+					"a cabin",
+					"a fireplace",
+					"a bonfire"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "What season was it?",
+				"statement": "It was {}.",
+				"options": [
+					"autumn",
+					"winter",
+					"spring",
+					"summer"
+				]
+			}
+		]
+	},
+	{
+		"id": "s069",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The smell of cleaning fluids",
+		"echo": {
+			"recipe": "drone",
+			"pitch": 1
+		},
+		"valences": [
+			"a first job",
+			"a hospital room"
+		],
+		"tags": [
+			"cleaning",
+			"chemical",
+			"floors"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where was it?",
+				"statement": "It was {}.",
+				"options": [
+					"a school",
+					"a hospital",
+					"a workplace",
+					"your own home"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Who was using it?",
+				"statement": "It was used by {}.",
+				"options": [
+					"you",
+					"someone else"
+				]
+			}
+		]
+	},
+	{
+		"id": "s070",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The smell of vomit",
+		"echo": {
+			"recipe": "breath",
+			"pitch": 0.6
+		},
+		"valences": [
+			"a sick child",
+			"a night out"
+		],
+		"tags": [
+			"vomit",
+			"sickness",
+			"sour"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Whose was it?",
+				"statement": "It came from {}.",
+				"options": [
+					"you",
+					"a child",
+					"a friend",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Was it a night or a day?",
+				"statement": "It was {}.",
+				"options": [
+					"night",
+					"day"
+				]
+			}
+		]
+	},
+	{
+		"id": "s071",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The smell of feces",
+		"echo": {
+			"recipe": "drone",
+			"pitch": 0.6
+		},
+		"valences": [
+			"a baby's diaper",
+			"a barnyard"
+		],
+		"tags": [
+			"feces",
+			"stench",
+			"animal"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Was it a person or an animal?",
+				"statement": "It came from {}.",
+				"options": [
+					"a person",
+					"an animal"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "The place was {}.",
+				"options": [
+					"a barn",
+					"a bathroom",
+					"a field",
+					"a street"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s072",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The smell of urine",
+		"echo": {
+			"recipe": "drone",
+			"pitch": 0.7
+		},
+		"valences": [
+			"a stairwell at night",
+			"a child's accident"
+		],
+		"tags": [
+			"urine",
+			"stench",
+			"stairs"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Whose was it?",
+				"statement": "It came from {}.",
+				"options": [
+					"a child",
+					"an animal",
+					"a stranger",
+					"you"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "The place was {}.",
+				"options": [
+					"a stairwell",
+					"a stable",
+					"a public toilet",
+					"a bedroom"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s073",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The smell of flowers",
+		"echo": {
+			"recipe": "shimmer",
+			"pitch": 1.4
+		},
+		"valences": [
+			"a wedding",
+			"a graveside",
+			"a garden in spring"
+		],
+		"tags": [
+			"flowers",
+			"scent",
+			"bloom"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What was the occasion?",
+				"statement": "It was {}.",
+				"options": [
+					"a wedding",
+					"a funeral",
+					"a garden",
+					"a gift"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "name",
+				"prompt": "Which flower was it?",
+				"statement": "It was {}.",
+				"options": [
+					"roses",
+					"lilies",
+					"lilac",
+					"jasmine"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s074",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The smell of skunk",
+		"echo": {
+			"recipe": "drone",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a night walk",
+			"a dog's mistake"
+		],
+		"tags": [
+			"skunk",
+			"night",
+			"musk"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Where were you?",
+				"statement": "It was {}.",
+				"options": [
+					"on a road",
+					"in the woods"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who was with you?",
+				"statement": "The one with you was {}.",
+				"options": [
+					"your dog",
+					"a friend",
+					"a parent",
+					"a sibling"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s075",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A piece of music",
+		"echo": {
+			"recipe": "hum",
+			"pitch": 1.1
+		},
+		"valences": [
+			"a first dance",
+			"a lullaby",
+			"a funeral hymn"
+		],
+		"tags": [
+			"music",
+			"melody",
+			"song"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What kind of music was it?",
+				"statement": "It was {}.",
+				"options": [
+					"a lullaby",
+					"a hymn",
+					"a dance tune",
+					"a song on the radio"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who played it?",
+				"statement": "It was played by {}.",
+				"options": [
+					"your mother",
+					"your father",
+					"a friend",
+					"a stranger"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s076",
+		"type": "relational",
+		"source": "sean",
+		"text": "A musical voice",
+		"echo": {
+			"recipe": "hum",
+			"pitch": 1.3
+		},
+		"valences": [
+			"a mother singing",
+			"a stranger on a street corner"
+		],
+		"tags": [
+			"voice",
+			"song",
+			"singer"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Whose voice was it?",
+				"statement": "It was the voice of {}.",
+				"options": [
+					"your mother",
+					"a friend",
+					"a teacher",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "What were they doing?",
+				"statement": "They were {}.",
+				"options": [
+					"singing a lullaby",
+					"singing in a choir",
+					"singing in a kitchen",
+					"singing at a service"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "name",
+				"prompt": "What was their name?",
+				"statement": "Their name was {}.",
+				"options": [
+					"Amara",
+					"Tomas",
+					"Mei"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s077",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The echo of a voice across a distance",
+		"echo": {
+			"recipe": "murmur",
+			"pitch": 0.6
+		},
+		"valences": [
+			"a canyon call",
+			"a name called at dusk"
+		],
+		"tags": [
+			"echo",
+			"distance",
+			"voice"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "You were at {}.",
+				"options": [
+					"a canyon",
+					"a lake",
+					"a mountain",
+					"a tunnel"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Whose voice was it?",
+				"statement": "It was the voice of {}.",
+				"options": [
+					"your child",
+					"your parent",
+					"a friend",
+					"a stranger"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s078",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The words of a poem",
+		"echo": {
+			"recipe": "murmur",
+			"pitch": 1
+		},
+		"valences": [
+			"a school recitation",
+			"a funeral reading"
+		],
+		"tags": [
+			"poem",
+			"words",
+			"reading"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who read it to you?",
+				"statement": "It was read to you by {}.",
+				"options": [
+					"your mother",
+					"a teacher",
+					"a lover",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "Where did you hear it?",
+				"statement": "You heard it at {}.",
+				"options": [
+					"school",
+					"a funeral",
+					"bedtime",
+					"a wedding"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s079",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The words of a speech",
+		"echo": {
+			"recipe": "murmur",
+			"pitch": 0.8
+		},
+		"valences": [
+			"a graduation",
+			"a eulogy",
+			"a rally"
+		],
+		"tags": [
+			"speech",
+			"crowd",
+			"words"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What was the occasion?",
+				"statement": "It was {}.",
+				"options": [
+					"a graduation",
+					"a funeral",
+					"a wedding",
+					"a rally"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who was speaking?",
+				"statement": "The speaker was {}.",
+				"options": [
+					"your father",
+					"a teacher",
+					"a stranger",
+					"a politician"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "binary",
+				"prompt": "Where were you?",
+				"statement": "You were {}.",
+				"options": [
+					"in the crowd",
+					"on the stage"
+				]
+			}
+		]
+	},
+	{
+		"id": "s080",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Dancing",
+		"echo": {
+			"recipe": "footsteps",
+			"pitch": 1.3
+		},
+		"valences": [
+			"a wedding",
+			"an empty kitchen",
+			"a club"
+		],
+		"tags": [
+			"dance",
+			"movement",
+			"music"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where were you dancing?",
+				"statement": "You were dancing at {}.",
+				"options": [
+					"a wedding",
+					"a club",
+					"a kitchen",
+					"a festival"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who was your partner?",
+				"statement": "You danced with {}.",
+				"options": [
+					"a lover",
+					"a friend",
+					"a child",
+					"a stranger"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s081",
+		"type": "relational",
+		"source": "sean",
+		"text": "Someone leaping out from hiding",
+		"echo": {
+			"recipe": "shriek",
+			"pitch": 1.3
+		},
+		"valences": [
+			"a game of hide and seek",
+			"an ambush"
+		],
+		"tags": [
+			"hiding",
+			"leap",
+			"surprise"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who leapt out?",
+				"statement": "The one who leapt out was {}.",
+				"options": [
+					"a sibling",
+					"a friend",
+					"a parent",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Was it a game?",
+				"statement": "It was {}.",
+				"options": [
+					"a game",
+					"not a game"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "You were in {}.",
+				"options": [
+					"a house",
+					"a forest",
+					"a hallway",
+					"a school"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s082",
+		"type": "relational",
+		"source": "sean",
+		"text": "Someone's action was surprising",
+		"echo": {
+			"recipe": "breath",
+			"pitch": 1.2
+		},
+		"valences": [
+			"a gift",
+			"a betrayal",
+			"a kindness"
+		],
+		"tags": [
+			"action",
+			"surprise",
+			"person"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who was it?",
+				"statement": "It was {}.",
+				"options": [
+					"your partner",
+					"a parent",
+					"a friend",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Was something given or taken?",
+				"statement": "Something was {}.",
+				"options": [
+					"given",
+					"taken"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "occasion",
+				"prompt": "Where did it happen?",
+				"statement": "It happened at {}.",
+				"options": [
+					"home",
+					"work",
+					"a gathering",
+					"a roadside"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s083",
+		"type": "relational",
+		"source": "sean",
+		"text": "Someone said something funny",
+		"echo": {
+			"recipe": "laugh",
+			"pitch": 1
+		},
+		"valences": [
+			"a shared joke at a table",
+			"laughter at a funeral"
+		],
+		"tags": [
+			"joke",
+			"laughter",
+			"words"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who said it?",
+				"statement": "It was said by {}.",
+				"options": [
+					"a sibling",
+					"a friend",
+					"a parent",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "You were at {}.",
+				"options": [
+					"a table",
+					"school",
+					"work",
+					"a party"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "s084",
+		"type": "relational",
+		"source": "sean",
+		"text": "Someone said something that hurt",
+		"echo": {
+			"recipe": "breath",
+			"pitch": 0.7
+		},
+		"valences": [
+			"a parent's cruelty",
+			"a friend's careless word",
+			"a parting"
+		],
+		"tags": [
+			"words",
+			"cruel",
+			"person"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who said it?",
+				"statement": "It was said by {}.",
+				"options": [
+					"your mother",
+					"your father",
+					"a partner",
+					"a friend",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "You were at {}.",
+				"options": [
+					"home",
+					"school",
+					"work",
+					"a gathering"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "How old were you?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"a teenager",
+					"an adult",
+					"old"
+				]
+			},
+			{
+				"id": "q4",
+				"kind": "binary",
+				"prompt": "Where was it said?",
+				"statement": "It was said {}.",
+				"options": [
+					"to your face",
+					"behind your back"
+				]
+			}
+		]
+	},
+	{
+		"id": "s085",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A stage",
+		"echo": {
+			"recipe": "murmur",
+			"pitch": 1.1
+		},
+		"valences": [
+			"a school play",
+			"a band's first show"
+		],
+		"tags": [
+			"stage",
+			"lights",
+			"audience"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What was happening?",
+				"statement": "It was {}.",
+				"options": [
+					"a play",
+					"a recital",
+					"a speech",
+					"a concert"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Were you on it or watching?",
+				"statement": "You were {}.",
+				"options": [
+					"on it",
+					"watching"
+				]
+			}
+		]
+	},
+	{
+		"id": "s086",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A found coin",
+		"echo": {
+			"recipe": "clink",
+			"pitch": 1.4
+		},
+		"valences": [
+			"a childhood luck",
+			"a gutter in a strange city"
+		],
+		"tags": [
+			"coin",
+			"found",
+			"luck"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where did you find it?",
+				"statement": "You found it {}.",
+				"options": [
+					"on a street",
+					"in the grass",
+					"at a beach",
+					"in a drawer"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "How old were you?",
+				"statement": "You were {}.",
+				"options": [
+					"small",
+					"a teenager",
+					"an adult"
+				]
+			}
+		]
+	},
+	{
+		"id": "s087",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A lost coin",
+		"echo": {
+			"recipe": "clink",
+			"pitch": 0.7
+		},
+		"valences": [
+			"a drain's loss",
+			"a child's pocket money"
+		],
+		"tags": [
+			"coin",
+			"lost",
+			"pocket"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where did you lose it?",
+				"statement": "You lost it {}.",
+				"options": [
+					"down a drain",
+					"through a hole in a pocket",
+					"in the grass",
+					"on a bus"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Whose coin was it?",
+				"statement": "The coin belonged to {}.",
+				"options": [
+					"you",
+					"a child",
+					"a stranger"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s088",
+		"type": "sensory",
+		"source": "sean",
+		"text": "An object turned up in a pocket",
+		"echo": {
+			"recipe": "shimmer",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a keepsake from a lover",
+			"a stranger's trinket"
+		],
+		"tags": [
+			"pocket",
+			"object",
+			"found"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "name",
+				"prompt": "What was it?",
+				"statement": "It was {}.",
+				"options": [
+					"a key",
+					"a ticket",
+					"a stone",
+					"a note"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Whose pocket was it?",
+				"statement": "The pocket belonged to {}.",
+				"options": [
+					"you",
+					"your father",
+					"a stranger",
+					"a lover"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s089",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The press of the typewriter",
+		"echo": {
+			"recipe": "clack",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a first novel",
+			"an office job"
+		],
+		"tags": [
+			"typewriter",
+			"press",
+			"paper"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What were you typing?",
+				"statement": "You were typing {}.",
+				"options": [
+					"a letter",
+					"a story",
+					"a report",
+					"a list"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Whose typewriter was it?",
+				"statement": "The typewriter belonged to {}.",
+				"options": [
+					"you",
+					"your mother",
+					"a stranger",
+					"a friend"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s090",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The clacking of typewriter keys",
+		"echo": {
+			"recipe": "clack",
+			"pitch": 1.2
+		},
+		"valences": [
+			"a newsroom",
+			"a mother at the table"
+		],
+		"tags": [
+			"typewriter",
+			"keys",
+			"rhythm"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who was typing?",
+				"statement": "The one typing was {}.",
+				"options": [
+					"you",
+					"your mother",
+					"your father",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Was it day or night?",
+				"statement": "It was {}.",
+				"options": [
+					"day",
+					"night"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "occasion",
+				"prompt": "What place was it?",
+				"statement": "You were in {}.",
+				"options": [
+					"an office",
+					"a classroom",
+					"a bedroom",
+					"a library"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s091",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The noise of a dial-up modem",
+		"echo": {
+			"recipe": "modem",
+			"pitch": 1
+		},
+		"valences": [
+			"a first night online",
+			"a lonely connection"
+		],
+		"tags": [
+			"modem",
+			"screen",
+			"dial-up"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"a teenager",
+					"an adult"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "You were in {}.",
+				"options": [
+					"a bedroom",
+					"a study",
+					"an office",
+					"a library"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "binary",
+				"prompt": "Whose computer was it?",
+				"statement": "It was {} computer.",
+				"options": [
+					"your own",
+					"someone else's"
+				]
+			}
+		]
+	},
+	{
+		"id": "s092",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The clatter of dishes",
+		"echo": {
+			"recipe": "clink",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a busy kitchen",
+			"a family dinner ending"
+		],
+		"tags": [
+			"dishes",
+			"kitchen",
+			"clatter"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What was happening?",
+				"statement": "It was {}.",
+				"options": [
+					"a family meal",
+					"a restaurant kitchen",
+					"a washing up",
+					"a quarrel"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who was washing?",
+				"statement": "The one washing was {}.",
+				"options": [
+					"your mother",
+					"you",
+					"a sibling",
+					"a stranger"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s093",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The ring of a phone",
+		"echo": {
+			"recipe": "phone",
+			"pitch": 1
+		},
+		"valences": [
+			"a good-news call",
+			"bad news at night"
+		],
+		"tags": [
+			"phone",
+			"ring",
+			"call"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Who answered?",
+				"statement": "It was answered by {}.",
+				"options": [
+					"you",
+					"someone else"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "What time of day was it?",
+				"statement": "It was {}.",
+				"options": [
+					"morning",
+					"afternoon",
+					"night",
+					"the small hours"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "relational",
+				"prompt": "Who was calling?",
+				"statement": "The caller was {}.",
+				"options": [
+					"your mother",
+					"your father",
+					"a friend",
+					"a stranger"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s094",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Clock alarm",
+		"echo": {
+			"recipe": "alarm",
+			"pitch": 1
+		},
+		"valences": [
+			"a school morning",
+			"a night shift ending"
+		],
+		"tags": [
+			"alarm",
+			"clock",
+			"morning"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What was it for?",
+				"statement": "It was for {}.",
+				"options": [
+					"school",
+					"work",
+					"a journey",
+					"a medicine"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Who set it?",
+				"statement": "It was set by {}.",
+				"options": [
+					"you",
+					"someone else"
+				]
+			}
+		]
+	},
+	{
+		"id": "s095",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Radio static",
+		"echo": {
+			"recipe": "static",
+			"pitch": 1
+		},
+		"valences": [
+			"a car on a long road",
+			"a late-night search for a station"
+		],
+		"tags": [
+			"radio",
+			"static",
+			"signal"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where was the radio?",
+				"statement": "It was in {}.",
+				"options": [
+					"a car",
+					"a kitchen",
+					"a bedroom",
+					"a shed"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "name",
+				"prompt": "What were you trying to hear?",
+				"statement": "You were trying to hear {}.",
+				"options": [
+					"a song",
+					"a ballgame",
+					"the news",
+					"a voice"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s096",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The ring of metal hitting metal",
+		"echo": {
+			"recipe": "clink",
+			"pitch": 0.6
+		},
+		"valences": [
+			"a blacksmith's yard",
+			"a dropped pan"
+		],
+		"tags": [
+			"metal",
+			"ring",
+			"strike"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What made it?",
+				"statement": "It was made by {}.",
+				"options": [
+					"a hammer",
+					"a dropped pan",
+					"a train coupling",
+					"a gate"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Was it work or an accident?",
+				"statement": "It was {}.",
+				"options": [
+					"work",
+					"an accident"
+				]
+			}
+		]
+	},
+	{
+		"id": "s097",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The shriek of brakes",
+		"echo": {
+			"recipe": "brakes",
+			"pitch": 1.2
+		},
+		"valences": [
+			"a near miss",
+			"a school bus stop"
+		],
+		"tags": [
+			"brakes",
+			"road",
+			"stop"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Were you in the car?",
+				"statement": "You were {} the car.",
+				"options": [
+					"in",
+					"outside"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "What came after?",
+				"statement": "After it, there was {}.",
+				"options": [
+					"silence",
+					"shouting",
+					"laughter",
+					"a crash"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s098",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The thud of a car hitting something",
+		"echo": {
+			"recipe": "thud",
+			"pitch": 0.6
+		},
+		"valences": [
+			"an animal on a road",
+			"a crash"
+		],
+		"tags": [
+			"car",
+			"impact",
+			"road"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "What did it hit?",
+				"statement": "It was {}.",
+				"options": [
+					"an animal",
+					"something else"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Were you driving?",
+				"statement": "You were {}.",
+				"options": [
+					"driving",
+					"a passenger"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "occasion",
+				"prompt": "What kind of road was it?",
+				"statement": "The road was {}.",
+				"options": [
+					"a highway",
+					"a country lane",
+					"a city street",
+					"a driveway"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s099",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The roar of a car passing by",
+		"echo": {
+			"recipe": "engine",
+			"pitch": 1
+		},
+		"valences": [
+			"a street at night",
+			"a highway shoulder"
+		],
+		"tags": [
+			"car",
+			"passing",
+			"road"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "You were {}.",
+				"options": [
+					"beside a road",
+					"on a porch",
+					"at a crossing",
+					"on a bicycle"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Was it close or far?",
+				"statement": "It passed {}.",
+				"options": [
+					"close",
+					"far away"
+				]
+			}
+		]
+	},
+	{
+		"id": "s100",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The roar of a motorcycle passing by",
+		"echo": {
+			"recipe": "engine",
+			"pitch": 1.4
+		},
+		"valences": [
+			"a riding friend",
+			"a night-time waking"
+		],
+		"tags": [
+			"motorcycle",
+			"roar",
+			"speed"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who rode it?",
+				"statement": "It was ridden by {}.",
+				"options": [
+					"a friend",
+					"a sibling",
+					"your father",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "You were {}.",
+				"options": [
+					"on a street",
+					"in a field",
+					"at a gas station",
+					"at a rally"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s101",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The sound of a motorcycle passing past",
+		"echo": {
+			"recipe": "engine",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a rider leaving",
+			"a summer evening"
+		],
+		"tags": [
+			"motorcycle",
+			"fading",
+			"distance"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Was it coming or going?",
+				"statement": "It was {}.",
+				"options": [
+					"coming",
+					"going"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "What time of day was it?",
+				"statement": "It was {}.",
+				"options": [
+					"morning",
+					"afternoon",
+					"dusk",
+					"night"
+				]
+			}
+		]
+	},
+	{
+		"id": "s102",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The sound of a boat motor",
+		"echo": {
+			"recipe": "engine",
+			"pitch": 0.7
+		},
+		"valences": [
+			"a fishing trip",
+			"a ferry crossing"
+		],
+		"tags": [
+			"boat",
+			"motor",
+			"water"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What was the trip?",
+				"statement": "It was {}.",
+				"options": [
+					"a fishing trip",
+					"a ferry ride",
+					"a day on a lake",
+					"a rescue"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Whose boat was it?",
+				"statement": "The boat belonged to {}.",
+				"options": [
+					"your father",
+					"a friend",
+					"a stranger",
+					"you"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "binary",
+				"prompt": "Was it a lake or the sea?",
+				"statement": "It was {}.",
+				"options": [
+					"a lake",
+					"the sea"
+				]
+			}
+		]
+	},
+	{
+		"id": "s103",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The sound of oars in the water",
+		"echo": {
+			"recipe": "water",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a rowing lesson",
+			"a night crossing"
+		],
+		"tags": [
+			"oars",
+			"water",
+			"rowing"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who was rowing?",
+				"statement": "The one rowing was {}.",
+				"options": [
+					"you",
+					"your father",
+					"a friend",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Was the water calm or rough?",
+				"statement": "The water was {}.",
+				"options": [
+					"calm",
+					"rough"
+				]
+			}
+		]
+	},
+	{
+		"id": "s104",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The sound of a gunshot",
+		"echo": {
+			"recipe": "shot",
+			"pitch": 1
+		},
+		"valences": [
+			"a hunt",
+			"a distant fright"
+		],
+		"tags": [
+			"gunshot",
+			"crack",
+			"distance"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What was happening?",
+				"statement": "It was {}.",
+				"options": [
+					"a hunt",
+					"a celebration",
+					"a shooting range",
+					"a lesson"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Was it near or far?",
+				"statement": "It was {}.",
+				"options": [
+					"near",
+					"far away"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "relational",
+				"prompt": "Who was beside you?",
+				"statement": "The one beside you was {}.",
+				"options": [
+					"your father",
+					"a friend",
+					"a stranger",
+					"a sibling"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "s105",
+		"type": "sensory",
+		"source": "sean",
+		"text": "A bright light",
+		"echo": {
+			"recipe": "shimmer",
+			"pitch": 1.5
+		},
+		"valences": [
+			"a hospital lamp",
+			"a camera flash"
+		],
+		"tags": [
+			"light",
+			"bright",
+			"glare"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where did the light come from?",
+				"statement": "It came from {}.",
+				"options": [
+					"a lamp",
+					"the sun",
+					"a car's headlights",
+					"a flash"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Were your eyes open or closed?",
+				"statement": "Your eyes were {}.",
+				"options": [
+					"open",
+					"closed"
+				]
+			}
+		]
+	},
+	{
+		"id": "s106",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Laser and strobe lights",
+		"echo": {
+			"recipe": "shimmer",
+			"pitch": 1.3
+		},
+		"valences": [
+			"a club night",
+			"a concert"
+		],
+		"tags": [
+			"lasers",
+			"strobe",
+			"dark"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where were you?",
+				"statement": "You were at {}.",
+				"options": [
+					"a club",
+					"a concert",
+					"a party",
+					"a fair"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who were you with?",
+				"statement": "You were with {}.",
+				"options": [
+					"a friend",
+					"a lover",
+					"your sibling",
+					"strangers"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "How old were you?",
+				"statement": "You were {}.",
+				"options": [
+					"a teenager",
+					"a young adult",
+					"middle-aged"
+				]
+			}
+		]
+	},
+	{
+		"id": "s107",
+		"type": "sensory",
+		"source": "sean",
+		"text": "The glow of a fire",
+		"echo": {
+			"recipe": "fire",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a hearth",
+			"a camp at night",
+			"a distant burning"
+		],
+		"tags": [
+			"fire",
+			"glow",
+			"warmth"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "Where was the fire?",
+				"statement": "It was {}.",
+				"options": [
+					"a hearth",
+					"a campfire",
+					"a bonfire",
+					"a house on fire"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who sat by it with you?",
+				"statement": "Beside you was {}.",
+				"options": [
+					"your father",
+					"a friend",
+					"a lover",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "binary",
+				"prompt": "How was it lit?",
+				"statement": "It was lit {}.",
+				"options": [
+					"on purpose",
+					"by accident"
+				]
+			}
+		]
+	},
+	{
+		"id": "s108",
+		"type": "sensory",
+		"source": "sean",
+		"text": "Looking out a window",
+		"echo": {
+			"recipe": "wind",
+			"pitch": 0.7
+		},
+		"valences": [
+			"a sick room",
+			"a child waiting",
+			"a long journey"
+		],
+		"tags": [
+			"window",
+			"view",
+			"glass"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What was outside?",
+				"statement": "Outside was {}.",
+				"options": [
+					"a street",
+					"a garden",
+					"the sea",
+					"a field"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "Where was the window?",
+				"statement": "The window was in {}.",
+				"options": [
+					"a bedroom",
+					"a classroom",
+					"a hospital",
+					"a kitchen"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "d001",
+		"type": "relational",
+		"source": "draft",
+		"text": "A hand held yours longer than it needed to. The corridor smelled of floor polish. Nobody said anything.",
+		"echo": {
+			"recipe": "footsteps",
+			"pitch": 0.9
+		},
+		"valences": [
+			"waiting for news",
+			"a first love",
+			"a parting"
+		],
+		"tags": [
+			"touch",
+			"corridor",
+			"silence"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Whose hand was it?",
+				"statement": "The hand belonged to {}.",
+				"options": [
+					"a parent",
+					"a friend",
+					"someone you loved",
+					"a child"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Who let go first?",
+				"statement": "It was {} who let go first.",
+				"options": [
+					"you",
+					"they"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "d002",
+		"type": "relational",
+		"source": "draft",
+		"text": "Two cups on the table, one still full. A coat over the back of a chair. The light above the stove was on.",
+		"echo": {
+			"recipe": "clink",
+			"pitch": 1
+		},
+		"valences": [
+			"the morning someone left",
+			"a death in the house",
+			"waiting for someone to come home"
+		],
+		"tags": [
+			"kitchen",
+			"morning",
+			"absence"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Whose was the full cup?",
+				"statement": "The full cup was {}.",
+				"options": [
+					"yours",
+					"theirs"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "What kind of day was it?",
+				"statement": "It was {}.",
+				"options": [
+					"an ordinary morning",
+					"the day after an argument",
+					"the day someone left",
+					"the day someone came home"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "name",
+				"prompt": "What was their name?",
+				"statement": "Their name was {}.",
+				"options": [
+					"Maya",
+					"Tomas",
+					"Ren",
+					"Adaeze"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "d003",
+		"type": "relational",
+		"source": "draft",
+		"text": "A suitcase open on the bed. Folded shirts, not yours. Someone kept smoothing the same sleeve flat.",
+		"echo": {
+			"recipe": "breath",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a leaving",
+			"an arrival",
+			"clearing out after a death"
+		],
+		"tags": [
+			"room",
+			"packing",
+			"hands"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Were they packing, or unpacking?",
+				"statement": "They were {}.",
+				"options": [
+					"packing",
+					"unpacking"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Whose shirts were they?",
+				"statement": "The shirts belonged to {}.",
+				"options": [
+					"a parent",
+					"a lover",
+					"a child",
+					"a friend"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "What time of year was it?",
+				"statement": "It was {}.",
+				"options": [
+					"spring",
+					"summer",
+					"autumn",
+					"winter"
+				]
+			}
+		]
+	},
+	{
+		"id": "d004",
+		"type": "relational",
+		"source": "draft",
+		"text": "Someone laughing in the next room until it stopped being laughing. You stayed where you were, one hand flat on the wall.",
+		"echo": {
+			"recipe": "laugh",
+			"pitch": 0.8
+		},
+		"valences": [
+			"a celebration turning",
+			"a breakdown",
+			"a night of bad news"
+		],
+		"tags": [
+			"wall",
+			"laughter",
+			"night"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who was in the next room?",
+				"statement": "In the next room was {}.",
+				"options": [
+					"a parent",
+					"a friend",
+					"your partner",
+					"a child"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Did you go in?",
+				"statement": "You {} go in.",
+				"options": [
+					"did",
+					"did not"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "d005",
+		"type": "relational",
+		"source": "draft",
+		"text": "A long drive with the window cracked and the radio low. They fell asleep against the glass, and you drove more slowly.",
+		"echo": {
+			"recipe": "engine",
+			"pitch": 1
+		},
+		"valences": [
+			"a family trip",
+			"a new love",
+			"the road to a funeral"
+		],
+		"tags": [
+			"car",
+			"sleep",
+			"road"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who was asleep beside you?",
+				"statement": "Beside you, {} was asleep.",
+				"options": [
+					"a child",
+					"a parent",
+					"a friend",
+					"someone you loved"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "Where were you driving?",
+				"statement": "You were driving to {}.",
+				"options": [
+					"a wedding",
+					"a hospital",
+					"the sea",
+					"someone's house"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "What time of day was it?",
+				"statement": "It was {}.",
+				"options": [
+					"before dawn",
+					"afternoon",
+					"dusk",
+					"the middle of the night"
+				]
+			}
+		]
+	},
+	{
+		"id": "d006",
+		"type": "relational",
+		"source": "draft",
+		"text": "A phone rang late. You let it ring three times before you picked up. Someone breathed on the line and did not speak first.",
+		"echo": {
+			"recipe": "phone",
+			"pitch": 1
+		},
+		"valences": [
+			"news of a death",
+			"a reconciliation",
+			"a lover calling"
+		],
+		"tags": [
+			"phone",
+			"night",
+			"silence"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Who spoke first in the end?",
+				"statement": "It was {} who spoke first in the end.",
+				"options": [
+					"you",
+					"they"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who was calling?",
+				"statement": "The call was from {}.",
+				"options": [
+					"a parent",
+					"a sibling",
+					"a friend",
+					"someone you loved"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "name",
+				"prompt": "What was their name?",
+				"statement": "Their name was {}.",
+				"options": [
+					"Priya",
+					"Daniel",
+					"Mei",
+					"Joseph"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "d007",
+		"type": "relational",
+		"source": "draft",
+		"text": "A folded note pressed into your palm. The paper was warm from a pocket. You did not read it until you were alone.",
+		"echo": {
+			"recipe": "murmur",
+			"pitch": 1.2
+		},
+		"valences": [
+			"a school crush",
+			"a farewell",
+			"a confession"
+		],
+		"tags": [
+			"paper",
+			"hands",
+			"secret"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Did you keep it, or lose it?",
+				"statement": "You {} it.",
+				"options": [
+					"kept",
+					"lost"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who gave it to you?",
+				"statement": "It was from {}.",
+				"options": [
+					"a friend",
+					"a classmate",
+					"someone you loved",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "d008",
+		"type": "relational",
+		"source": "draft",
+		"text": "A bed too wide. Someone's weight on the far side, not turning. The ceiling had a crack in it that you knew by heart.",
+		"echo": {
+			"recipe": "breath",
+			"pitch": 0.7
+		},
+		"valences": [
+			"a marriage fading",
+			"an empty side after a death",
+			"a long illness"
+		],
+		"tags": [
+			"bed",
+			"night",
+			"ceiling"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Were they awake?",
+				"statement": "They were {}.",
+				"options": [
+					"awake",
+					"asleep"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who was beside you?",
+				"statement": "Beside you was {}.",
+				"options": [
+					"your partner",
+					"a child",
+					"a friend",
+					"someone you had only just met"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "d009",
+		"type": "relational",
+		"source": "draft",
+		"text": "A school hallway after the bell. Someone straightened your collar and said it would be all right. Their hands smelled of chalk.",
+		"echo": {
+			"recipe": "footsteps",
+			"pitch": 1.1
+		},
+		"valences": [
+			"a first day",
+			"a last day",
+			"being seen off"
+		],
+		"tags": [
+			"school",
+			"hands",
+			"chalk"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Whose hands smelled of chalk?",
+				"statement": "The hands belonged to {}.",
+				"options": [
+					"a teacher",
+					"a parent",
+					"a friend",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Was it the first day, or the last?",
+				"statement": "It was the {} day.",
+				"options": [
+					"first",
+					"last"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "occasion",
+				"prompt": "What was the day for?",
+				"statement": "It was {}.",
+				"options": [
+					"a new school",
+					"an exam",
+					"a recital",
+					"a goodbye"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "d010",
+		"type": "relational",
+		"source": "draft",
+		"text": "Cold water over your hands at the sink. Behind you a chair scraped back. Neither of you had finished eating.",
+		"echo": {
+			"recipe": "water",
+			"pitch": 1
+		},
+		"valences": [
+			"a quarrel",
+			"bad news at dinner",
+			"a child leaving the table"
+		],
+		"tags": [
+			"sink",
+			"meal",
+			"chair"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Did you turn around?",
+				"statement": "You {} turn around.",
+				"options": [
+					"did",
+					"did not"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who was at the table?",
+				"statement": "At the table was {}.",
+				"options": [
+					"a parent",
+					"your partner",
+					"a child",
+					"a friend"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "occasion",
+				"prompt": "What had been said?",
+				"statement": "What had been said was {}.",
+				"options": [
+					"a refusal",
+					"a piece of news",
+					"a question",
+					"nothing at all"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "d011",
+		"type": "relational",
+		"source": "draft",
+		"text": "A platform at dusk. A door sliding shut, a face behind the glass, one hand lifted but not waving. The train took a long time to leave.",
+		"echo": {
+			"recipe": "brakes",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a departure",
+			"an arrival",
+			"a parting with no return"
+		],
+		"tags": [
+			"station",
+			"train",
+			"glass"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Were you leaving, or staying?",
+				"statement": "You were {}.",
+				"options": [
+					"leaving",
+					"staying"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who was behind the glass?",
+				"statement": "Behind the glass was {}.",
+				"options": [
+					"a parent",
+					"a friend",
+					"someone you loved",
+					"a child"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "d012",
+		"type": "relational",
+		"source": "draft",
+		"text": "Flour on someone's forearms. A radio, and a song they sang with the wrong words. You let them.",
+		"echo": {
+			"recipe": "hum",
+			"pitch": 1.1
+		},
+		"valences": [
+			"a childhood kitchen",
+			"a lost parent",
+			"a first home"
+		],
+		"tags": [
+			"kitchen",
+			"flour",
+			"song"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Whose forearms were they?",
+				"statement": "The forearms belonged to {}.",
+				"options": [
+					"your mother",
+					"your father",
+					"a grandparent",
+					"a friend"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "What were they making?",
+				"statement": "They were making {}.",
+				"options": [
+					"bread",
+					"a cake",
+					"dinner for many",
+					"nothing in particular"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "d013",
+		"type": "relational",
+		"source": "draft",
+		"text": "A small hand closed around your finger and would not open. The room was very quiet. Someone said your name softly, as if testing it.",
+		"echo": {
+			"recipe": "heartbeat",
+			"pitch": 1.3
+		},
+		"valences": [
+			"a birth",
+			"a child's illness",
+			"a last day"
+		],
+		"tags": [
+			"hand",
+			"room",
+			"hush"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Was it the first time, or the last?",
+				"statement": "It was the {} time.",
+				"options": [
+					"first",
+					"last"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Whose hand was it?",
+				"statement": "The hand belonged to {}.",
+				"options": [
+					"your child",
+					"a niece or nephew",
+					"a younger sibling",
+					"a friend's child"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "name",
+				"prompt": "What was your name, as they said it?",
+				"statement": "They said {}.",
+				"options": [
+					"Sam",
+					"Alex",
+					"Jo",
+					"Nour"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "d014",
+		"type": "relational",
+		"source": "draft",
+		"text": "A long table, the good plates, too many chairs. Someone stood to speak and forgot what they meant to say. Everyone waited.",
+		"echo": {
+			"recipe": "murmur",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a wedding toast",
+			"a wake",
+			"a farewell"
+		],
+		"tags": [
+			"table",
+			"speech",
+			"gathering"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What was the gathering?",
+				"statement": "It was {}.",
+				"options": [
+					"a wedding",
+					"a wake",
+					"a birthday",
+					"a farewell"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Did they go on, or sit down?",
+				"statement": "They {}.",
+				"options": [
+					"went on",
+					"sat down"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "relational",
+				"prompt": "Who stood to speak?",
+				"statement": "The one who stood was {}.",
+				"options": [
+					"a parent",
+					"a friend",
+					"someone you loved",
+					"you"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "d015",
+		"type": "relational",
+		"source": "draft",
+		"text": "A key turned in the lock from the wrong side. The hallway light came on. Someone stood there with a bag still on their shoulder.",
+		"echo": {
+			"recipe": "clack",
+			"pitch": 1
+		},
+		"valences": [
+			"a homecoming",
+			"a return after years apart",
+			"a visit you dreaded"
+		],
+		"tags": [
+			"door",
+			"key",
+			"hallway"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who was at the door?",
+				"statement": "At the door was {}.",
+				"options": [
+					"a parent",
+					"a sibling",
+					"someone you loved",
+					"a friend"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Whose key was it?",
+				"statement": "The key was {}.",
+				"options": [
+					"yours",
+					"theirs"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "How long had it been?",
+				"statement": "It had been {}.",
+				"options": [
+					"a day",
+					"a season",
+					"years",
+					"a lifetime"
+				]
+			}
+		]
+	},
+	{
+		"id": "d016",
+		"type": "relational",
+		"source": "draft",
+		"text": "A back seat and a blanket that smelled of another house. In the front, two voices talking low. You kept your eyes shut.",
+		"echo": {
+			"recipe": "engine",
+			"pitch": 0.8
+		},
+		"valences": [
+			"a night drive in childhood",
+			"overhearing an argument",
+			"a move to somewhere new"
+		],
+		"tags": [
+			"car",
+			"voices",
+			"night"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Whose voices were in the front?",
+				"statement": "The voices in front belonged to {}.",
+				"options": [
+					"your parents",
+					"two relatives",
+					"two friends of the family",
+					"strangers"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Were you really asleep?",
+				"statement": "You were {}.",
+				"options": [
+					"asleep",
+					"only pretending"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "occasion",
+				"prompt": "Where had you been?",
+				"statement": "You were coming back from {}.",
+				"options": [
+					"a funeral",
+					"a holiday",
+					"a hospital",
+					"a party"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "d017",
+		"type": "relational",
+		"source": "draft",
+		"text": "A waiting room with a fish tank. Someone beside you read the same page again and again. A door opened and everyone looked up.",
+		"echo": {
+			"recipe": "water",
+			"pitch": 0.8
+		},
+		"valences": [
+			"a birth",
+			"a diagnosis",
+			"a verdict"
+		],
+		"tags": [
+			"waiting",
+			"room",
+			"door"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What were you waiting for?",
+				"statement": "You were waiting for {}.",
+				"options": [
+					"news",
+					"a birth",
+					"a verdict",
+					"someone to wake"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who sat beside you?",
+				"statement": "Beside you sat {}.",
+				"options": [
+					"a parent",
+					"your partner",
+					"a friend",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "binary",
+				"prompt": "Was it your name they called?",
+				"statement": "The name called was {}.",
+				"options": [
+					"yours",
+					"someone else's"
+				]
+			}
+		]
+	},
+	{
+		"id": "d018",
+		"type": "relational",
+		"source": "draft",
+		"text": "A letter with your name on it, in handwriting you knew. The envelope was thin. You held it a while before turning it over.",
+		"echo": {
+			"recipe": "murmur",
+			"pitch": 0.9
+		},
+		"valences": [
+			"news of a death",
+			"a love letter",
+			"an apology"
+		],
+		"tags": [
+			"letter",
+			"handwriting",
+			"paper"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Did you open it?",
+				"statement": "You {} it.",
+				"options": [
+					"opened",
+					"never opened"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Whose handwriting was it?",
+				"statement": "It was written by {}.",
+				"options": [
+					"a parent",
+					"someone you loved",
+					"a friend",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When did it arrive?",
+				"statement": "It arrived {}.",
+				"options": [
+					"in the morning",
+					"in the afternoon",
+					"at night",
+					"years too late"
+				]
+			}
+		]
+	},
+	{
+		"id": "d019",
+		"type": "relational",
+		"source": "draft",
+		"text": "A coat held open for you. The sleeves were too long. Someone turned the collar up against your neck and stepped back to look.",
+		"echo": {
+			"recipe": "wind",
+			"pitch": 1
+		},
+		"valences": [
+			"a child sent to school",
+			"leaving home",
+			"a gift at a funeral"
+		],
+		"tags": [
+			"coat",
+			"cold",
+			"collar"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Whose coat was it?",
+				"statement": "The coat belonged to {}.",
+				"options": [
+					"a parent",
+					"a sibling",
+					"a friend",
+					"someone you loved"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Did you keep the coat?",
+				"statement": "You {} the coat.",
+				"options": [
+					"kept",
+					"gave back"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "d020",
+		"type": "relational",
+		"source": "draft",
+		"text": "Someone's laughter close by, and a hand over your mouth to keep yours in. You were hiding behind something. Footsteps went past.",
+		"echo": {
+			"recipe": "laugh",
+			"pitch": 1.3
+		},
+		"valences": [
+			"a childhood game",
+			"a secret meeting",
+			"hiding from something"
+		],
+		"tags": [
+			"hiding",
+			"hand",
+			"footsteps"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who was hiding with you?",
+				"statement": "Hiding with you was {}.",
+				"options": [
+					"a sibling",
+					"a friend",
+					"someone you loved",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Were you found?",
+				"statement": "You were {}.",
+				"options": [
+					"found",
+					"never found"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "d021",
+		"type": "relational",
+		"source": "draft",
+		"text": "A name said across a crowded room, once. You turned. The speaker was already looking at you.",
+		"echo": {
+			"recipe": "murmur",
+			"pitch": 1.2
+		},
+		"valences": [
+			"a first meeting",
+			"a reunion",
+			"being mistaken for someone"
+		],
+		"tags": [
+			"crowd",
+			"name",
+			"eyes"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Was it your name they said?",
+				"statement": "The name was {}.",
+				"options": [
+					"yours",
+					"someone else's"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "Where was this?",
+				"statement": "It was at {}.",
+				"options": [
+					"a party",
+					"a station",
+					"a school",
+					"a market"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "relational",
+				"prompt": "Who were they?",
+				"statement": "They were {}.",
+				"options": [
+					"a friend",
+					"a relative",
+					"someone you would come to love",
+					"a stranger"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "d022",
+		"type": "relational",
+		"source": "draft",
+		"text": "Wet footprints from the door to the bed. Someone asleep with their shoes still on. You took the shoes off, one at a time.",
+		"echo": {
+			"recipe": "footsteps",
+			"pitch": 0.8
+		},
+		"valences": [
+			"caring for a friend",
+			"a sick parent",
+			"a child grown tall"
+		],
+		"tags": [
+			"shoes",
+			"sleep",
+			"care"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who was asleep?",
+				"statement": "Asleep was {}.",
+				"options": [
+					"a parent",
+					"a friend",
+					"your partner",
+					"a child"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Did they wake?",
+				"statement": "They {}.",
+				"options": [
+					"woke",
+					"did not wake"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "occasion",
+				"prompt": "Where had they come from?",
+				"statement": "They had come from {}.",
+				"options": [
+					"a long night",
+					"a long journey",
+					"a long shift",
+					"a hospital"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "d023",
+		"type": "relational",
+		"source": "draft",
+		"text": "A table for two by a window, and a menu you both pretended to read. The waiter came back twice. Neither of you was ready.",
+		"echo": {
+			"recipe": "clink",
+			"pitch": 1
+		},
+		"valences": [
+			"a proposal",
+			"a breakup",
+			"a first date"
+		],
+		"tags": [
+			"restaurant",
+			"table",
+			"menu"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What was the meal for?",
+				"statement": "The meal was for {}.",
+				"options": [
+					"a celebration",
+					"a conversation put off",
+					"no reason",
+					"a goodbye"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Who spoke first?",
+				"statement": "It was {} who spoke first.",
+				"options": [
+					"you",
+					"they"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "relational",
+				"prompt": "Who sat across from you?",
+				"statement": "Across from you sat {}.",
+				"options": [
+					"someone you loved",
+					"a friend",
+					"a parent",
+					"a stranger"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "d024",
+		"type": "relational",
+		"source": "draft",
+		"text": "A voice on an answering machine, saying nothing important. You played it again, and again, until the tape began to hiss.",
+		"echo": {
+			"recipe": "static",
+			"pitch": 0.9
+		},
+		"valences": [
+			"someone alive and loved",
+			"someone gone"
+		],
+		"tags": [
+			"voice",
+			"tape",
+			"kitchen"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Whose voice was it?",
+				"statement": "The voice belonged to {}.",
+				"options": [
+					"a parent",
+					"a friend",
+					"a lover",
+					"a child"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Did you keep it, or erase it?",
+				"statement": "You {} it.",
+				"options": [
+					"kept",
+					"erased"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "name",
+				"prompt": "What was their name?",
+				"statement": "Their name was {}.",
+				"options": [
+					"Lena",
+					"Obi",
+					"Carlos",
+					"Hana"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "d025",
+		"type": "relational",
+		"source": "draft",
+		"text": "A narrow stairwell, someone going up ahead of you one step at a time, a hand on the rail. You carried the bags and said nothing.",
+		"echo": {
+			"recipe": "footsteps",
+			"pitch": 0.9
+		},
+		"valences": [
+			"helping a frail parent",
+			"moving in",
+			"a last visit"
+		],
+		"tags": [
+			"stairs",
+			"bags",
+			"rail"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who went ahead of you?",
+				"statement": "Ahead of you went {}.",
+				"options": [
+					"a parent",
+					"a grandparent",
+					"a friend",
+					"someone you loved"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Was it the first time on those stairs, or the last?",
+				"statement": "It was the {} time you climbed them.",
+				"options": [
+					"first",
+					"last"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "d026",
+		"type": "relational",
+		"source": "draft",
+		"text": "A single candle on a small cake. A knife held ready. Someone watched the flame and not you, and nobody had begun to sing.",
+		"echo": {
+			"recipe": "fire",
+			"pitch": 1.1
+		},
+		"valences": [
+			"a birthday",
+			"a memorial",
+			"a last birthday"
+		],
+		"tags": [
+			"candle",
+			"cake",
+			"flame"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who was the cake for?",
+				"statement": "The cake was for {}.",
+				"options": [
+					"you",
+					"a child",
+					"someone old",
+					"someone absent"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "How did the candle end?",
+				"statement": "The candle was {}.",
+				"options": [
+					"blown out",
+					"left to burn down"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "d027",
+		"type": "relational",
+		"source": "draft",
+		"text": "Gravel underfoot and someone's arm through yours, steadying you or being steadied. The path was longer than it looked.",
+		"echo": {
+			"recipe": "footsteps",
+			"pitch": 0.7
+		},
+		"valences": [
+			"a wedding procession",
+			"a funeral walk",
+			"caring for a frail parent"
+		],
+		"tags": [
+			"path",
+			"arm",
+			"walk"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Who was steadied?",
+				"statement": "It was {} who was steadied.",
+				"options": [
+					"you",
+					"they"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "Where did the path lead?",
+				"statement": "The path led to {}.",
+				"options": [
+					"a church",
+					"a graveside",
+					"a house",
+					"the water"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "relational",
+				"prompt": "Whose arm was it?",
+				"statement": "The arm belonged to {}.",
+				"options": [
+					"a parent",
+					"your partner",
+					"a friend",
+					"a child"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "d028",
+		"type": "relational",
+		"source": "draft",
+		"text": "Someone cutting your hair in the kitchen, newspaper on the floor. Cold scissors at your neck. They hummed and did not hurry.",
+		"echo": {
+			"recipe": "hum",
+			"pitch": 1.2
+		},
+		"valences": [
+			"childhood",
+			"just before an illness",
+			"a lover's care"
+		],
+		"tags": [
+			"hair",
+			"kitchen",
+			"scissors"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who held the scissors?",
+				"statement": "The scissors were held by {}.",
+				"options": [
+					"a parent",
+					"your partner",
+					"a friend",
+					"a grandparent"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "Why was your hair being cut?",
+				"statement": "Your hair was cut for {}.",
+				"options": [
+					"a new school",
+					"an illness",
+					"a wedding",
+					"no reason"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "d029",
+		"type": "relational",
+		"source": "draft",
+		"text": "An empty lead in someone's hand. They stood at the end of the lane with their back to you, and you called out.",
+		"echo": {
+			"recipe": "wind",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a lover leaving",
+			"a child walking ahead",
+			"the day a pet died"
+		],
+		"tags": [
+			"lane",
+			"back",
+			"distance"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who stood at the end of the lane?",
+				"statement": "At the end of the lane stood {}.",
+				"options": [
+					"a parent",
+					"a child",
+					"someone you loved",
+					"a friend"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Did they turn round in the end?",
+				"statement": "They {} turn round.",
+				"options": [
+					"did",
+					"did not"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "What season was it?",
+				"statement": "It was {}.",
+				"options": [
+					"spring",
+					"summer",
+					"autumn",
+					"winter"
+				]
+			}
+		]
+	},
+	{
+		"id": "d030",
+		"type": "relational",
+		"source": "draft",
+		"text": "A borrowed scarf wound twice around your neck. It smelled of someone's soap. They tucked in the end and looked away.",
+		"echo": {
+			"recipe": "breath",
+			"pitch": 1.1
+		},
+		"valences": [
+			"a new love",
+			"a parent's care",
+			"a parting gift"
+		],
+		"tags": [
+			"scarf",
+			"soap",
+			"cold"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Whose scarf was it?",
+				"statement": "The scarf belonged to {}.",
+				"options": [
+					"a parent",
+					"a friend",
+					"someone you loved",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Did you give it back?",
+				"statement": "You {} it back.",
+				"options": [
+					"gave",
+					"never gave"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "occasion",
+				"prompt": "What was the occasion?",
+				"statement": "It was {}.",
+				"options": [
+					"a first meeting",
+					"a long goodbye",
+					"an ordinary cold day",
+					"a walk home"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "d031",
+		"type": "relational",
+		"source": "draft",
+		"text": "Dishes stacked in the sink and two people not washing them. The tap dripped. Outside the window it was entirely black.",
+		"echo": {
+			"recipe": "water",
+			"pitch": 0.8
+		},
+		"valences": [
+			"a late confession",
+			"a quiet reconciliation",
+			"an evening of grief"
+		],
+		"tags": [
+			"kitchen",
+			"silence",
+			"night"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Who broke the silence?",
+				"statement": "It was {} who broke the silence.",
+				"options": [
+					"you",
+					"they"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who was there with you?",
+				"statement": "With you was {}.",
+				"options": [
+					"a parent",
+					"your partner",
+					"a friend",
+					"a sibling"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "occasion",
+				"prompt": "What had happened that day?",
+				"statement": "That day there had been {}.",
+				"options": [
+					"a funeral",
+					"a quarrel",
+					"a reunion",
+					"nothing in particular"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "d032",
+		"type": "relational",
+		"source": "draft",
+		"text": "A crowd on a pavement, and one pair of shoulders going the other way. You said a word that no one heard. The light changed.",
+		"echo": {
+			"recipe": "brakes",
+			"pitch": 1
+		},
+		"valences": [
+			"a parting for good",
+			"a chance missed",
+			"a goodbye in the street"
+		],
+		"tags": [
+			"street",
+			"crowd",
+			"word"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Who was walking away?",
+				"statement": "The one walking away was {}.",
+				"options": [
+					"someone you loved",
+					"a friend",
+					"a parent",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Did you follow?",
+				"statement": "You {}.",
+				"options": [
+					"followed",
+					"stayed where you were"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "d033",
+		"type": "relational",
+		"source": "draft",
+		"text": "Two sets of footprints in fresh snow, one stepping inside the other. A mitten held out. Your breath and theirs in a single cloud.",
+		"echo": {
+			"recipe": "wind",
+			"pitch": 1.2
+		},
+		"valences": [
+			"a childhood game",
+			"a winter walk",
+			"following someone"
+		],
+		"tags": [
+			"snow",
+			"footprints",
+			"breath"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Whose footprints were they?",
+				"statement": "The other footprints belonged to {}.",
+				"options": [
+					"a parent",
+					"a sibling",
+					"a friend",
+					"a lover"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Were you leading, or following?",
+				"statement": "You were {}.",
+				"options": [
+					"leading",
+					"following"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "d034",
+		"type": "relational",
+		"source": "draft",
+		"text": "A low voice reading aloud, and a page turning. Someone's eyes were closing, though the lamp stayed on. The reading did not stop.",
+		"echo": {
+			"recipe": "murmur",
+			"pitch": 0.8
+		},
+		"valences": [
+			"a bedtime story",
+			"sitting with the dying",
+			"a lover's evening"
+		],
+		"tags": [
+			"voice",
+			"lamp",
+			"book"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Who was falling asleep?",
+				"statement": "It was {} who was falling asleep.",
+				"options": [
+					"you",
+					"they"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "Where was this?",
+				"statement": "This was in {}.",
+				"options": [
+					"a bedroom",
+					"a hospital room",
+					"a tent",
+					"a train"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "relational",
+				"prompt": "Who was reading?",
+				"statement": "The one reading was {}.",
+				"options": [
+					"a parent",
+					"your partner",
+					"a friend",
+					"a child"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "d035",
+		"type": "relational",
+		"source": "draft",
+		"text": "A handshake that went on a moment too long. Dry palm, firm grip. Behind them a door was already open.",
+		"echo": {
+			"recipe": "clack",
+			"pitch": 1
+		},
+		"valences": [
+			"a job offered",
+			"a farewell",
+			"a reconciliation"
+		],
+		"tags": [
+			"hands",
+			"door",
+			"grip"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Was it a greeting, or a farewell?",
+				"statement": "It was a {}.",
+				"options": [
+					"greeting",
+					"farewell"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Whose hand was it?",
+				"statement": "The hand belonged to {}.",
+				"options": [
+					"a stranger",
+					"a relative",
+					"a friend",
+					"someone you worked for"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "occasion",
+				"prompt": "What had been agreed?",
+				"statement": "What had been agreed was {}.",
+				"options": [
+					"a job",
+					"a sale",
+					"an end",
+					"nothing yet"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "d036",
+		"type": "relational",
+		"source": "draft",
+		"text": "A window seat on a bus, and someone's head slowly settling on your shoulder. You did not move for a long time, though your arm went numb.",
+		"echo": {
+			"recipe": "engine",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a lover",
+			"a child",
+			"a stranger",
+			"a friend after bad news"
+		],
+		"tags": [
+			"bus",
+			"shoulder",
+			"weight"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "relational",
+				"prompt": "Whose head was it?",
+				"statement": "The head belonged to {}.",
+				"options": [
+					"a child",
+					"someone you loved",
+					"a friend",
+					"a stranger"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Did you know them already?",
+				"statement": "You {} them.",
+				"options": [
+					"already knew",
+					"did not yet know"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "d037",
+		"type": "sensory",
+		"source": "draft",
+		"text": "Wool, a stiff collar, a button done up wrong. The smell of someone else's mothballs.",
+		"echo": {
+			"recipe": "drone",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a funeral",
+			"a wedding",
+			"a first day of work"
+		],
+		"tags": [
+			"clothes",
+			"wool",
+			"smell"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What were you wearing it for?",
+				"statement": "You wore it for {}.",
+				"options": [
+					"a funeral",
+					"a wedding",
+					"a first day",
+					"a photograph"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Whose clothes were they?",
+				"statement": "The clothes were {}.",
+				"options": [
+					"yours",
+					"borrowed"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "d038",
+		"type": "sensory",
+		"source": "draft",
+		"text": "A stairwell light on a timer, clicking off between floors. Your hand sliding along the cold rail in the dark.",
+		"echo": {
+			"recipe": "clack",
+			"pitch": 0.8
+		},
+		"valences": [
+			"coming home late",
+			"leaving a flat for good",
+			"visiting a hospital"
+		],
+		"tags": [
+			"stairs",
+			"dark",
+			"rail"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Were you going up, or down?",
+				"statement": "You were going {}.",
+				"options": [
+					"up",
+					"down"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "occasion",
+				"prompt": "Whose stairs were they?",
+				"statement": "They were the stairs of {}.",
+				"options": [
+					"your childhood home",
+					"a hospital",
+					"a first flat",
+					"someone you loved"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "d039",
+		"type": "sensory",
+		"source": "draft",
+		"text": "Chalk dust on a sleeve. A board half erased, the ghost of a word still on it. The room smelled of oranges.",
+		"echo": {
+			"recipe": "shimmer",
+			"pitch": 1
+		},
+		"valences": [
+			"the start of a school year",
+			"a last day",
+			"a teacher gone"
+		],
+		"tags": [
+			"chalk",
+			"board",
+			"school"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "occasion",
+				"prompt": "What time of the school year was it?",
+				"statement": "It was {}.",
+				"options": [
+					"the first week",
+					"an ordinary Tuesday",
+					"exam time",
+					"the last day"
+				],
+				"free": true
+			},
+			{
+				"id": "q2",
+				"kind": "binary",
+				"prompt": "Was the room full, or empty?",
+				"statement": "The room was {}.",
+				"options": [
+					"full",
+					"empty"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "d040",
+		"type": "sensory",
+		"source": "draft",
+		"text": "A hospital corridor at night, the floor shining. A trolley's soft wheels. Somewhere a machine kept a slow count.",
+		"echo": {
+			"recipe": "heartbeat",
+			"pitch": 0.7
+		},
+		"valences": [
+			"a birth",
+			"a death",
+			"a recovery"
+		],
+		"tags": [
+			"hospital",
+			"corridor",
+			"night"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Were you arriving, or leaving?",
+				"statement": "You were {}.",
+				"options": [
+					"arriving",
+					"leaving"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "relational",
+				"prompt": "Who were you there for?",
+				"statement": "You were there for {}.",
+				"options": [
+					"a parent",
+					"a child",
+					"a friend",
+					"yourself"
+				],
+				"free": true
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	},
+	{
+		"id": "d041",
+		"type": "sensory",
+		"source": "draft",
+		"text": "The kitchen light left on over the stove. A faint smell of onions. A radio so low it was only a texture.",
+		"echo": {
+			"recipe": "hum",
+			"pitch": 0.9
+		},
+		"valences": [
+			"a childhood home",
+			"alone after a loss",
+			"a night waiting up"
+		],
+		"tags": [
+			"kitchen",
+			"light",
+			"radio"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Were you alone in the kitchen?",
+				"statement": "You were {}.",
+				"options": [
+					"alone",
+					"not alone"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "What time was it?",
+				"statement": "It was {}.",
+				"options": [
+					"very late",
+					"before dawn",
+					"evening",
+					"the middle of the afternoon"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "occasion",
+				"prompt": "Whose kitchen was it?",
+				"statement": "It was the kitchen of {}.",
+				"options": [
+					"your parents",
+					"a first home",
+					"a friend",
+					"someone you loved"
+				],
+				"free": true
+			}
+		]
+	},
+	{
+		"id": "d042",
+		"type": "sensory",
+		"source": "draft",
+		"text": "The rattle of a train over points and the long lean of a curve. A paper cup sliding on a tray. Everything outside was a smear of lights.",
+		"echo": {
+			"recipe": "clack",
+			"pitch": 1.1
+		},
+		"valences": [
+			"leaving home",
+			"coming home",
+			"a daily commute"
+		],
+		"tags": [
+			"train",
+			"lights",
+			"motion"
+		],
+		"questions": [
+			{
+				"id": "q1",
+				"kind": "binary",
+				"prompt": "Were you going toward home, or away?",
+				"statement": "You were going {}.",
+				"options": [
+					"toward home",
+					"away from home"
+				]
+			},
+			{
+				"id": "q2",
+				"kind": "temporal",
+				"prompt": "What time of day was it?",
+				"statement": "It was {}.",
+				"options": [
+					"morning",
+					"afternoon",
+					"dusk",
+					"night"
+				]
+			},
+			{
+				"id": "q3",
+				"kind": "temporal",
+				"prompt": "When in your life was this?",
+				"statement": "You were {}.",
+				"options": [
+					"a child",
+					"young",
+					"in the middle of your life",
+					"old"
+				]
+			}
+		]
+	}
+]

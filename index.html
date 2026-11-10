@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<meta name="color-scheme" content="dark">
+	<title>Adrift</title>
+	<link rel="icon" href="data:,">
+	<link rel="preload" href="assets/fonts/CormorantGaramond.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div id="game">
+		<canvas id="shore" aria-hidden="true"></canvas>
+
+		<div id="sky" aria-label="Memories"></div>
+
+		<button id="hands" type="button" aria-label="What you hold" hidden></button>
+		<p id="hint" aria-live="polite"></p>
+
+		<section id="title" class="screen active" aria-label="Adrift">
+			<div class="title-text">
+				<h1>Adrift</h1>
+				<nav class="title-menu">
+					<button id="btn-continue" type="button" class="menu-item" hidden>continue</button>
+					<button id="btn-begin" type="button" class="menu-item">begin</button>
+					<button id="btn-again" type="button" class="menu-item hold" hidden>begin again</button>
+					<button id="btn-gallery" type="button" class="menu-item" hidden>gallery</button>
+				</nav>
+			</div>
+		</section>
+
+		<section id="hand" class="screen" aria-label="What you hold">
+			<button id="sky-drop" type="button" aria-label="Keep it in a new place"></button>
+			<div id="cards"></div>
+			<button id="set-down" type="button" aria-label="Set it back down on the sand"></button>
+		</section>
+
+		<section id="memory" class="screen" aria-label="A memory">
+			<div id="memory-col"></div>
+			<button id="memory-close" type="button" class="light-button" aria-label="Return to the shore"></button>
+		</section>
+
+		<section id="reading" class="screen" aria-label="The reading">
+			<div id="reading-page"></div>
+			<button id="reading-next" type="button" class="light-button" aria-label="Go on"></button>
+		</section>
+
+		<section id="rating" class="screen" aria-label="Where this life belongs">
+			<div class="plane-wrap">
+				<input id="axis-top" class="axis-label top" type="text" maxlength="18" aria-label="Top of the chart" autocomplete="off" spellcheck="false">
+				<input id="axis-left" class="axis-label left" type="text" maxlength="18" aria-label="Left of the chart" autocomplete="off" spellcheck="false">
+				<div id="plane" class="plane" tabindex="0" role="application" aria-label="Place one point"><span id="point" class="point" hidden></span></div>
+				<input id="axis-right" class="axis-label right" type="text" maxlength="18" aria-label="Right of the chart" autocomplete="off" spellcheck="false">
+				<input id="axis-bottom" class="axis-label bottom" type="text" maxlength="18" aria-label="Bottom of the chart" autocomplete="off" spellcheck="false">
+			</div>
+			<div id="axis-prompts" class="axis-prompts"></div>
+			<button id="rating-next" type="button" class="light-button" aria-label="Go on" hidden></button>
+		</section>
+
+		<section id="symbol" class="screen" aria-label="A mark for this life">
+			<div class="symbol-layout">
+				<div id="palette" class="palette"></div>
+				<div class="stage-col">
+					<div id="stage" class="stage" tabindex="0" role="application" aria-label="Your mark"></div>
+					<div id="symbol-controls" class="symbol-controls">
+						<label>size <input id="ctl-size" type="range" min="0.12" max="1.3" step="0.01"></label>
+						<label>turn <input id="ctl-turn" type="range" min="-180" max="180" step="1"></label>
+						<label>light <input id="ctl-bright" type="range" min="0.3" max="1.9" step="0.01"></label>
+						<label>contrast <input id="ctl-contrast" type="range" min="0.4" max="2" step="0.01"></label>
+						<label>colour <input id="ctl-sat" type="range" min="0" max="2.4" step="0.01"></label>
+						<span class="layer-buttons">
+							<button id="ctl-up" type="button" aria-label="Bring forward">&#x2191;</button>
+							<button id="ctl-down" type="button" aria-label="Send back">&#x2193;</button>
+							<button id="ctl-remove" type="button" aria-label="Take away">&#xd7;</button>
+						</span>
+					</div>
+				</div>
+			</div>
+			<button id="symbol-next" type="button" class="light-button" aria-label="Keep this mark" hidden></button>
+		</section>
+
+		<section id="gallery" class="screen" aria-label="Gallery">
+			<div class="plane-wrap">
+				<div id="gallery-plane" class="plane"></div>
+			</div>
+			<button id="gallery-close" type="button" class="light-button" aria-label="Leave the gallery"></button>
+		</section>
+
+		<div id="veil" aria-hidden="true"></div>
+
+		<div id="debug" hidden></div>
+	</div>
+
+	<script type="module" src="js/main.js"></script>
+</body>
+</html>
