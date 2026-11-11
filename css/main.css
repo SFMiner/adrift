@@ -105,6 +105,7 @@ button:disabled { cursor: default; }
 	letter-spacing: 0.08em;
 	line-height: 1.1;
 }
+.premise { max-width: 30rem; margin: 1.5rem auto 0; padding: 0 1.4rem; font-size: 1.16rem; font-style: italic; line-height: 1.5; color: rgba(245, 240, 232, 0.62); text-wrap: balance; }
 .title-menu { margin-top: 2.2rem; display: flex; flex-direction: column; align-items: center; gap: 1.1rem; font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--faded); }
 .menu-item {
 	position: relative;
