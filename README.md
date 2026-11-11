@@ -38,6 +38,7 @@ The bot uses the Chrome on this machine through the Playwright in `Website\game-
 ## Features
 
 - [x] Title, with continue / begin again (held) when a run is in progress
+- [x] Premise line on the title screen, in Sean's words
 - [x] Shore: scrolling, bidirectional, dark at both ends; walk by key, click or touch
 - [x] Fragments drawn per run from the library (30, at least 10 relational), seeded
 - [x] Fragments as points of light; first words surface when near; gather and set back down

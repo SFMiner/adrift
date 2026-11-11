@@ -33,7 +33,7 @@ format: `data/SCHEMA.md`. Background and Godot port notes: `KNOWLEDGE.md`.
 	then sets; set portraits show as stars. Rules and the choices still awaiting his word: `IMPLEMENTATION_PLAN.md`
 	§ Portraits. In code the data is still `run.containers`.
 - **No narration, no scoring, no win/lose framing, no music.** The story comes from what the player
-	assembles. The tone is quiet: shore ambience plus faint fragment echoes.
+	assembles. The one exception is Sean's premise line on the title screen (`#premise`, his wording, 2026-11-11). The tone is quiet: shore ambience plus faint fragment echoes.
 - **Fragments are written with double valence.** Each must plausibly belong in more than one container
 	(a first kiss *or* a funeral). Details stay ambiguous until certainty is spent on them.
 - **Sean's fragments keep his wording.** `adrift-fragment-library.md` is his working list; its entries go into
